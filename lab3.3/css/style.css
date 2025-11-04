@@ -1,0 +1,407 @@
+
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    
+}
+
+
+/*Estilos para el header*/
+.header-format {
+    /*background-color: rgb(35, 42, 140);*/
+    background-color: rgb(0, 112, 190);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100px;
+    padding: 5px 15px;
+    gap: 10px;
+    align-items: center;
+  
+}
+
+.header-format div{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: end;
+}
+
+
+.header-format img{
+    height: 90%;
+    padding: 0 15px;
+    
+}
+
+.header-format img[alt*="plenum"]{
+    height: 95%;
+    padding-left: 30px;
+    
+    
+}
+.header-format img[alt="lateral_menu"]{
+    height: 50px;
+    
+}
+
+.event img:hover{
+    background-color: rgb(30, 99, 148);
+}
+
+
+
+/*Estilo logo plenumsoft*/
+.main-logo-format {
+    
+    display: flex;
+    justify-content: center;
+
+}
+.main-logo-format img{
+   
+    width: 100%;
+
+}
+
+.plenumsoft-academy{
+    height: 110px;
+    width: 220px;
+}
+
+
+
+/*ESTILOS PARA EL BODY*/
+.body-format{
+    width: 95%;
+    margin: 0 0 0 4%;
+}
+
+.body-padding{
+    padding-top: 8%;
+}
+
+
+/*ESTILOS PARA EL FOOTER*/
+
+.footer-format{
+    background-color: rgb(0, 112, 192);
+    height: 100px;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.footer-format > p{
+    font-size: 20px;
+    font-weight: lighter;
+    color: rgb(172, 176, 179);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px 0;
+    padding: 0 0 0 50px;
+}
+
+
+.shadow{
+    box-shadow: 0 0 10px;
+}
+
+
+
+
+
+/*FORMATO DE TEXTOS*/
+h1{
+    color: rgb(3, 111, 199);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    padding: 0 0 20px 30px;
+    
+}
+
+
+.subtitle-format h2{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 50px 0 50px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    background-color: rgb(0, 112, 190);
+
+ }
+
+
+
+.non-hypertext-view a{
+    text-decoration: none;
+    color: rgb(15, 20, 99);
+    
+}
+
+
+.non-list-view li{
+    list-style-type: none;   
+}
+
+.seleccion-elemento a:hover{
+    color: rgb(40, 47, 187);
+    font-size: 20px;
+}
+
+.elemento-seleccionable a{
+   
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.fuente-elemento-seleccionable a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.elemento-seleccionable li{
+    padding: 0 0 5px 0;
+}
+
+.texto-blanco{
+    color: white;
+}
+
+
+
+.index-menu-format{
+    width: 80%;
+    justify-self: center;
+    
+    
+}
+
+.index-menu-format a{
+    
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.index-menu-format p{
+    padding: 0 0 15px 40px;
+}
+
+.index-menu-format a:hover{
+    color: rgb(40, 47, 187);
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.index-menu-format li{
+    display: flex;
+    
+}
+
+.index-menu-format div{
+    width: 70%;
+    height: 100px;
+}
+
+.index-menu-format div[class = "image-right"]{
+    width: 30%;
+    height: 100px;
+}
+
+/*FORMATO DE CAJAS*/
+
+.article-format{
+    border: medium solid gray;
+    border-radius: 40px;
+    padding: 30px;
+    
+}
+
+.article-format>h3{
+    color: rgb(15, 20, 99);
+    font-size: 50px;
+    font-family: Archia, Outfit, BlinkMacSystemFont, -apple-system, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-bottom: 25px;
+}
+
+.article-format h4{
+    font-size: 25px;
+}
+
+.menu-contenidos{
+    margin: 2% 0 0 0;
+    display: flex;
+    height: 200px;
+    border-radius: 40px;
+    align-items: center;
+    border: medium solid rgb(71, 140, 201);
+}
+
+
+.menu-contenidos h2{
+    color: rgb(101, 102, 104);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+
+.menu-contenidos>p{
+    font-size: 150px;
+}
+
+.menu-contenidos>ul{
+   background-color: aliceblue;
+   height: 100%;
+   width: 100%;
+   border-bottom-right-radius: 40px;
+   border-top-right-radius: 40px;
+}
+
+.menu-contenidos>img{
+    height: 70%;
+    margin-right: 2%;
+    padding: 0 30px 0 75px;
+}
+
+
+.lateral-menu{
+    border: thick solid rgb(0, 7, 146);
+    border-radius: 50px;
+    height: 60%;
+    width: 20%;
+    position: fixed;
+    justify-self: end;
+    background-color: white;
+    margin-right: 2%;
+    visibility: hidden;
+}
+
+
+.lateral-menu >h2{
+    text-align: center;
+}
+
+.lateral-menu li{
+    padding: 5px;
+}
+
+
+hr{
+    margin: 25px 0;
+}
+
+/*Estilos para las imágenes*/
+.image-right{
+    display: flex;
+    justify-content: end;
+    padding: 0 50px 0 0;
+}
+
+.image-right img{
+    height: 100%;
+}
+
+.image-format{  
+    width: 45%;
+    height: 45%;
+}
+
+
+.estilo-letra-articulo p, li{
+    font-size: 18px;
+    color:dimgrey;
+
+}
+
+.estilo-uno{
+    display: flex;
+    align-content: flex-start;
+}
+
+.estilo-uno>div{
+    margin: 0 0 0 15px;
+}
+
+
+.estilo-dos{
+    display: flex;
+}
+
+.estilo-dos >div{
+    border: thin solid rgb(185, 216, 255);
+    border-radius: 20px;
+    margin: 0 30px 0 0;
+    padding: 15px;
+    background-color: rgb(185, 216, 255);
+
+
+}
+
+.estilo-subtitulos h4{
+    padding: 5px 5px 5px 10px;
+    color: white;
+    background-color: rgb(0, 135, 197);
+    width:100%;
+    text-align: center;
+
+}
+
+.estilo-dos > img{
+    justify-self: center;
+}
+
+.two-columnas{
+    display: grid;
+}
+.dos-columnas{
+    display: flex;
+    
+    align-items: center;
+    align-content: center;
+    
+}
+
+
+.dos-columnas iframe{
+    margin: 0 70px;
+    background-color: black;
+    height: 450px;
+    width: 560px;
+    
+}
+
+.dos-columnas >div{
+    width: 50%;
+    height: auto;  
+    
+    align-content: center;
+}
+
+
+.video-dimensiones >iframe{
+    width: 80%;
+    height: 500px;
+    padding: 25px;  
+}
+
+/*Estilos de Videos*/
+
+.video-estilo-dos iframe{
+   
+}
+
+
+.video-borde iframe{
+    border: medium solid black;
+    border-radius: 10px;
+}
+
+.dimensiones-imagen >img{
+    width: 80%
+}

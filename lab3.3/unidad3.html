@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 3.2</title>
+    <meta name="descripcion" content = "Contenidos de la lección $">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+  
+   
+    <div> 
+    <header class ="header-format">
+        <img id="plenum_academy" src = "images/celulas_plenumsoft.svg", alt="plenumsfot_academy">
+        <img id="itescam" src = "images/itescam_logo.svg", alt="itescam_logo">
+        <img id="tecnm" src = "images/tecnm_logo.svg", alt = "tecnm_logo">
+      
+
+    </header>
+    <hr>
+    </div>
+
+    <br>
+
+    <!-- Nombre del programa-->
+    <div>
+    <h1> PROGRAMA CÉLULAS PLENUM</h1>
+    </div>
+
+    <aside>
+        <h2> Curso</h2>
+        <ul id="menu-unidades" class="non-hypertext-view">
+            <li class="item"><a href="index.html">Inicio</a></li>
+            <li class="item"><a href="unidad1.html">Unidad 1</a></li>
+            <li class="item"><a href="unidad2.html">Unidad 2</a></li>
+            <li class="item"><a href="unidad3.html">Unidad 3</a></li>
+        </ul>
+    </aside>
+    <hr>
+  
+   
+  
+        <h2> Unidad 3. Fundamentos de Programación Web</h2>
+        <ul class="non-hypertext-view">
+            Contenidos
+            <li><a href="unidad3.html#tema1">3.1 HTTP (HyperText Transfer Protocol)</a></li>
+            <li><a href="unidad3.html#tema2">3.2 HTML</a></li>
+            <li><a href="unidad3.html#tema3">3.3 CSS</a></li>
+            <li><a href="unidad3.html#tema4">3.4 Bootstrap</a></li>
+            <li><a href="unidad3.html#tema5">3.5 JavaScript</a></li>
+ 
+        </ul>
+        <hr>
+    
+        
+        <article id="tema1">
+            <h3>3.1 HTTP</h3>
+            <p>Se trata del llamado y mundialmente conocido<b><i> Protocolo de Transferencia de Hipertexto</i></b>, bajo el cual, se rige todo tipo de comunicación dentro de la web.
+                Se rige por 3 conceptos:
+            </p>
+            <table>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li><b>Cliente-Servidor</b></li>
+                                <li><b>Protocolo sin Estado</b></li>
+                                <li><b>Dependencia de TCP/IP</b></li>
+                            </ul>             
+            
+                        </td>
+
+                        <td>
+                            <p>Bajo el uso de 4 métodos:</p>
+                            <img src="images/unidad3/3.1/metodosHTTP.png" alt="metodos_http">
+                        </td>
+                    </tr>
+
+            </table>
+
+            <h4>Estructura de una URL</h4>
+            <p>Una <b>URL</b>, <i>(Uniform Resource Locator) es el elemento necesario por el que todo comienza para que un navegador sepa donde puede acceder a un recurso dentro de la web.</i></p>
+            <p>Se conforma por 4 partes: <i> scheme://domain_port/path?query_string#fragment_id</i></p>
+
+            <table>
+               <tr>
+                    <td><b>Protocolo</b>
+                        Define cómo se realizará la comunicación
+                    </td>
+                    <td><b>Dominio y Puerto</b>
+                        Define el servidor y, opcionalmente el puerto de conexión
+                    </td>
+                    <td><b>Ruta</b>
+                        Especifica la ubicación del recurso en el servidor
+                    </td>
+                    <td><b>Consulta y Fragmento</b>
+                        Añaden parámetros dentro del recurso
+                    </td>
+                </tr>
+            </table>
+                
+            <h4>Servidores Web</h4>
+            <p>Un servidor web es un sistema que procesa peticiones HTTP/HTTPS y entrega el contenido web solicitado</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vG4LLrLXPU8?si=IvRdl6sFK9EYg6-D&amp;start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h4>Arquitectura de una Aplicación Web</h4>
+            <ul>
+                <li>Todo en un servidor.</li>
+                <p>Servidor web y base de datos en una misma máquina, ideal para desarrollo</p>
+                <li>Separación de componentes.</li>
+                <p>El servidor web y la base de datos se encuentran en máquinas distintas para un mejor rendimiento</p>
+                <li>Cloud Computing.</li>
+                <p>Se tienen múltiples servidores web gestionados por un balanceador de estados</p>
+                <li>Granjas de Servidores.</li>
+                <p>Se incluyen plataforma con infraestructuras complejas de servicios escalables, como AWS</p>
+            </ul>
+            <h4>Socket</h4>
+            <p>Un <b>Socket</b> se define como la combinación de una dirección IP y un puerto para la comunicación entre un <i>cliente</i> y un <i>servidor</i></p>
+            <p>
+                Ya que precisamente, para que se dé una comunicación, incluso mediante HTTP, se debe de establecer una conexión <b><i>TCP/IP</i></b>, que viene necesitando dichos datos por parte del servidor
+            </p>
+
+                
+        </article>
+        <hr>
+
+        <article id="tema2">
+            <h3>3.2 HTML</h3>
+            <h4>Buenas Prácticas con HTML</h4>
+            <div id="p">Declarar el doctype</div>
+            <div id="p">Cierre de etiquetas</div>
+            <div id="p">Etiquetas con minúsculas</div>
+            <div id="p">Atributo alt en imágenes</div>
+            <div id="p">Identación de etiquetas</div>
+            <div id="p">No poner estilos en el documento HTML</div>
+            <div id="p">No usar divs para todod</div>
+            <div id="p">No poner el valor de los atributos booleanos</div>
+            <div id="p">Declarar codificación de caracteres</div>
+            <div id="p">Revisar etiquetas especiales existentes</div>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sIO8kb5b6D0?si=SS8H8ExVU0sTkwwW&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>een>
+            </iframe>
+        </article>
+        <hr>
+
+        <article id="tema3">
+            <h3>3.3 CSS</h3>
+            <p>
+                Veíamos antes en HTML, que este era exclusivamente para la definición de la estructura y contenidos de una página web.
+            </p>
+            <p>
+                Ahora, para lograr darle más detalles a la aplicación web, se usa CSS.
+                Un lenguaje de definición de presentación de los contenidos de una página web.
+            </p>
+
+            <p>
+                Cascading Style Sheets
+            </p>
+            <p>
+                Existen varios niveles de CSS, 1, 2, etc. El más aceptados por loss navegadores, es el nivel 2.1 que actualmente cuenta con alrededor de 200 declaraciones diferentes.
+            </p>
+            <h4>Reglas del lenguaje de CSS</h4>
+            <img src="images/unidad3/3.3/css_reglas.png">
+        </article>
+        <hr>
+
+        <article id="tema4">
+            <h3>3.4 Bootstrap</h3>
+            <p></p>
+
+            <iframe 
+                width="560" height="315" 
+                src="https://youtu.be/svPDhmXY1Yg?si=mvAtxKss4XCnUPOH/?controls=0" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>       
+
+        </article>
+        <hr>
+
+        <article id="tema5">
+            <h3>3.5 JavaScript</h3>
+            <p></p>
+
+            <iframe 
+                width="560" height="315" 
+                src="https://youtu.be/iXf90OstEK4?si=A0V5sgYYuCzTUaX1/?controls=0" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </article>
+    
+
+</body>
+
+<footer>
+    <label>
+        Designed By Iván Arturo Chi Mut
+        contact:
+        996-101-04-93
+        arturochi_m@outlook.com
+
+    </label>
+</footer>
+
+</html>
