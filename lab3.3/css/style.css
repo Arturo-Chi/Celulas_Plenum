@@ -6,9 +6,20 @@
 }
 
 
+.menu-wrapper{
+
+
+
+
+
+}
+
+
+
+
 /*Estilos para el header*/
 .header-format {
-    background-color: rgb(0, 112, 190);
+     background-color: rgb(0, 112, 190);
     display: flex;
     position: fixed;
     top: 0;
@@ -263,26 +274,70 @@ h1{
 
 
 .lateral-menu{
-    border: thick solid rgb(0, 7, 146);
-    border-radius: 50px;
-    height: 60%;
-    width: 20%;
+    background-color: rgb(0, 112, 192);
+    
     position: fixed;
-    justify-self: end;
-    background-color: white;
-    margin-right: 2%;
-    visibility: hidden;
+    height: 100vh;
+    width: 22%;
+   
+    top: 0;
+    left: 0;
+
+   
+    padding-top: 7%;
+    
+    z-index:1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
 }
 
+.lateral-menu a{
+    color:rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+  
+}
 
-.lateral-menu >h2{
+.lateral-menu a:hover{
+    color: rgb(182, 186, 189);
+    text-align: left;
+}
+
+.lateral-menu>h2{
     text-align: center;
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 112, 192);
+    background-color: aliceblue;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.lateral-menu ul{
+    width: 100%;
+    padding: 0;
+    
 }
 
 .lateral-menu li{
-    padding: 5px;
+    width: 100%;
+    margin-bottom: 40px;
+    
+    display: flexbox;
+    vertical-align: middle;
+    padding: 0 10px 0 20px;
+}
+.lateral-menu li:hover{
+    background-color: rgb(4, 131, 204);
 }
 
+.menu-wrapper:hover > .lateral-menu{
+    transform: translateX(0);
+}
 
 hr{
     margin: 25px 0;
@@ -595,6 +650,13 @@ Estilos para tablas*/
     height: 200px;
     
 }
+.imagen-generica-cuatro{
+    height: 500px;
+    width: 80%;
+}
+.fondo-blanco{
+    background-color: white;
+}
 
 .card{
     border: thick solid rgba(55, 131, 185, 0.459);
@@ -678,4 +740,15 @@ Estilos para tablas*/
 .caso-dos div{
     width: 50%;
     border-color: white;
+}
+
+
+.contenedores-iguales div{
+    top: 0;
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    height: 450px;
+    
 }

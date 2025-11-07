@@ -11,32 +11,34 @@
 <body class = "body-padding">
            
    
-    <header class ="header-format shadow event">
-        <img src="images/lateral-bar.svg" alt="lateral-menu">
-        <img src = "images/celulas_plenumsoft.svg", alt="plenumsfot_academy">
-        <div>
-            <img src = "images/itescam_logo.svg", alt="itescam_logo">
-            <img src = "images/tecnm_logo.svg", alt = "tecnm_logo">
-    
-        </div>
+    <div class="menu-wrapper">
+        <header class ="header-format shadow event">
+            <img src="images/lateral-bar.svg" alt="lateral-menu" class="menu-toggle-evento">
+            <img src = "images/celulas_plenumsoft.svg", alt="plenumsfot_academy">
+            <div>
+                <img src = "images/itescam_logo.svg", alt="itescam_logo">
+                <img src = "images/tecnm_logo.svg", alt = "tecnm_logo">
+        
+            </div>
 
-    </header>
-    
+        </header>
+        
 
 
-    <aside class="lateral-menu shadow non-hypertext-view non-list-view event">
-        <h2> Curso</h2>
-        <ul >
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="unidad1.html">Módulo 1. Inducción al Programa</a></li>
-            <li><a href="unidad2.html">Módulo 2. Fundamentos de Programación</a></li>
-            <li><a href="unidad3.html">Módulo 3. Fundamentos de Programación Web</a></li>
-            <li><a href="">Módulo 4. Angular</a></li>
-            <li><a href="">Módulo 5. C#</a></li>
-            <li><a href="">Módulo 6. Flutter</a></li>
-            <li><a href="">Módulo 7. Cómputo en la Nube</a></li>
-        </ul>
-    </aside>
+        <aside class="lateral-menu shadow non-hypertext-view non-list-view event">
+            <h2>Curso</h2>
+            <ul >
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="unidad1.html">Módulo 1. Inducción al Programa</a></li>
+                <li><a href="unidad2.html">Módulo 2. Fundamentos de Programación</a></li>
+                <li><a href="unidad3.html">Módulo 3. Fundamentos de Programación Web</a></li>
+                <li><a href="">Módulo 4. Angular</a></li>
+                <li><a href="">Módulo 5. C#</a></li>
+                <li><a href="">Módulo 6. Flutter</a></li>
+                <li><a href="">Módulo 7. Cómputo en la Nube</a></li>
+            </ul>
+        </aside>
+    </div>
     
 
 
@@ -45,10 +47,10 @@
        
         <div class="menu-contenidos non-hypertext-view non-list-view elemento-seleccionable seleccion-elemento fuente-elemento-seleccionable">
             <p>1</p>
-            <img src="images/assets/induccion.svg" alt="unidad1_induccion">
+            <img src="images/assets/induccion.svg" alt="unidad1-induccion">
             <ul>
                 <h2>Inducción al Programa Células Plenum</h2>
-                <li><a href="unidad1.html#tema1">1.1 Introducción a la Ingeniería de Requerimientos</a></li>
+                <li><a href="unidad1.html#tema1">1.1 Inducción a la Ingeniería de Requerimientos</a></li>
                 <li><a href="unidad1.html#tema2">1.2 Ingeniería de Requerimientos</a></li>
                 <li><a href="unidad1.html#tema3">1.3 Introducción a la Arquitectura de Software</a></li>
                 <li><a href="unidad1.html#tema4">1.4 Patrones de Diseño</a></li>
@@ -58,7 +60,7 @@
 
         <hr>
 
-        <article id="tema1" class="article-format estilo-subtitulos">
+        <article id="tema1" class="article-format estilo-subtitulos vuelta-inicio">
             <h3>1.1 Introducción a la Ingeniería de Requerimientos</h3>
             
             <div class="estilo-uno estilo-letra-articulo">
@@ -102,13 +104,13 @@
                 <img class="image-format image-in-line" src="images/unidad1/1.1/descripciones.png">
 
             </div>
-            
+            <a href="">Volver a los contenidos☝️</a>
 
         </article>
         
         <hr>
 
-        <article id="tema2" class="article-format estilo-subtitulos">
+        <article id="tema2" class="article-format estilo-subtitulos vuelta-inicio">
             
             <h3 >1.2 Ingeniería de Requerimientos</h3>
             
@@ -132,16 +134,23 @@
                         <p><b><i>Uso de prototipos:</i></b> Permiten al cliente entender hacia dónde va el sistema dando una visualización de funcionalidad limitada</p>
                     </div>
                 </div>
-                <iframe  src="https://www.youtube.com/embed/TRp3ZkjKtj8?si=Jrwky4q8_vixmZkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                            
 
+                <iframe 
+                    src="https://www.youtube.com/embed/TRp3ZkjKtj8" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
                
             </div>
+            <a href="">Volver a los contenidos☝️</a>
  
         </article>
                
         <hr>
 
-        <article id="tema3" class="article-format estilo-letra-articulo estilo-subtitulos">
+        <article id="tema3" class="article-format estilo-letra-articulo estilo-subtitulos vuelta-inicio">
             <h3 >1.3 Introducción a la Arquitectura de Software</h3>
             <p>
                 La <b><i>Arquitectura de Software</i></b> Es la estructura fundamental de un sistema: cómo se divide en componentes, cómo interactúan y cómo evolucionan.
@@ -177,16 +186,13 @@
                     <iframe  src="https://www.youtube.com/embed/PKyTFZtRztk?si=fBGX1VVbsBjvOatk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             
             </div>
-
-            
-
-          
-           
+            <a href="">Volver a los contenidos☝️</a>
+      
         </article>   
        
         <hr>
 
-        <article id="tema4" class="article-format estilo-subtitulos">
+        <article id="tema4" class="article-format estilo-subtitulos vuelta-inicio">
             <h3>1.4 Patrones de Diseño</h3>
             <section class="dos-columnas estilo-letra-articulo video-borde dimensiones">
                 
@@ -202,14 +208,12 @@
                     <p>Nacen de la observación de problemas comunes y se formalizan para ser aplicados en distintos contextos</p>
                     <img src="images/unidad1/1.4/patrones-diseno" alt="patrones-diseno">
                 </div>
-
+                
 
             </section>
-            
-            
-            
-            
+                 <a href="">Volver a los contenidos☝️</a>
         </article>
+        
         <br>
     </div>
 </body>
