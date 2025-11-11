@@ -5,6 +5,17 @@
     
 }
 
+.header-estilo{
+    background-color: rgb(0, 112, 190);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100px;
+    padding: 5px 15px;
+}
+
 /*Estilos para el header*/
 .header-format {
      background-color: rgb(0, 112, 190);
@@ -20,6 +31,7 @@
     align-items: center;
   
 }
+
 
 .header-format div{
     display: flex;
@@ -50,6 +62,24 @@
     background-color: rgb(30, 99, 148);
 }
 
+.nombre-tema a{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nombre-tema a:hover{
+    color: rgb(40, 47, 187);
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.duracion-tema {
+    font-size: 20px;
+    color: rgb(101, 102, 104);
+    font-style: italic;
+}
+
+
 
 
 /*Estilo logo plenumsoft*/
@@ -78,7 +108,11 @@
     margin: 0 0 0 4%;
 }
 
-.body-padding{
+.body-padding-md{
+    padding-top: 5%;
+}
+
+.body-padding-lg{
     padding-top: 8%;
 }
 
@@ -122,6 +156,27 @@ h1{
     
 }
 
+.mi-tabla{
+    border: thin solid rgb(101, 102, 104);
+    border-radius: 20px;
+}
+
+.mi-tabla th{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 112, 190);
+}
+.mi-tabla th,
+.mi-tabla td{
+    border: thin solid rgb(101, 102, 104);
+}
+
+.mi-tabla td{
+    width: 50%;
+    
+}
+
+
 
 .subtitle-format h2{
     font-weight: bold;
@@ -135,6 +190,13 @@ h1{
  }
 
 
+.topicos{
+    background-color: rgb(0, 112, 190);
+}
+.topicos h5{
+    font-weight: bold;
+    color: white;
+}
 
 .non-hypertext-view a{
     text-decoration: none;
@@ -214,6 +276,29 @@ h1{
     
 }
 
+.article-format h1{
+    font-weight: bold;
+
+}
+
+.subtitulos h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(0, 112, 190);
+    border: medium solid rgb(0, 112, 190);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0 10px;
+
+}
+pre{
+    margin:0;
+    padding:10px;
+    background-color: #eee;
+    overflow: auto;
+}
+
 .article-format>h3{
     color: rgb(15, 20, 99);
     font-size: 50px;
@@ -223,23 +308,29 @@ h1{
 
 .article-format h4{
     font-size: 25px;
+    font-weight: bold;
+}
+
+.max-font-size{
+    font-size: 1000%;
+    font-weight: bold;
 }
 
 .menu-contenidos{
     margin: 2% 0 0 0;
-    display: flex;
+    
     height: 270px;
     width: 100%;
-    border-radius: 40px;
-    align-items: center;
+    /*border-radius: 40px;*/
+    
     border: medium solid rgb(71, 140, 201);
     padding: 0 0 0 0;
 }
 
 .menu-contenidos h2{
     color: rgb(101, 102, 104);
+    font-weight: bold;
    
-    font-style: italic;
 }
 
 .menu-contenidos>p{
@@ -648,11 +739,7 @@ Estilos para tablas*/
 
 .card{
     border: thick solid rgba(55, 131, 185, 0.459);
-    
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px;
-   
+    border-radius: 20px;   
 }
 
 .contenedor-mayor{
@@ -740,3 +827,9 @@ Estilos para tablas*/
     height: 450px;
     
 }
+
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"

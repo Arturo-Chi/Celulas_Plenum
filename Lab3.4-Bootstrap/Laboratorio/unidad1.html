@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio 3.3. Práctica con CSS</title>
+    <title>Unidad 1 - Laboratorio Bootstrap</title>
     <meta name="descripcion" content = "Contenidos de la lección $">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="src/custom.css">
 
 </head>
-<body class = "body-padding">
+<body class = "body-padding-lg">
            
    
     <div class="menu-wrapper">
-        <header class ="header-format shadow event">
-            <img src="images/lateral-bar.svg" alt="lateral-menu" class="menu-toggle-evento">
-            <img src = "images/celulas_plenumsoft.svg", alt="plenumsfot_academy">
-            <div>
-                <img src = "images/itescam_logo.svg", alt="itescam_logo">
-                <img src = "images/tecnm_logo.svg", alt = "tecnm_logo">
-        
-            </div>
-
+             
+        <header class="header-estilo shadow">
+            
+            <div class="container-fluid row w-100 h-100">
+                <div class="col-lg-9 col-md-9 d-flex">
+                        <img src="images/lateral-bar.svg" alt="lateral-menu" class="menu-toggle-evento img-fluid">
+                        <img class="img-fluid ps-5" src="images/celulas_plenumsoft.svg" , alt="plenumsfot_academy">
+                    </div>
+                    <div class="col-lg-3 col-md-3 d-flex flex-row-reverse">
+                        
+                        <img class="img-fluid d-sm-none d-md-block d-none d-sm-block" src="images/tecnm_logo.svg" alt="tecnm_logo">
+                        <img class="img-fluid d-sm-none d-md-block d-none d-sm-block" src="images/itescam_logo.svg" alt="itescam_logo">
+                    </div>
+                </div>
         </header>
-        
 
 
         <aside class="lateral-menu shadow non-hypertext-view non-list-view event">
@@ -42,190 +46,307 @@
     
 
 
-    <div class="body-format">
-        <h1> PROGRAMA CÉLULAS PLENUM</h1>
+    <main class="body-format">
+        <h1> Inducción al Programa Células Plenum</h1>
        
-        <div class="menu-contenidos non-hypertext-view non-list-view elemento-seleccionable seleccion-elemento fuente-elemento-seleccionable">
-            <p>1</p>
-            <img src="images/assets/induccion.svg" alt="unidad1-induccion">
-            <ul>
-                <h2>Inducción al Programa Células Plenum</h2>
-                <li><a href="unidad1.html#tema1">1.1 Inducción a la Ingeniería de Requerimientos</a></li>
-                <li><a href="unidad1.html#tema2">1.2 Ingeniería de Requerimientos</a></li>
-                <li><a href="unidad1.html#tema3">1.3 Introducción a la Arquitectura de Software</a></li>
-                <li><a href="unidad1.html#tema4">1.4 Patrones de Diseño</a></li>
-            </ul>
-           
-        </div>
 
-        <hr>
-
-        <article id="tema1" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>1.1 Introducción a la Ingeniería de Requerimientos</h3>
-            
-            <div class="estilo-uno estilo-letra-articulo">
-                <div>
-                    <p>
-                        Es la rama enfocada en que el desarrollo de software se realice de manera ordenada, sistemática y aplicando la reutilización
-                    </p>
-
-                    <h4>¿Por qué se le considera una ingeniería?</h4>
-                   
-
-                    <p>Pese a que en muchos casos, los desarrolladores reinventan sus soluciones y tratan a cada proyecto como algo nuevo, se ha buscado usar 
-                        métodos probados así como elementos ya existentes para evitar empezar desde cero con cada solución
-                    </p>
-
-                    <h4>El papel del ingerniero de Software</h4>
-                   
-
-                    <p>Un ingeniero de software es aquel encargado de construir el comportamiento y las propiedades del hardware necesarias para su uso específico.
-                        Además, de por supuesto, escribir las descripciones necesarias sobre el programa.
-                    </p>
-
-                    <ol>
-                        <li class="item">Documenta requerimientos funcionales</li>
-                        <li class="item">Modela el Sistema con descripciones abstractas</li>
-                        <li class="item">Verifica que el software cumpla con su diseño</li>
-                        <li class="item">Divide el desarrollo para trabajo en paralelo</li>
-                    </ol>
-
-                    <h4>Buenas prácticas en la gestión de proyectos</h4>
-                        
-                    <ol>
-                        <li>Definir el alcance, en cuanto a Objetico, límites y restricciones</li>
-                        <li>Plan general y cronograma con hitos</li>
-                        <li>Estimación de costos y esfuerzos</li>
-                        <li>Planificar el entorno de trabajo y el equipo humano</li>
-                        <li>Identificación de riesgos y recursos</li>
-                    </ol>
+        <div class="row menu-contenidos non-hypertext-view non-list-view elemento-seleccionable seleccion-elemento">
+            <div class="col-lg-1 bg-secondary col-sm-1 col-xs-1">
+                <div class="w-100 d-flex h-100 w-100 justify-content-center align-items-center">
+                    <p class="max-font-size text-white">1</p>
                 </div>
-
-                <img class="image-format image-in-line" src="images/unidad1/1.1/descripciones.png">
-
             </div>
-            <a href="">Volver a los contenidos☝️</a>
-
-        </article>
-        
-        <hr>
-
-        <article id="tema2" class="article-format estilo-subtitulos vuelta-inicio">
-            
-            <h3 >1.2 Ingeniería de Requerimientos</h3>
-            
-            <div class = "dos-columnas estilo-letra-articulo video-borde" >
-                
-                <div>
-                    <div>
-                        <h4>¿Qué son los requerimientos?</h4>
-                        <p>Los requerimientos describen qué <b>debe hacer el sistema y cómo debe comportarse</b>, según las necesidades del usuario.</p>
-                        <p>Se redactan en lenguaje natural y se clasifican en:</p>
-                        <ul>
-                            <li>Funcionales</li>
-                            <li>No Funcionales</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Principios clave:</h4>
-                        <p><b><i>Conocer el negocio detrás del sistema:</i></b> Se busca contribuir al objetivo comercial</p>
-                        <p><b><i>Entender el dominio de la aplicación:</i></b> Delimitar cuál es el sector industrial para el que se está desarrollando</p>
-                        <p><b><i>Definir requerimientos funcionales y no funcionales:</i></b> Funciones y restricciones con las que tiene que cumplir el sistema</p>
-                        <p><b><i>Uso de prototipos:</i></b> Permiten al cliente entender hacia dónde va el sistema dando una visualización de funcionalidad limitada</p>
-                    </div>
+            <div class="col-lg-2 border d-sm-none d-md-block d-none d-sm-block d-md-none d-lg-block">
+                <div class="w-100 d-flex h-100 w-100 justify-content-center">
+                    <img class="img-fluid" src="images/assets/induccion.svg" alt="unidad1-induccion">
                 </div>
-
-                <iframe 
-                    src="https://www.youtube.com/embed/TRp3ZkjKtj8" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-               
             </div>
-            <a href="">Volver a los contenidos☝️</a>
- 
-        </article>
-               
-        <hr>
-
-        <article id="tema3" class="article-format estilo-letra-articulo estilo-subtitulos vuelta-inicio">
-            <h3 >1.3 Introducción a la Arquitectura de Software</h3>
-            <p>
-                La <b><i>Arquitectura de Software</i></b> Es la estructura fundamental de un sistema: cómo se divide en componentes, cómo interactúan y cómo evolucionan.
-            </p>
-            <p>
-                Su propósito es permitir “<b>el diseño para el cambio</b>”, es decir, que el sistema pueda modificarse sin perder calidad.
-            </p>
-
-            <div class="dos-columnas  video-borde">
-                <div>
-                    <h4>Elementos de la Arquitectura</h4>
-                    <ul id="menu">
-                        <li class="item"><b>Componentes: </b>módulos, bibliotecas y servicios</li>
-                        <li class="item"><b>Interfaz: </b>Capa de comunicación entre los clientes</li>
-                        <li class="item"><b>Relaciones: </b>Cómo es que los módulos se conectan y colaboran entre sí</li>
-
+            <div class="col-lg-9 border col-sm-11 col-xs-11">
+                <div class="w-100 d-flex h-100 w-100 align-items-center">
+                    <ul>
+                        <li><a href="unidad1.html#tema1">1.1 Inducción a la Ingeniería de Requerimientos</a></li>
+                        <li><a href="unidad1.html#tema2">1.2 Ingeniería de Requerimientos</a></li>
+                        <li><a href="unidad1.html#tema3">1.3 Introducción a la Arquitectura de Software</a></li>
+                        <li><a href="unidad1.html#tema4">1.4 Patrones de Diseño</a></li>
                     </ul>
-
-                    <h4>Arquitectura de Software vs. Arquitectura del Sistema</h4>
-                    <p>
-                        La arquitectura del sistema considera todos los componentes de un sistema informático, incluyendo hardware, software, redes y dispositivos de comunicación, con el objetivo de garantizar que todos los elementos trabajen juntos de manera eficiente y armoniosa.
-                        En contraste, la arquitectura del software se centra exclusivamente en la estructura y organización del software dentro de ese sistema, definiendo cómo se organizan y comunican sus componentes para cumplir con los requisitos técnicos y comerciales.
-                    </p>
-
-                    <p>
-                        La arquitectura del sistema abarca tanto el hardware como el software, así como la infraestructura de red y otros subsistemas interconectados, y se ocupa de aspectos como la escalabilidad, la interoperabilidad y la seguridad del sistema en su conjunto.
-                        Por otro lado, la arquitectura del software se enfoca en la modularidad, la separación de preocupaciones, la reutilización de componentes y la facilidad de mantenimiento, elementos clave para garantizar que el software sea escalable, seguro y de alta calidad
-                    </p>
-
                 </div>
-                
-                    <!--<h4>Estilos Arquitectónicos</h4>-->
-                    <iframe  src="https://www.youtube.com/embed/PKyTFZtRztk?si=fBGX1VVbsBjvOatk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
             </div>
-            <a href="">Volver a los contenidos☝️</a>
-      
-        </article>   
-       
+
+        </div>
         <hr>
 
-        <article id="tema4" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>1.4 Patrones de Diseño</h3>
-            <section class="dos-columnas estilo-letra-articulo video-borde dimensiones">
-                
-                <div class="video-dimensiones">
-                    <h4>El Patrón singleton</h4>
-                    <iframe src="https://www.youtube.com/embed/GGq6s7xhHzY?si=ICCEXADG-oWgkXpM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-                </div>
-                <div>
+        <article class="article-format vuelta-inicio subtitulos" id="tema1">   
+            <div class="row ">
+                <!--Columna Izquierda-->
+                <div class="col-lg-6">
                     
-                    <p>Los <b>Patrones de Diseño</b>, pueden entenderse como soluciones comprobadas a problemas
-                    recurrentes en el desarrollo de software. Fomentando la reusabilidad, mantenibilidad y el rendimiento del código.</p>
-                    <p>Nacen de la observación de problemas comunes y se formalizan para ser aplicados en distintos contextos</p>
-                    <img src="images/unidad1/1.4/patrones-diseno" alt="patrones-diseno">
-                </div>
-                
+                    <div class="col-12 col-lg-12">
+                        <h3>Introducción a la Ingeniería de Requerimientos</h3>
+    
+                    </div>
 
-            </section>
-                 <a href="">Volver a los contenidos☝️</a>
+                    <div class="row h-100">
+                        <div class="col-12 col-lg-12">
+                            <p>
+                                Es la rama enfocada en que el desarrollo de software se realice de manera ordenada, sistemática y aplicando la reutilización
+                            </p>
+        
+                            <h4>¿Por qué se le considera una ingeniería?</h4>
+                            
+        
+                            <p>Pese a que en muchos casos, los desarrolladores reinventan sus soluciones y tratan a cada proyecto como algo nuevo, se ha buscado usar 
+                                métodos probados así como elementos ya existentes para evitar empezar desde cero con cada solución
+                            </p>
+                            <p>
+                                Un requerimiento es una descripción clara y detallada de una necesidad, característica o funcionalidad que un sistema debe cumplir para satisfacer las expectativas de los usuarios y las metas del proyecto. En el contexto del desarrollo de software, los requerimientos sirven como guía para diseñar, implementar y validar soluciones tecnológicas.
+                            </p>
+                            <p>Los requerimientos son esenciales porque establecen un entendimiento común entre los stakeholders y el equipo de desarrollo, 
+                                reduciendo riesgos y garantizando que el producto final cumpla con las expectativas definidas.</p>
+                        </div>
+
+                        <div class="col-lg-6 px-4">
+                            <h4 class="text-center">El Ingeniero de Software</h4>
+        
+                            <p>Un ingeniero de software es aquel encargado de construir el comportamiento y las propiedades del hardware necesarias para su uso específico.
+                                Además, de por supuesto, escribir las descripciones necesarias sobre el programa.
+                            </p>
+        
+                            <ol>
+                                <li class="item">Documenta requerimientos funcionales</li>
+                                <li class="item">Modela el Sistema con descripciones abstractas</li>
+                                <li class="item">Verifica que el software cumpla con su diseño</li>
+                                <li class="item">Divide el desarrollo para trabajo en paralelo</li>
+                            </ol>
+    
+    
+                        </div>
+                        <div class="col-lg-6 px-4">
+    
+                            <h4 class="text-center">Buenas prácticas</h4>
+                                
+                            <ol>
+                                <li>Definir el alcance, en cuanto a Objetico, límites y restricciones</li>
+                                <li>Plan general y cronograma con hitos</li>
+                                <li>Estimación de costos y esfuerzos</li>
+                                <li>Planificar el entorno de trabajo y el equipo humano</li>
+                                <li>Identificación de riesgos y recursos</li>
+                            </ol>
+                        </div>
+                    </div>      
+                </div>
+
+                <!--Columna Derecha-->
+                <div class="col-lg-6">
+                    <img class="img-fluid rounded-circle" src="images/unidad1/1.1/descripciones.png">
+                </div>
+            </div>
+
+            <!--Segunda Fila-->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+                </div>
+            </div>
+            
         </article>
+        <hr>
+
+
+        <article class="article-format vuelta-inicio subtitulos" id="tema2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Ingeniería de Requerimientos</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <!--Columna Izquierda-->
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-12 col.-lg-12">
+                            <h4>¿Qué son los requerimientos?</h4>
+                            <p>Los requerimientos describen qué <b>debe hacer el sistema y cómo debe comportarse</b>, según las necesidades del usuario.</p>
+                            <p>Se redactan en lenguaje natural y se clasifican en:</p>
+                            <ul>
+                                <li>Funcionales</li>
+                                <li>No Funcionales</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-12 col-lg-12">
+                            <h4>Principios clave:</h4>
+                            <p><b><i>Conocer el negocio detrás del sistema:</i></b> Se busca contribuir al objetivo comercial</p>
+                            <p><b><i>Entender el dominio de la aplicación:</i></b> Delimitar cuál es el sector industrial para el que se está desarrollando</p>
+                            <p><b><i>Definir requerimientos funcionales y no funcionales:</i></b> Funciones y restricciones con las que tiene que cumplir el sistema</p>
+                            <p><b><i>Uso de prototipos:</i></b> Permiten al cliente entender hacia dónde va el sistema dando una visualización de funcionalidad limitada</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Columna Derecha-->
+                <div class="col-lg-8">
+                    <div class="ratio ratio-4x3">
+                        <iframe
+                            class="w-100 h-100"
+                            src="https://www.youtube.com/embed/TRp3ZkjKtj8" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
+        <hr>
+       
+
+        <article class="article-format vuelta-inicio subtitulos" id="tema3">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Introducción a la Arquitectura de Software</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <!--Columna Izquierda-->
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-12 col.-lg-12">
+                            <h4>Elementos de la Arquitectura</h4>
+                            <ul id="menu">
+                                <li class="item"><b>Componentes: </b>módulos, bibliotecas y servicios</li>
+                                <li class="item"><b>Interfaz: </b>Capa de comunicación entre los clientes</li>
+                                <li class="item"><b>Relaciones: </b>Cómo es que los módulos se conectan y colaboran entre sí</li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col-12 col-lg-12">
+                            <h4>Arquitectura de Software vs. Arquitectura del Sistema</h4>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                     <p>
+                                        La arquitectura del sistema considera todos los componentes de un sistema informático, incluyendo hardware, software, redes y dispositivos de comunicación, con el objetivo de garantizar que todos los elementos trabajen juntos de manera eficiente y armoniosa.
+                                        En contraste, la arquitectura del software se centra exclusivamente en la estructura y organización del software dentro de ese sistema, definiendo cómo se organizan y comunican sus componentes para cumplir con los requisitos técnicos y comerciales.
+                                    </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p>
+                                        La arquitectura del sistema abarca tanto el hardware como el software, así como la infraestructura de red y otros subsistemas interconectados, y se ocupa de aspectos como la escalabilidad, la interoperabilidad y la seguridad del sistema en su conjunto.
+                                        Por otro lado, la arquitectura del software se enfoca en la modularidad, la separación de preocupaciones, la reutilización de componentes y la facilidad de mantenimiento, elementos clave para garantizar que el software sea escalable, seguro y de alta calidad
+                                    </p> 
+                                </div>
+                            </div>
+                           
+
+                               
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Columna Derecha-->
+                <div class="col-lg-6">
+                    <div class="ratio ratio-4x3">
+                        <iframe src="https://www.youtube.com/embed/PKyTFZtRztk?si=fBGX1VVbsBjvOatk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article>
+        <hr>
+
+
+        <article class="article-format vuelta-inicio subtitulos" id="tema4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Patrones de Diseño</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                
+                <!--Columna Izquierda-->
+                <div class="col-lg-5">
+                    <div class="col-12 col-lg-12">
+                        <h4>El Patrón Singleton</h4>
+                    </div>
+                    <div class="ratio ratio-4x3">
+                        <iframe 
+                            src="https://www.youtube.com/embed/GGq6s7xhHzY?si=ICCEXADG-oWgkXpM" title="YouTube video player"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!--Columna Derecha-->
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col-12 col.-lg-12">
+                            <p>
+                                Los <b>Patrones de Diseño</b>, pueden entenderse como soluciones  comprobadas a problemas recurrentes en el desarrollo de software. Fomentando la reusabilidad, mantenibilidad y el rendimiento del código.
+                            </p>
+                            <p>
+                                Nacen de la observación de problemas comunes y se formalizan para ser aplicados en distintos contextos
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-lg-12">
+                            <h4>Principios clave:</h4>
+                            <p><b><i>Conocer el negocio detrás del sistema:</i></b> Se busca contribuir al objetivo comercial</p>
+                            <p><b><i>Entender el dominio de la aplicación:</i></b> Delimitar cuál es el sector industrial para el que se está desarrollando</p>
+                            <p><b><i>Definir requerimientos funcionales y no funcionales:</i></b> Funciones y restricciones con las que tiene que cumplir el sistema</p>
+                            <p><b><i>Uso de prototipos:</i></b> Permiten al cliente entender hacia dónde va el sistema dando una visualización de funcionalidad limitada</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
+        <hr>
+
         
         <br>
-    </div>
+    </main>
 </body>
 
 
-<footer class="footer-format">
-    <p>
-        Designed By <b><i>Iván Arturo Chi Mut</i></b>
-    </p>
-    <p>
-        @2025 Células Plenum | Micrositio HTML Laboratorio 3.2-3.3
-    </p>
+<footer class="footer-format row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <p>
+            Designed By <b><i>Iván Arturo Chi Mut</i></b>
+        </p>
+        <p>
+            arturochi_m@outlook.com
+        </p>
+
+    </div>
 </footer>
 
 </html>

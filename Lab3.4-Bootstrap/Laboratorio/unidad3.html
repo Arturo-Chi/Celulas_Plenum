@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio 3.3. Práctica con CSS</title>
+    <title>Unidad 3 - Laboratorio Bootstrap</title>
     <meta name="descripcion" content = "Contenidos de la lección $">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="src/custom.css">
 </head>
-<body class="body-padding">
+<body class="body-padding-lg">
     
 
     <div class="menu-wrapper">
-        <header class ="header-format shadow event">
-            <img src="images/lateral-bar.svg" alt="lateral-menu" class="menu-toggle-evento">
-            <img src = "images/celulas_plenumsoft.svg", alt="plenumsfot_academy">
-            <div>
-                <img src = "images/itescam_logo.svg", alt="itescam_logo">
-                <img src = "images/tecnm_logo.svg", alt = "tecnm_logo">
-        
-            </div>
-
+     
+        <header class="header-estilo shadow">
+            
+            <div class="container-fluid row w-100 h-100">
+                <div class="col-lg-9 col-md-9 d-flex">
+                        <img src="images/lateral-bar.svg" alt="lateral-menu" class="menu-toggle-evento img-fluid">
+                        <img class="img-fluid ps-5" src="images/celulas_plenumsoft.svg" , alt="plenumsfot_academy">
+                    </div>
+                    <div class="col-lg-3 col-md-3 d-flex flex-row-reverse">
+                        
+                        <img class="img-fluid d-sm-none d-md-block d-none d-sm-block" src="images/tecnm_logo.svg" alt="tecnm_logo">
+                        <img class="img-fluid d-sm-none d-md-block d-none d-sm-block" src="images/itescam_logo.svg" alt="itescam_logo">
+                    </div>
+                </div>
         </header>
         
 
@@ -40,66 +45,85 @@
     </div>
     
 
-    <div class="body-format">
-        <h1> PROGRAMA CÉLULAS PLENUM</h1>
+    <main class="body-format">
+        <h1> Fundamentos de Programación Web</h1>
   
-        <div class="menu-contenidos non-hypertext-view non-list-view elemento-seleccionable fuente-elemento-seleccionable seleccion-elemento">
-            <p>3</p>
-            <img src="images/assets/programacion-web.svg" alt="unidad3-programacion-web">
-            <ul class="non-hypertext-view">
-                <h2> Unidad 3. Fundamentos de Programación Web</h2>
-                <li><a href="unidad3.html#tema1">3.1 HTTP (HyperText Transfer Protocol)</a></li>
-                <li><a href="unidad3.html#tema2">3.2 HTML</a></li>
-                <li><a href="unidad3.html#tema3">3.3 CSS</a></li>
-                <li><a href="unidad3.html#tema4">3.4 Bootstrap</a></li>
-                <li><a href="unidad3.html#tema5">3.5 JavaScript</a></li>
-    
-            </ul>
-
-
+         <div class="row menu-contenidos non-hypertext-view non-list-view elemento-seleccionable seleccion-elemento">
+            <div class="col-lg-1 bg-secondary col-sm-2 col-xs-2">
+                <div class="w-100 d-flex h-100 w-100 justify-content-center align-items-center">
+                    <p class="max-font-size text-white">3</p>
+                </div>
+            </div>
+            <div class="col-lg-2 border d-sm-none d-md-block d-none d-sm-block d-md-none d-lg-block">
+                <div class="w-100 d-flex h-100 w-100 justify-content-center">
+                    <img class="img-fluid" src="images/assets/programacion-web.svg" alt="unidad2-programacion">
+                </div>
+            </div>
+            <div class="col-lg-9 border col-sm-10 col-xs-10">
+                <div class="w-100 d-flex h-100 w-100 align-items-center">
+                    <ul>
+                        <li><a href="unidad3.html#tema1">3.1 HTTP - Hypertext Transfer Protocol</a></li>
+                        <li><a href="unidad3.html#tema2">3.2 HTML</a></li>
+                        <li><a href="unidad3.html#tema3">3.3 CSS</a></li>
+                        <li><a href="unidad3.html#tema4">3.4 Bootstrap</a></li>
+                        <li><a href="unidad3.html#tema5">3.5 JavaScript</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
         </div>
         <hr>
     
         
-        <article id="tema1" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>3.1 HTTP</h3>
-            
-            <table>
-                    <tr>
-                        <td>
-                            <p>Se trata del llamado y mundialmente conocido<b><i> Protocolo de Transferencia de Hipertexto</i></b>, bajo el cual, se rige todo tipo de comunicación dentro de la web.
+        
+        <article class="article-format vuelta-inicio subtitulos" id="tema1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>HTTP</h3>
+                </div>
+
+                <div class="col-lg-6">
+                    <p>Se trata del llamado y mundialmente conocido<b><i> Protocolo de Transferencia de Hipertexto</i></b>, bajo el cual, se rige todo tipo de comunicación dentro de la web.
                                 Se rige por 3 conceptos:
-                            </p>
-                            <ul>
-                                <li><b>Cliente-Servidor</b></li>
-                                <li><b>Protocolo sin Estado</b></li>
-                                <li><b>Dependencia de TCP/IP</b></li>
-                            </ul>             
-                            
-                            <h4>Servidores Web</h4>
-                            <p>Un servidor web es un sistema que procesa peticiones HTTP/HTTPS y entrega el contenido web solicitado</p>
+                    </p>
+                    <ul>
+                        <li><b>Cliente-Servidor</b></li>
+                        <li><b>Protocolo sin Estado</b></li>
+                        <li><b>Dependencia de TCP/IP</b></li>
+                    </ul>             
+                    
+                    <h4>Servidores Web</h4>
+                    <p>Un servidor web es un sistema que procesa peticiones HTTP/HTTPS y entrega el contenido web solicitado</p>
 
-                            <h4>Socket</h4>
-                            <p>Un <b>Socket</b> se define como la combinación de una dirección IP y un puerto para la comunicación entre un <i>cliente</i> y un <i>servidor</i></p>
-                            <p>
-                                Ya que precisamente, para que se dé una comunicación, incluso mediante HTTP, se debe de establecer una conexión <b><i>TCP/IP</i></b>, que viene necesitando dichos datos por parte del servidor
-                            </p>
-                        </td>
+                    <h4>Socket</h4>
+                    <p>Un <b>Socket</b> se define como la combinación de una dirección IP y un puerto para la comunicación entre un <i>cliente</i> y un <i>servidor</i></p>
+                    <p>
+                        Ya que precisamente, para que se dé una comunicación, incluso mediante HTTP, se debe de establecer una conexión <b><i>TCP/IP</i></b>, que viene necesitando dichos datos por parte del servidor
+                    </p>
+                    <h4>Arquitectura de una Aplicación Web</h4>
+                    <ul>
+                        <li>Todo en un servidor.</li>
+                        <p>Servidor web y base de datos en una misma máquina, ideal para desarrollo</p>
+                        <li>Separación de componentes.</li>
+                        <p>El servidor web y la base de datos se encuentran en máquinas distintas para un mejor rendimiento</p>
+                        <li>Cloud Computing.</li>
+                        <p>Se tienen múltiples servidores web gestionados por un balanceador de estados</p>
+                        <li>Granjas de Servidores.</li>
+                        <p>Se incluyen plataforma con infraestructuras complejas de servicios escalables, como AWS</p>
+                    </ul>
+                    
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                    <div class="ratio ratio-4x3">
+                        <iframe src="https://www.youtube.com/embed/vG4LLrLXPU8?si=IvRdl6sFK9EYg6-D&amp;start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>  
+      
+            <div class="row">
 
-                        <td>
-                            <!--<p>Bajo el uso de 4 métodos:</p>
-                            <img src="images/unidad3/3.1/metodosHTTP.png" alt="metodos_http">-->
-                            <div class="contenedor-video">
-                                <iframe class="imagen-generica" src="https://www.youtube.com/embed/vG4LLrLXPU8?si=IvRdl6sFK9EYg6-D&amp;start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            
-                        </td>
-                    </tr>
 
-            </table>
-
-            <section class="dos-columnas contenedores-iguales">
-                <div>
+                <div class="col-lg-12">
                     <h4>Estructura de una URL</h4>
                         <p>Una <b>URL</b>, <i>(Uniform Resource Locator) es el elemento necesario por el que todo comienza para que un navegador sepa donde puede acceder a un recurso dentro de la web.</i></p>
                         <p>Se conforma por 4 partes: <i> scheme://domain_port/path?query_string#fragment_id</i></p>
@@ -121,105 +145,158 @@
                             </tr>
                         </table>
                 </div>
-                <div>
-                    <h4>Arquitectura de una Aplicación Web</h4>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
+        <hr>
+
+        <article class="article-format vuelta-inicio subtitulos" id="tema2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>HTML</h3>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="ratio ratio-4x3">
+                        <iframe src="https://www.youtube.com/embed/10GHKjgQIR0?si=PB6MrJVNaPip2_Gb&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <hb></hb>
+                    <hb></hb>
+                    <hb></hb>
+                    <hb></hb>
                     <ul>
-                        <li>Todo en un servidor.</li>
-                        <p>Servidor web y base de datos en una misma máquina, ideal para desarrollo</p>
-                        <li>Separación de componentes.</li>
-                        <p>El servidor web y la base de datos se encuentran en máquinas distintas para un mejor rendimiento</p>
-                        <li>Cloud Computing.</li>
-                        <p>Se tienen múltiples servidores web gestionados por un balanceador de estados</p>
-                        <li>Granjas de Servidores.</li>
-                        <p>Se incluyen plataforma con infraestructuras complejas de servicios escalables, como AWS</p>
+                        <li>Declarar el doctype</li>
+                        <li>Cierre de etiquetas</li>
+                        <li>Etiquetas con minúsculas</li>
+                        <li>Atributo alt en imágenes</li>
+                        <li>Identación de etiquetas</li>
+                        <li>No poner estilos en el documento HTML</li>
+                        <li>No usar divs para todod</li>
+                        <li>No poner el valor de los atributos booleanos</li>
+                        <li>Declarar codificación de caracteres</li>
+                        <li>Revisar etiquetas especiales existentes</li>
                     </ul>
 
+                </div>
+            </div>  
+      
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
 
                 </div>
-
-            </section>
-
-  
-
-            <a href="">Volver a los contenidos☝️</a>   
-        </article>
+            </div>
+        </article> 
         <hr>
 
-        <article id="tema2" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>3.2 HTML</h3>
+
         
-            <section class="dos-columnas">
-                <div class="contenedor-mayor-video fondo-blanco">
-                    <iframe class="imagen-generica-cuatro" src="https://www.youtube.com/embed/sIO8kb5b6D0?si=SS8H8ExVU0sTkwwW&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </iframe>
+        <article class="article-format vuelta-inicio subtitulos" id="tema3">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Bootstrap</h3>
                 </div>
-                <div>
-                    <h4>Buenas Prácticas con HTML</h4>
-                    <p>Declarar el doctype</p>
-                    <p>Cierre de etiquetas</p>
-                    <p>Etiquetas con minúsculas</p>
-                    <p>Atributo alt en imágenes</p>
-                    <p>Identación de etiquetas</p>
-                    <p>No poner estilos en el documento HTML</p>
-                    <p>No usar divs para todod</p>
-                    <p>No poner el valor de los atributos booleanos</p>
-                    <p>Declarar codificación de caracteres</p>
-                    <p>Revisar etiquetas especiales existentes</p>
+
+                <div class="col-lg-12">
+                    <p>
+                        Veíamos antes en HTML, que este era exclusivamente para la definición de la estructura y contenidos de una página web.
+                    </p>
+                    <p>
+                        Ahora, para lograr darle más detalles a la aplicación web, se usa CSS.
+                        Un lenguaje de definición de presentación de los contenidos de una página web.
+                    </p>
+
+                    <p>
+                        Cascading Style Sheets
+                    </p>
+                    <p>
+                        Existen varios niveles de CSS, 1, 2, etc. El más aceptados por loss navegadores, es el nivel 2.1 que actualmente cuenta con alrededor de 200 declaraciones diferentes.
+                    </p>
                 </div>
-                
+            </div>  
+      
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
 
-            </section>
-            
-
-            
-            <a href="">Volver a los contenidos☝️</a>
-        </article>
+                </div>
+            </div>
+        </article> 
         <hr>
-
-        <article id="tema3" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>3.3 CSS</h3>
-            <p>
-                Veíamos antes en HTML, que este era exclusivamente para la definición de la estructura y contenidos de una página web.
-            </p>
-            <p>
-                Ahora, para lograr darle más detalles a la aplicación web, se usa CSS.
-                Un lenguaje de definición de presentación de los contenidos de una página web.
-            </p>
-
-            <p>
-                Cascading Style Sheets
-            </p>
-            <p>
-                Existen varios niveles de CSS, 1, 2, etc. El más aceptados por loss navegadores, es el nivel 2.1 que actualmente cuenta con alrededor de 200 declaraciones diferentes.
-            </p>
-            <!--<h4>Reglas del lenguaje de CSS</h4>
-            <img src="images/unidad3/3.3/css_reglas.png">-->
-            <a href="">Volver a los contenidos☝️</a>
-        </article>
-        <hr>
-
-        <article id="tema4" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>3.4 Bootstrap</h3>
-            <div class="contenedor-mayor-video fondo-blanco">
-                   <iframe class="imagen-generica-cuatro" src="https://www.youtube.com/embed/svPDhmXY1Yg?si=-7Mw7Hh-p1EcMV6y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+        
+ 
+        <article class="article-format vuelta-inicio subtitulos" id="tema4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Bootstrap</h3>
+                </div>
             </div>
 
-            <a href="">Volver a los contenidos☝️</a>
-        </article>
+           <div class="row">
+
+                <div class="col-lg-8 mt-4 offset-2">
+                    <div class="ratio ratio-4x3">
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/svPDhmXY1Yg?si=-7Mw7Hh-p1EcMV6y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+
+           </div>         
+      
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
         <hr>
 
-        <article id="tema5" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>3.5 JavaScript</h3>
-            
-            <div class="contenedor-mayor-video fondo-blanco">
-                <iframe class="imagen-generica-cuatro" src="https://www.youtube.com/embed/iXf90OstEK4?si=-krBICoip6gj4B-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <article class="article-format vuelta-inicio subtitulos" id="tema5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>JavaScript</h3>
+                </div>
             </div>
 
-            
-            <a href="">Volver a los contenidos☝️</a>
-        </article>
+           <div class="row">
+
+                <div class="col-lg-8 mt-4 offset-2">
+                    <div class="ratio ratio-4x3">
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iXf90OstEK4?si=-krBICoip6gj4B-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+
+           </div>         
+      
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
         <hr>
-    </div>
+
+
+
+
+
+    </main>
 
 </body>
 <footer class="footer-format">

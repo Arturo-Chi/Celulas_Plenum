@@ -1,129 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio 3.3. Práctica con CSS</title>
-    <meta name="descripcion" content = "Contenidos de la lección $">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    
+    <title>Laboratorio 3.4. Bootstrap</title>
+    <meta name="descripcion" content="Contenidos de la lección $">
+
+    <link rel="stylesheet" href="src/custom.css">
 
 
 
 </head>
-<body class="body-padding">
+
+<body class="body-padding-md">
+
+
     
-     
-    <div> 
-        <header class ="header-format shadow event">
-            
-            <img src = "images/celulas_plenumsoft.svg", alt="plenumsfot_academy">
-            <div>
-                <img src = "images/itescam_logo.svg" alt="itescam_logo" href="https://www.itescam.edu.mx/portal/" target = "_blank">
-                <img src = "images/tecnm_logo.svg" alt = "tecnm_logo">
-        
+    <header class="header-estilo shadow">
+
+        <div class="container-fluid row w-100 h-100">
+            <div class="col-lg-9 col-md-9 d-flex">
+                <img class="img-fluid" src="images/celulas_plenumsoft.svg" , alt="plenumsfot_academy">
+
+            </div>
+            <div class="col-lg-3 col-md-3 d-flex flex-row-reverse">
+                
+                <img class="img-fluid d-sm-none d-md-block d-none d-sm-block" src="images/tecnm_logo.svg" alt="tecnm_logo">
+                <img class="img-fluid d-sm-none d-md-block d-none d-sm-block" src="images/itescam_logo.svg" alt="itescam_logo">
             </div>
 
-        </header>
-    </div>
-   
+        </div>
+
+
+    </header>
+    
+
+
+
     <div>
-        <h1> PROGRAMA CÉLULAS PLENUM</h1>
-        <div class = "main-logo-format">
-            <img src = "images/plenum_image.svg">
-        </div >
+        <!--<h1> PROGRAMA CÉLULAS PLENUM</h1>-->
+
+
+
     </div>
 
-    <aside class="index-menu-format non-hypertext-view non-list-view subtitle-format">
-        <h2> Curso </h2>
-        <ul>
-            <li>
-                <div>
-                    <a href="unidad1.html">Módulo 1. Inducción al Programa Células Plenum</a>
-                    <p>1 Semana</p>
-                </div>
-                <div class="image-right"> 
-                    <img src="images/assets/induccion.svg" alt="">  
-                </div>
-                
-            </li>
-            
-            <hr>
-            <li>
-                <div>
-                    <a href="unidad2.html">Módulo 2. Fundamentos de Programación</a>
-                    <p>12 días</p>
-                </div>
-                <div class="image-right"> 
-                    <img src="images/assets/programacion.svg" alt="">  
-                </div>
-            </li>
-            <hr>
-            <li>
-                <div>
-                    <a href="unidad3.html">Módulo 3. Fundamentos de Programación Web</a>
-                    <p>22 días</p>
-                </div>
-                <div class="image-right"> 
-                    <img src="images/assets/programacion-web.svg" alt="">  
-                </div>
-            </li>
-            <hr>
-            <li>
-                <div>
-                    <a href="unidad2.html">Módulo 4. Angular</a>
-                    <p>8 días</p>
-                </div>
-                <div class="image-right"> 
-                    <img src="images/assets/angular.svg" alt="">  
-                </div>
-            </li>
-            <hr>
-            <li>
-                <div>
-                    <a href="">Módulo 5. C#</a>
-                    <p>15 días</p>
-                </div>
-                <div class="image-right"> 
-                    <img src="images/assets/c-sharp.svg" alt="">  
-                </div>
-            </li>
-            <hr>
-            <li>
-                <div>
-                    <a href="">Módulo 6. Flutter</a>
-                    <p>8 días</p>
-                </div>
-                <div class="image-right"> 
-                    <img src="images/assets/flutter.svg" alt="">  
-                </div>
-            </li>
-            <hr>
-            <li>
-               <div>
-                    <a href="">Módulo 7. Cómputo en la Nube</a>
-                    <p>10 días</p>
-                </div>
-                <div class="image-right"> 
-                    <img src="images/assets/cloud-computing.svg" alt="">  
-                </div>
-            </li>
-        </ul>
-    </aside>
+    <!--aside class="index-menu-format non-hypertext-view non-list-view subtitle-format"-->
+    <main class="non-hypertext-view  subtitle-format">
 
-  
+        <div class="container-fluid w-100">
+
+            <!--<div class="row px-5">
+                <div class="col-lg-12 d-none d-lg-block">
+                    <h2 class="w-100 px-5">Contenido del Curso</h2>
+                </div>
+            </div>
+            -->
+
+           
+            <div class="w-100 row mb-5">
+                <div class="col-lg-12 d-none d-sm-block d-sm-none d-md-block">
+                    <img class="img-fluid w-100 px-5" src="images/plenum_image.svg"
+                        alt="logo-plenum-academy">
+                </div>
+            </div>
+            
+
+
+            <div class="row px-5 nombre-tema">
+                <div class="col-lg-2 col-md-5 d-sm-none d-md-block d-none">
+                    <div class="container d-flex justify-content-center align-items-center">
+
+                        <img src="images/assets/induccion.svg" alt="" class="img-fluid h-100">
+                    </div>
+
+                </div>
+                <div class="col-lg-10 col-md-7 col-sm-12 col-sx-12">
+                    <a href="unidad1.html">Módulo 1. Inducción al Programa de Células Plenum</a>
+                    <p class="duracion-tema">Duración: 1 Semana</p>
+                </div>
+                <hr class="w-100 mt-3 mb-3">
+            </div>
+
+            <div class="row px-5 nombre-tema">
+                <div class="col-lg-2 col-md-5 d-sm-none d-md-block d-none d-sm-block">
+                    <div class="container d-flex justify-content-center align-items-center">
+
+                        <img src="images/assets/programacion.svg" alt="" class="img-fluid h-100">
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-7 col-sm-12 col-sx-12 px-3">
+                    <a href="unidad2.html">Módulo 2. Fundamentos de Programación </a>
+                    <p class="duracion-tema">Duración: 12 días</p>
+                </div>
+                <hr class="w-100 mt-3 mb-3">
+            </div>
+
+            <div class="row px-5 nombre-tema">
+                <div class="col-lg-2 col-md-5 d-sm-none d-md-block d-none d-sm-block">
+                    <div class="container d-flex justify-content-center align-items-center">
+
+                        <img src="images/assets/programacion-web.svg" alt="" class="img-fluid h-100">
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-7 col-sm-12 col-sx-12 px-3">
+                    <a href="unidad3.html">Módulo 3. Fundamentos de Programación Web</a>
+                    <p class="duracion-tema">Duración: 22 días</p>
+                </div>
+                <hr class="w-100 mt-3 mb-3">
+            </div>
+
+            <div class="row px-5 nombre-tema">
+                <div class="col-lg-2 col-md-5 d-sm-none d-md-block d-none d-sm-block">
+                    <div class="container d-flex justify-content-center align-items-center h-100">
+
+                        <img src="images/assets/angular.svg" alt="" class="img-fluid h-100">
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-7 col-sm-12 col-sx-12 px-3">
+                    <a href="">Módulo 4. Angular</a>
+                    <p class="duracion-tema">Duración: 8 días</p>
+                </div>
+                <hr class="w-100 mt-3 mb-3">
+            </div>
+
+            <div class="row px-5 nombre-tema">
+                <div class="col-lg-2 col-md-5 d-sm-none d-md-block d-none d-sm-block">
+                    <div class="container d-flex justify-content-center align-items-center h-100">
+
+                        <img src="images/assets/c-sharp.svg" alt="" class="img-fluid h-100">
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-7 col-sm-12 col-sx-12 px-3">
+                    <a href="">Módulo 5. C#</a>
+                    <p class="duracion-tema">Duración: 10 días</p>
+                </div>
+                <hr class="w-100 mt-3 mb-3">
+            </div>
+
+            <div class="row px-5 nombre-tema">
+                <div class="col-lg-2 col-md-5 d-sm-none d-md-block d-none d-sm-block">
+                    <div class="container d-flex justify-content-center align-items-center h-100">
+
+                        <img src="images/assets/flutter.svg" alt="" class="img-fluid h-100">
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-7 col-sm-12 col-sx-12 px-3">
+                    <a href="">Módulo 6. Flutter</a>
+                    <p class="duracion-tema">Duración: 15 días</p>
+                </div>
+                <hr class="w-100 my-4">
+            </div>
+
+            <div class="row px-5 nombre-tema">
+                <div class="col-lg-2 col-md-5 d-sm-none d-md-block d-none d-sm-block">
+                    <div class="container d-flex justify-content-center align-items-center h-100">
+
+                        <img src="images/assets/cloud-computing.svg" alt="" class="img-fluid h-100">
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-7 col-sm-12 col-sx-12 px-3">
+                    <a href="">Módulo 7. Cómputo en la Nube</a>
+                    <p class="duracion-tema">Duración: 8 días</p>
+                </div>
+                <hr class="w-100 mt-3 mb-3">
+            </div>
+
+        </div>
+    </main>
+
+
 
 </body>
 
-<footer class="footer-format">
-    <p>
-        Designed By <b><i>Iván Arturo Chi Mut</i></b>
-    </p>
-    <p>
-        arturochi_m@outlook.com
-    </p>
+
+<footer class="footer-format row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <p>
+            Designed By <b><i>Iván Arturo Chi Mut</i></b>
+        </p>
+        <p>
+            arturochi_m@outlook.com
+        </p>
+
+    </div>
 </footer>
+
 
 </html>

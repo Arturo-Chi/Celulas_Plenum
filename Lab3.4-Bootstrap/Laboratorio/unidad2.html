@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio 3.3. Práctica con CSS</title>
+    <title>Unidad 2 - Laboratorio Bootstrap</title>
     <meta name="descripcion" content = "Contenidos de la lección $">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="src/custom.css">
 </head>
-<body class="body-padding">
+<body class="body-padding-lg">
     
      
     <div class="menu-wrapper">
-        <header class ="header-format shadow event">
-            <img src="images/lateral-bar.svg" alt="lateral-menu" class="menu-toggle-evento">
-            <img src = "images/celulas_plenumsoft.svg", alt="plenumsfot_academy">
-            <div>
-                <img src = "images/itescam_logo.svg", alt="itescam_logo">
-                <img src = "images/tecnm_logo.svg", alt = "tecnm_logo">
-        
-            </div>
-
+       
+        <header class="header-estilo shadow">
+            
+            <div class="container-fluid row w-100 h-100">
+                <div class="col-lg-9 col-md-9 d-flex">
+                        <img src="images/lateral-bar.svg" alt="lateral-menu" class="menu-toggle-evento img-fluid">
+                        <img class="img-fluid ps-5" src="images/celulas_plenumsoft.svg" , alt="plenumsfot_academy">
+                    </div>
+                    <div class="col-lg-3 col-md-3 d-flex flex-row-reverse">
+                        
+                        <img class="img-fluid d-sm-none d-md-block d-none d-sm-block" src="images/tecnm_logo.svg" alt="tecnm_logo">
+                        <img class="img-fluid d-sm-none d-md-block d-none d-sm-block" src="images/itescam_logo.svg" alt="itescam_logo">
+                    </div>
+                </div>
         </header>
         
 
@@ -39,367 +44,370 @@
         </aside>
     </div>
 
-    <div class="body-format">
-        <h1 id="muestra-inicial"> PROGRAMA CÉLULAS PLENUM</h1>
+    <main class="body-format">
+        <h1>Fundamentos de Programación</h1>
 
-        <div class="menu-contenidos non-hypertext-view non-list-view elemento-seleccionable seleccion-elemento fuente-elemento-seleccionable" id="menu-contenidos">
-            <p>2</p>
-            <img src="images/assets/programacion.svg" alt="unidad2-programacion">
-            <ul>
-                <h2>Fundamentos de Programación</h2>
-                <li><a href="unidad2.html#tema1">2.1 Bases de Datos Relacionales</a></li>
-                <li><a href="unidad2.html#tema2">2.2 Normalización</a></li>
-                <li><a href="unidad2.html#tema3">2.3 SQL</a></li>
-                <li><a href="unidad2.html#tema4">2.4 Triggers</a></li>
-                <li><a href="unidad2.html#tema5">2.5 Programación Orientada a Objetos</a></li>
-                <li><a href="unidad2.html#tema6">2.6 Práctica de Java y MySQL</a></li>
-                <li><a href="unidad2.html#tema7">2.7 API</a></li>
-            </ul>
+        <div class="row menu-contenidos non-hypertext-view non-list-view elemento-seleccionable seleccion-elemento">
+            <div class="col-lg-1 bg-secondary col-sm-2 col-xs-2">
+                <div class="w-100 d-flex h-100 w-100 justify-content-center align-items-center">
+                    <p class="max-font-size text-white">2</p>
+                </div>
+            </div>
+            <div class="col-lg-2 border d-sm-none d-md-block d-none d-sm-block d-md-none d-lg-block">
+                <div class="w-100 d-flex h-100 w-100 justify-content-center">
+                    <img class="img-fluid" src="images/assets/programacion.svg" alt="unidad2-programacion">
+                </div>
+            </div>
+            <div class="col-lg-9 border col-sm-10 col-xs-10">
+                <div class="w-100 d-flex h-100 w-100 align-items-center">
+                    <ul>
+                        <li><a href="unidad1.html#tema1">2.1 Bases de Datos Relacionales</a></li>
+                        <li><a href="unidad2.html#tema2">2.2 Normalización</a></li>
+                        <li><a href="unidad2.html#tema3">2.3.SQL</a></li>
+                        <li><a href="unidad2.html#tema4">2.4 Trigers</a></li>
+                        <li><a href="unidad2.html#tema5">2.5 Programación Orientada a Objetos</a></li>
+                        <li><a href="unidad2.html#tema6">2.6 Práctica de Java y MySQL</a></li>
+                        <li><a href="unidad2.html#tema7">2.7 API</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <hr>
 
-        <article id="tema1" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>2.1 Bases de datos relacionales</h3>
-            <section class="estilo-letra-articulo"> 
-                <div>
-                    <h4>Bases y Datos</h4>
-                    <p>De manera sencilla podemos definir un dato, como una unidad mínima de información, hechos relacionados con cualquier tipo de objeto o sistema en consideración.
-                        Mientras que, una base de datos propiamente, podemos verla como una colección sistematizada de estos datos.
-                    </p>
+        <article class="article-format vuelta-inicio subtitulos" id="tema1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Bases de Datos Relacionales</h3>
                 </div>
-            </section>
+            </div>
 
-            
-            <section class="dos-columnas-desiguales estilo-letra-articulo">
-                
-
-                <div class="contenedor-video">
-                    <iframe src="https://www.youtube.com/embed/6S8A-1jBD5Y?si=IPVncEwCxbVQke-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    
-                    
-                </div>
-
-              
-                <div class="contenedor-mayor">
-                    
-
-                    <div>
-                        <h4>Tipos de Bases de Datos</h4>
-                        <p>Existen varios tipos de Bases de Datos, algunas de ellas son:</p>
-
-                        <ul class="menu-nombres-negritas">
-                        
-                            <li>Bases de datos navegacionales</li>
-                            <p>En estas, los datos están organizados en estructuras de red o incluso de árbol</p>
-                            <li>Bases de Datos jeráquicas</li>
-                            <p>Llevan una estructura de árbol con relaciones padre-hijo</p>
-                            <li>Bases de Datos Orientadas a Objetos</li>
-                            <p>Los datos se encuentran representados como objetos</p>
-                        </ul>
-
-                    </div>
-
-                    <div>
-                        <h4>Bases de Datos Relacionales</h4>
-                        <p>
-                            Su aparición se remonta a la década de 1970. Su principal característica es que la organización de los datos se encuentra en tablas relacionadas.
-                        </p>
-
-                        <label> Estructura</label>
-                        <ul >
-                            <li >Cada columna es un campo (El tipo de dato)</li>
-                            <li >Cada fila es un registro</li>
-
-                        </ul>
-
-                        <label> Claves</label>
-                        <ul class="nombres-negritas">
-                            <li><b>Clave Primaria.</b> Es el identificador único de cada registro</li>
-                            <li><b>Clave Foránea.</b> Es una referencia a la clave primaria de otra tabla</li>
-                        </ul>
-
-                    </div>
-                    
-                </div>
-                
-                
-            </section>
-            <a href="unidad2.html#muestra-inicial">Volver a los contenidos☝️</a>
-            
-        </article>
-        <hr>
-
-        <article id="tema2" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>2.2 Normalización</h3>
-            <section class="dos-columnas estilo-letra-articulo">
-                <div>
-                    <p>
-                        La normalización es un proceso esencial en el diseño 
-                        de bases de datos que busca eliminar redundancias
-                        y dependencias innecesarias. Su objetivo es organizar 
-                        los datos en tablas que sean coherentes y eficientes.
-                        <h4>Primera Forma Normal</h4>
-                        <p>Exige que cada columna contenga un valor único 
-                            y atómico, evitando listas dentro de una misma celda.</p>
-                        <h4>Segunda Forma Normal</h4>
-                        <p>Asegura que los campo no clave dependan de toda
-                             la clave primaria, mo de una parte</p>
-                        <h4>Tercera Forma Normal</h4>
-                        <p>Establece que todos los atributos no clave dependan
-                             directamente de la clave primaria, eliminando 
-                             dependencias transitivas</p>
-                    </p>
-                </div>
-
-                <div class="contenedor-video">
-                    <iframe src="https://www.youtube.com/embed/RlgbWESXySI?si=nKRxVxFmqfyvtNfN"
-                     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-                     clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                </div>
-                
-            </section>
-
-            <a href="">Volver a los contenidos☝️</a>
-        </article>
-        <hr>
-
-        <article id="tema3" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>2.3 SQL</h3>
-            <section class="estilo-letra-articulo">
-                <p>En este tema, se trabajaron diversas pruebas de Consultas de SQL. Al tener
-                    libertad de elección en cuanto al Sistema Gestor de Base de Datos, decicí usar
-                    el predeterminado de Windows, <b>Microsoft Acces</b>. Un sistema bastante completo
-                    en cierta medida y útil en la realización de los ejercicios.
-                </p>
-                
-                <h4>Diagrama de la Base de Datos en Access</h4>
-                <div class="contenedor-mayor-imagen">
-                     <img src="images/unidad2/2.3/lab2.3.png" alt="Base de Datos Laboratorio2.3">
-                </div>
-            </section>
-            <section class="estilo-letra-articulo">
-                <p>Los diferentes ejercicios tomaron como base consultas de lectura dentro la base de datos diseñada.
-                    Con casos como el de selección con la Primary y Foreign Key, o ciertos valores entre rangos:
-                </p>
-
-                <table class="tabla-dos-columnas">
-
-                   <tr>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 1. SELECT con PK y FK</h4>
-                                <pre><code>
-                                    SELECT Clientes.Empresa, Pedidos.Id_Pedido,
-                                    Pedidos.Fecha_Pedido, Pedidos.Enviado
-                                    FROM Clientes, Pedidos
-                                    WHERE Clientes.Id_Cliente = Pedidos.Id_Cliente;
-                                </code></pre>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 2. SELECT con BETWEEN</h4>       
-                                <pre><code>
-                                    SELECT Pedidos.Id_Pedido, Pedidos.Fecha_Pedido,
-                                    Pedidos.Forma_Pago
-                                    FROM Pedidos
-                                    WHERE Pedidos.Fecha_Pedido BETWEEN #06/01/2025# AND
-                                    #12/31/2025#;
-                                </code></pre>
-                            </div>
-                        </td>
-                   </tr>
-                   <tr>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 3. SELECT con LIKE</h4>
-                                <pre><code>
-                                    SELECT Clientes.Empresa, Clientes.Telefono, Clientes.Poblacion
-                                    FROM Clientes
-                                    WHERE Clientes.Poblacion LIKE "M*";
-                                </code></pre>
-                            </div>
-                            
-                        </td>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 4. SELECT con IN</h4>
-                                <pre><code>
-                                    SELECT Clientes.Empresa, Clientes.Telefono, Clientes.Poblacion,
-                                    Clientes.Direccion,
-                                    FROM Clientes
-                                    WHERE Clientes.Poblacion IN ("Mérida","Hecelchakán");
-                                </code></pre>
-                            </div>
-                        </td>
-                   </tr>
-                   <tr>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 5. SELECT con MAX</h4>
-                                <pre><code>
-                                    SELECT MAX(Precio) AS MayorPrecio
-                                    FROM Productos;
-                                </code></pre>
-                            </div>
-                            
-                        </td>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 6. SELECT con HAVING</h4>
-                                <pre><code>
-                                    SELECT Id_Cliente, COUNT(*) AS TOTAL
-                                    FROM Pedidos
-                                    GROUP BY Pedidos.Id_Cliente
-                                    HAVING COUNT(*) >1;
-                                </code></pre>
-                            </div>
-                            
-                        </td>
-                   </tr>
-                   <tr>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 7. INNER JOIN </h4>
-                                <p>El funcionamiento de una consulta de INNER JOIN, se basa en reflejaar siempre la información común que se encuentre en ambastablas que estén involucradas</p>
-                                <pre><code>
-                                    SELECT * FROM Clientes INNER JOIN Pedidos ON
-                                    Clientes.Id_Cliente = Pedidos.Id_Cliente;
-                                </code></pre>
-                            </div>
-                            
-                        </td>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 8. LEFT JOIN </h4>
-                                <p>Por otro lado, las consultas con Left Join, no solo devolverá los registros que estén en ambas tablas, sino también TODOS los registros que se encuentren en la tabla de la izquierda.</p>
-                                <pre><code>
-                                    SELECT Clientes.Empresa, Clientes.Id_Cliente,
-                                    Clientes.Poblacion, Clientes.Telefono
-                                    FROM Clientes Left JOIN Pedidos
-                                    ON Clientes.Id_Cliente = Pedidos.Id_Cliente;
-                                </code></pre>
-                            </div>
-                            
-                        </td>
-                   </tr>
-                   <tr>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 9. RIGHT JOIN </h4>
-                                <p>A diferencia del left Join, esta consulta realiza lo contrario. Pedidos mostrará también los registros que pudieron tener las dos tablas, sin mostrarnos algún registro de la tabla de clientes.</p>
-                                <pre><code>
-                                    SELECT Clientes.Empresa, Clientes.Id_Cliente,
-                                    Clientes.Poblacion, Clientes.Telefono
-                                    FROM Clientes Right JOIN Pedidos
-                                    ON Clientes.Id_Cliente = Pedidos.Id_Cliente;
-
-                                </code></pre>
-                            </div>
-                            
-                        </td>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 10. UNION </h4>
-                                <p>El modo funcionamiento de la unión es unir los campos seleccionados de dos o más tablas.</p>
-                                <pre><code>
-                                    SELECT Empresa, Poblacion
-                                    FROM Clientes
-                                    WHERE Poblacion = "Mérida"
-                                    UNION
-                                    SELECT Empresa, Poblacion
-                                    FROM Clientes
-                                    WHERE Poblacion = "Hecelchakán";                      
-                                </code></pre>
-                            </div>
-                        
-                        </td>
-                    </tr>
-                </table>
-
-               <!-- <table class="tabla-una-columna">
-                    <tr>
-                        <td>
-                            <div>
-                                <h4>Ejercicio 11. Subconsulta </h4>
-                                <pre><code>
-                                    SELECT Clientes.Empresa
-                                    FROM Clientes
-                                    WHERE Clientes.Id_Cliente IN (
-                                        SELECT Id_Cliente
-                                        FROM Pedidos
-                                        WHERE Pedidos.Forma_Pago = "Transferencia"
-                                    );
-                                </code></pre>
-                            </div>
-                        </td>
-                    </tr>
-                </table>-->
-                
-               
-
-                
-
-            </section>
-
-            <a href="">Volver a los contenidos☝️</a>
-        </article>
-        <hr>
-
-        <article id="tema4" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>2.4 Triggers</h3>
-            <section class="estilo-letra-articulo">
-                <h4>Base de Datos en SQL Server</h4>
-                <!--<table>
-                    <tr >
-                        <td>
+            <div class="row">
+                <!--Columna Izquierda-->
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-12 col.-lg-12">
+                            <h4>Bases y Datos</h4>
                             <p>
-                                Los "Trigger" no son más que un objeto almacenado en una base de datos que se ejecuta automáticamente cuando ocurre un evento específico en una tabla o vista.
+                                De manera sencilla podemos definir un dato, como una unidad mínima de información, hechos relacionados con cualquier tipo de objeto o sistema en consideración.
+                                Mientras que, una base de datos propiamente, podemos verla como una colección sistematizada de estos datos.
                             </p>
-                        </td>
-                        <td>
-                            <div><img src="images/unidad2/2.4/lab2.4.png" alt="BD en SQL Server"></div>
-                        </td>
-                    </tr>
-                </table>-->
-                <p>Un Trigger es un tipo de procedimiento almacenado especial que se ejecuta automáticamente (o se "dispara") en el servidor de la base de datos en respuesta a un evento específico.
-                    El objetivo principal de los triggers es hacer cumplir las reglas de negocio complejas, mantener la integridad de los datos y automatizar las acciones dentro de la base de datos.
-                </p>
-            </section>
+                        </div>
 
-            <section class="estilo-letra-articulo">
-                <h4>Trigger en INSERT</h4>
+                        <div class="col-12 col-lg-12">
+                            <h4>Tipos de Bases de Datos</h4>
+                            <p>Existen varios tipos de Bases de Datos, algunas de ellas son:</p>
+
+                            <ul class="menu-nombres-negritas">
+                            
+                                <li>Bases de datos navegacionales</li>
+                                <p>En estas, los datos están organizados en estructuras de red o incluso de árbol</p>
+                                <li>Bases de Datos jeráquicas</li>
+                                <p>Llevan una estructura de árbol con relaciones padre-hijo</p>
+                                <li>Bases de Datos Orientadas a Objetos</li>
+                                <p>Los datos se encuentran representados como objetos</p>
+                            </ul>
+
+                            <h4>Bases de Datos Relacionales</h4>
+                            <p>
+                                Su aparición se remonta a la década de 1970. Su principal característica es que la organización de los datos se encuentra en tablas relacionadas.
+                            </p>
+
+                            <label> Estructura</label>
+                            <ul >
+                                <li >Cada columna es un campo (El tipo de dato)</li>
+                                <li >Cada fila es un registro</li>
+
+                            </ul>
+
+                            <label> Claves</label>
+                            <ul class="nombres-negritas">
+                                <li><b>Clave Primaria.</b> Es el identificador único de cada registro</li>
+                                <li><b>Clave Foránea.</b> Es una referencia a la clave primaria de otra tabla</li>
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Columna Derecha-->
+                <div class="col-lg-6">
+                    <div class="ratio ratio-4x3">
+                        <iframe 
+                            src="https://www.youtube.com/embed/6S8A-1jBD5Y?si=IPVncEwCxbVQke-I"
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
+        <hr>
+
+        <article class="article-format vuelta-inicio subtitulos" id="tema2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Normalización</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <!--Columna Izquierda-->
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-12 col.-lg-12">
+                             <p>
+                                La normalización es un proceso esencial en el diseño 
+                                de bases de datos que busca eliminar redundancias
+                                y dependencias innecesarias. Su objetivo es organizar 
+                                los datos en tablas que sean coherentes y eficientes.
+                                <h4>Primera Forma Normal</h4>
+                                <p>Exige que cada columna contenga un valor único 
+                                    y atómico, evitando listas dentro de una misma celda.</p>
+                                <h4>Segunda Forma Normal</h4>
+                                <p>Asegura que los campo no clave dependan de toda
+                                    la clave primaria, mo de una parte</p>
+                                <h4>Tercera Forma Normal</h4>
+                                <p>Establece que todos los atributos no clave dependan
+                                    directamente de la clave primaria, eliminando 
+                                    dependencias transitivas</p>
+                            </p>
+
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+
+                <!--Columna Derecha-->
+                <div class="col-lg-6">
+                    <div class="ratio ratio-4x3">
+                        <iframe 
+                            src="https://www.youtube.com/embed/RlgbWESXySI?si=nKRxVxFmqfyvtNfN"
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
+        <hr>
+
+        <article class="article-format vuelta-inicio subtitulos" id="tema3">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>SQL</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center">
+                    <div class="text-right">
+
+                        <p>
+                            En este tema, se trabajaron diversas pruebas de Consultas de SQL. Al tener
+                            libertad de elección en cuanto al Sistema Gestor de Base de Datos, decicí usar
+                            el predeterminado de Windows, <b>Microsoft Acces</b>. Un sistema bastante completo
+                            en cierta medida y útil en la realización de los ejercicios.
+                        </p>
+                        <p>
+                            La Base de Datos sobre la que trabajé abordó el caso de un Sistema de Ventas de una tienda.
+                            Manejando 4 tablas solamente:
+                            <ul>
+                                <li>Clientes</li>
+                                <li>Pedidos</li>
+                                <li>Pedidos-Clientes</li>
+                                <li>Productos</li>
+                            </ul>
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h4>Diagrama de la Base Datos en Access</h4>
+                    <img class="img-fluid" src="images/unidad2/2.3/lab2.3.png" alt="Base de Datos Laboratorio2.3">
+
+                </div>
+            </div>
+            
+            <!--Ejericicios de SQL-->
+            <div class="row">
+                <div class="col-lg-4 border mb-4 px-4 py-4">
+                    <h4>SELECT con PK y FK</h4>
+                    <pre class="h-80"><code>
+SELECT Clientes.Empresa, Pedidos.Id_Pedido,
+Pedidos.Fecha_Pedido, Pedidos.Enviado
+FROM Clientes, Pedidos
+WHERE Clientes.Id_Cliente = Pedidos.Id_Cliente;
+                    </code></pre>
+                </div>
+                <div class="col-lg-4 border mb-4 px-4 py-4">
+                    <h4>SELECT con BETWEEN</h4>       
+                    <pre class="h-80"><code>
+SELECT Pedidos.Id_Pedido, Pedidos.Fecha_Pedido,
+Pedidos.Forma_Pago
+FROM Pedidos
+WHERE Pedidos.Fecha_Pedido BETWEEN #06/01/2025# AND
+#12/31/2025#;
+                    </code></pre>
+                </div>
+                <div class="col-lg-4 border mb-4 px-4 py-4">
+                    <h4>SELECT con LIKE</h4>
+                    <pre class="h-80"><code>
+SELECT Clientes.Empresa, Clientes.Telefono, Clientes.Poblacion
+FROM Clientes
+WHERE Clientes.Poblacion LIKE "M*";
+                    </code></pre>
+                </div>
+                <div class="col-lg-4 border mb-4 px-4 py-4">
+                    <h4>SELECT con IN</h4>
+                    <pre class="h-80"><code>
+SELECT Clientes.Empresa, Clientes.Telefono, Clientes.Poblacion,
+Clientes.Direccion,
+FROM Clientes
+WHERE Clientes.Poblacion IN ("Mérida","Hecelchakán");
+                    </code></pre>
+                </div>
+                <div class="col-lg-4 border mb-4 px-4 py-4">
+                    <h4>SELECT con MAX</h4>
+                    <pre class="h-80"><code>
+SELECT MAX(Precio) AS MayorPrecio
+FROM Productos;
+                    </code></pre>
+                </div>
+                <div class="col-lg-4 border mb-4 px-4 py-4">
+                    <h4>SELECT con HAVING</h4>
+                    <pre class="h-80"><code>
+SELECT Id_Cliente, COUNT(*) AS TOTAL
+FROM Pedidos
+GROUP BY Pedidos.Id_Cliente
+HAVING COUNT(*) >1;
+                    </code></pre>
+                </div>
+                <div class="col-lg-4 border mb-4 px-4 py-4">
+                    <h4>INNER JOIN </h4>
+                    <p>El funcionamiento de una consulta de INNER JOIN, se basa en reflejaar siempre la información común que se encuentre en ambastablas que estén involucradas</p>
+                    <pre class="h-80"><code>
+SELECT * FROM Clientes INNER JOIN Pedidos ON
+Clientes.Id_Cliente = Pedidos.Id_Cliente;
+                    </code></pre>
+                </div>
+                <div class="col-lg-4 border mb-4 px-4 py-4">
+                    <h4>LEFT JOIN </h4>
+                    <p>Por otro lado, las consultas con Left Join, no solo devolverá los registros que estén en ambas tablas, sino también TODOS los registros que se encuentren en la tabla de la izquierda.</p>
+                    <pre class="h-80"><code>
+SELECT Clientes.Empresa, Clientes.Id_Cliente,
+Clientes.Poblacion, Clientes.Telefono
+FROM Clientes Left JOIN Pedidos
+ON Clientes.Id_Cliente = Pedidos.Id_Cliente;
+                    </code></pre>
+                </div>
+                <div class="col-lg-4 border mb-4 px-4 py-4">
+                    <h4>RIGHT JOIN </h4>
+                    <p>A diferencia del left Join, esta consulta realiza lo contrario. Pedidos mostrará también los registros que pudieron tener las dos tablas, sin mostrarnos algún registro de la tabla de clientes.</p>
+                    <pre class="h-80"><code>
+SELECT Clientes.Empresa, Clientes.Id_Cliente,
+Clientes.Poblacion, Clientes.Telefono
+FROM Clientes Right JOIN Pedidos
+ON Clientes.Id_Cliente = Pedidos.Id_Cliente;
+
+                    </code></pre>
+                </div>
+
+                <div class="col-lg-4 mb-4 px-4 py-4 d-flex d-sm-none d-md-block d-none d-sm-block d-md-none d-lg-block">
+                    <img class="img-fluid" src="images/unidad2/2.3/union.png" alt="">
+                </div>
+
+
+                <div class="col-lg-8 border mb-4 px-4 py-4">
+                    <h4>UNION </h4>
+                    <p>El modo funcionamiento de la unión es unir los campos seleccionados de dos o más tablas.</p>
+                    <pre><code>
+SELECT Empresa, Poblacion
+FROM Clientes
+WHERE Poblacion = "Mérida"
+UNION
+SELECT Empresa, Poblacion
+FROM Clientes
+WHERE Poblacion = "Hecelchakán";                      
+                    </code></pre>
+                </div>
+               
+            </div>
                 
-               <table>
-                <tr>
-                    <td>
-                        <div class="card">
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
+        <hr>
+
+        <article class="article-format vuelta-inicio subtitulos" id="tema4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Triggers</h3>
+                    <p>
+                        Por definición, los triggers se entienden como un tipo de procedimiento
+                        almacenado que se ejecuta automáticamente en el servidor de la base de
+                        datos en respuesta a un evento específico.
+                        El objetivo principal de los triggers es hacer cumplir las reglas de negocio complejas, mantener la integridad de los datos y automatizar las acciones dentro de la base de datos
+                    </p>
+                </div>
+            </div>
+
+            <!--Espacios para los ejercicios-->
+            <div class="row mb-4">
+                <div class="row-12">
+                    <h4>Trigger en INSERT</h4>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
                             <p><b>Creación del Trigger:</b></p>
                             <pre><code>
-                                CREATE TABLE Historial(
-                                    fecha date,
-                                    descripcion VARCHAR(100),
-                                    usuario VARCHAR(50)
-                                );
-                                create trigger TR_EjInsert
-                                    ON Estudiantes for insert
-                                    AS INSERT INTO Historial VALUES(getdate(), 
-                                    'Inserción de nuevo estudiante',
-                                system_user);
-                                GO
+CREATE TABLE Historial(
+    fecha date,
+    descripcion VARCHAR(100),
+    usuario VARCHAR(50)
+);
+create trigger TR_EjInsert
+    ON Estudiantes for insert
+    AS INSERT INTO Historial VALUES(getdate(), 
+    'Inserción de nuevo estudiante',
+system_user);
+GO
                             </code></pre>
-                            <p><b>Query de Prueba:</b></p>
-                            <pre><code>
-                                INSERT INTO Estudiantes VALUES('Carlos', 'M', 23, 2, 1);
-                            </code></pre>
+                            
                         </div>
-                    </td>
+                </div>
+                <div class="col-lg-6">
 
-                    <td>
-                        <p><b>Resultado</b></p>
-                        <table class="tabla-generica">
+                    <p><b>Query de Prueba:</b></p>
+                    <pre><code>
+                        INSERT INTO Estudiantes VALUES('Carlos', 'M', 23, 2, 1);
+                    </code></pre>
+                    <table class="mi-tabla">
                             <thead>
                                 <tr>
                                     <th>En Estudiantes</th>
@@ -410,7 +418,7 @@
                                 <tr>
                                     <td>
                                         <pre><code>SELECT * FROM Estudiantes;
-                                        </ode></pre>
+                                        </code></pre>
                                     </td>
 
                                     <td>
@@ -420,57 +428,57 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img class="imagen-generica" src = "images/unidad2/2.4/lab2.4_rti1.png", alt="Resultado ti1">
+                                        <img class="img-fluid" src = "images/unidad2/2.4/lab2.4_rti1.png", alt="Resultado ti1">
                                     </td>
                                     <td>
-                                        <img class="imagen-generica" src = "images/unidad2/2.4/lab2.4_rti2.png", alt="Resultado ti2">
+                                        <img class="img-fluid" src = "images/unidad2/2.4/lab2.4_rti2.png", alt="Resultado ti2">
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                    </td>
-                </tr>
-               </table>
+                </div>
+            </div>
+            <!--Espacios para los ejercicios-->
+            <div class="row mb-4">
+                <div class="row-12">
+                    <h4>Trigger en DELETE</h4>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <pre><code>
+CREATE TABLE MaestrosEliminados(
+ID_eliminacion INT IDENTITY(1,1) PRIMARY KEY,
+Fecha_Eliminacion DATE,
+Id_Maestro INT,
+Nombre VARCHAR(50),
+EliminadoPor VARCHAR(50),
+);
 
+CREATE TRIGGER TR_EjDelete
+ON Maestro
+FOR DELETE
+AS BEGIN
+    SET NOCOUNT ON;
+    INSERT INTO MaestrosEliminados (Fecha_Eliminacion, 
+    ID_Maestro, Nombre, Eliminado_Por)
+    SELECT getdate(), ID_Maestro, Nombre, system_user
+    FROM deleted
+    PRINT('Registro eliminado con éxito');
+END;
+                        </code></pre>
 
-                <h4>Trigger en DELETE</h4>
-                <table>
-                    <tr>
-                        <td>
-                            <div class="card">
-                                <p><b>Creación del Trigger</b></p>
-                                <pre><code>
-                            CREATE TABLE MaestrosEliminados(
-                            ID_eliminacion INT IDENTITY(1,1) PRIMARY KEY,
-                            Fecha_Eliminacion DATE,
-                            Id_Maestro INT,
-                            Nombre VARCHAR(50),
-                            EliminadoPor VARCHAR(50),
-                            );
-
-                            CREATE TRIGGER TR_EjDelete
-                            ON Maestro
-                            FOR DELETE
-                            AS BEGIN
-                                SET NOCOUNT ON;
-                                INSERT INTO MaestrosEliminados (Fecha_Eliminacion, 
-                                ID_Maestro, Nombre, Eliminado_Por)
-                                SELECT getdate(), ID_Maestro, Nombre, system_user
-                                FROM deleted
-                                PRINT('Registro eliminado con éxito');
-                            END;
-                                </code></pre>
-                                <p><b>Query de Prueba:</b></p>
-                                <pre><code>
-                                    DELETE FROM Maestro WHERE ID_Maestro = 11;
-                                </code></pre>
-                            </div>
-                        </td>
-                        <td>
-                            <p>El el funcionamiento del Trigger bajo la acción de Eliminar hace un registro de los datos eliminados a modo de auditoría en una tabla "ajena" a las demás 
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                            <p>
+                                El funcionamiento del Trigger bajo la acción <b><i>DELETE</i></b> hace un registro de los datos eliminados a modo de auditoría en una tabla "ajena" a las demás 
                                 dentro de la base de datos, tomando datos como la fecha, el tiempo y el usuario que realizó la eliminación.
                             </p>
 
+                            <p><b>Query de Prueba:</b></p>
+                            <pre><code>
+                                DELETE FROM Maestro WHERE ID_Maestro = 11;
+                            </code></pre>
 
                             <p><b>Resultados</b></p>
                             <table class="tabla-generica">
@@ -486,230 +494,214 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img class="imagen-generica" src="images/unidad2/2.4/lab2.4_rtd.png" alt="Resultado td">
+                                        <img class="img-fluid" src="images/unidad2/2.4/lab2.4_rtd.png" alt="Resultado td">
                                     </td>
                                 </tr>
                             </table>
-                            
-                            
-                        </td>
-                    </tr>
-                </table>
-                
-                <h4>Trigger en UPDATE</h4>
-                
-                <table>
-                    <tr>
-                        <td>
-                            <div class="card">
+
+                </div>
+            </div>
+            <!--Espacios para los ejercicios-->
+            <div class="row mb-4">
+                <div class="row-12">
+                    <h4>Trigger en UPDATE</h4>
+                </div>
+                <div class="col-lg-6">
+                    
+                       <div class="card">
                                 <p><b>Creación del Trigger:</b></p>
                                 <pre><code>
-                                    CREATE TRIGGER Ej_Update
-                                    ON Estudiantes
-                                    FOR UPDATE
-                                    AS
-                                    BEGIN
-                                        IF UPDATE(Genero)
-                                        BEGIN
-                                        PRINT('Actualización de campo no permitida');
-                                        ROLLBACK TRANSACTION;
-                                        END
-                                        END;
+CREATE TRIGGER Ej_Update
+ON Estudiantes
+FOR UPDATE
+AS
+BEGIN
+    IF UPDATE(Genero)
+    BEGIN
+    PRINT('Actualización de campo no permitida');
+    ROLLBACK TRANSACTION;
+    END
+    END;
 
                                 </code></pre>
 
-                                <p><b>Query de Prueba:</b></p>
-                                <pre><code>
-                                    UPDATE Estudiantes
-                                    SET Genero = 'F'
-                                    WHERE ID_Estudiante = 11
-                                </code></pre>
+                                
                             </div>
-                        </td>
-                        <td>
-                             <p><b>Resultados</b></p>
-                            <img class="imagen-generica" src="images/unidad2/2.4/lab2.4_rtu.png" alt="Resultado tu">
-                        </td>
-                    </tr>
-                </table>
-                
-                
-                
+                   
+                </div>
+                <div class="col-lg-6">
+                    <p><b>Query de Prueba:</b></p>
+                    <pre><code>
+UPDATE Estudiantes
+SET Genero = 'F'
+WHERE ID_Estudiante = 11
+                    </code></pre>
+                    <p><b>Resultados</b></p>
+                    <img class="img-fluid" src="images/unidad2/2.4/lab2.4_rtu.png" alt="Resultado tu">
 
-               
+                </div>
+            </div>
 
-                <a href="">Volver a los contenidos☝️</a>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
 
-
-            </section>
-        </article>
+                </div>
+            </div>
+        </article> 
         <hr>
 
-        <article id="tema5" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>2.5 Programación Orientada a Objetos</h3>
-            <section class="estilo-letra-articulo">
+        <article class="article-format vuelta-inicio subtitulos" id="tema5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Programación Orientada a Objetos</h3>
+                </div>
+            </div>
 
-                <table class="tabla-dos-columnas nobordes">
-                    <tr>
-                        <td>
-                           <div>
-                                <h4>El paradigma Orientado a Objetos</h4>
-                                <p>El paraddigma de programación orientado a objetos, se caracteriza por estar basado en la encapsulación de los atributos y métodos.
-                                    Donde el código se organiza en unidades de las cuale, se crean objetos para su uso
-                                </p>
-                            </div>
-                        </td>
-                        <td>
-                            <h4>¿Qué es un paradigma?</h4>
-                            <p>Sabemos que la Programación Orientada a Objetos es un paradigma, pero 
-                                ¿A qué nos referimos con esto?</p>
-                            <p>Básicamente, un "paradigama" es un patrón, un modelo. En programación, 
-                                se tratan más de estilos de desarrollo de software. con la importancia
-                                destacable de que nos ayudan a abordar desarrollo y la clasificación
-                                de los distintos lenguajes de programación</p>
-                        </td>
-                    </tr>
-                </table>
+            <div class="row">
                 
                 
-                <h4>Conceptos clave de la Orientación a Objetos</h4>
-                <table class="tabla-generica">
-                    <tbody>
-                    <thead>
-                            <th>
-                                Clases
-                            </th>
+                <div class="col-lg-5 pe-5">
+                    <p>
+                        Sabemos que la Programación Orientada a Objetos es un paradigma, pero 
+                        ¿A qué nos referimos con esto?
+                    </p>
+                    <p>
+                        Básicamente, un "paradigama" es un patrón, un modelo. En programación, 
+                        se tratan más de estilos de desarrollo de software. con la importancia
+                        destacable de que nos ayudan a abordar desarrollo y la clasificación
+                        de los distintos lenguajes de programación
+                    </p>
 
-                            <th>
-                                Objetos                    
-                            </th>
-                    </thead>
-                    <tr>
-                        <td>
-                            Se tratan de un modelo. Una unidad del esistema, que encapsula estados y comportamientos
-                        </td>
-                        <td>
-                            Son la instancia de una clase. Representan un concepto.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><img class="imagen-generica" src="images/unidad2/2.5/tema2.5_clases.png" alt="Ejemplo_clase"></td>
-                        <td><img class="imagen-generica" src="images/unidad2/2.5/tema2.5_objetos.png" alt="Ejemplo_objeto"></td>
+                    <h4 class="mt-5">El paradigma Orientado a Objetos</h4>
+                    <p>
+                        El paraddigma de programación orientado a objetos, se caracteriza por estar basado en la encapsulación de los atributos y métodos.
+                        Donde el código se organiza en unidades de las cuale, se crean objetos para su uso
+                    </p>
 
-                    </tr>
+                </div>
+                <div class="col-lg-7 ">
+                    <h4>Conceptos clave de la Orientación a Objetos</h4>
+                    <table class="mi-tabla">
+                        <tbody>
+                        <thead w-100>
+                                <th class="text-center">
+                                    Clases
+                                </th>
 
-                    </tbody>
-                </table>
-                <h4> Pilares de la POO</h4>
-                <ul class="lista-a-tarjetas">
-                    <li>
-                        <div>
-                            <h5>Encapsulación</h5>
-                            <p>Se refiera a agrupar datos con métodos que puedan operar dentro de una clase.</p>
-                            <p>Dichos métodos no son más que funciones para recuperar <b>Getters</b> y cambiar<b>Setters</b> información</p>
-                            <p>Con la encapsulación se previene cualquier interacción directa de la clase con su exterior</p>
-                            
-                        </div>
-                    </li>
-                    
-                    <li>
-                        <div>
-                            <h5>Abstracción</h5>
-                            <p>La abstraccción consta de mostrar solamente los detalles esenciales de una entidad.</p>
-                        </div>
-
-                    </li>
-                    
-                    <!--<table>
+                                <th class="text-center">
+                                    Objetos                    
+                                </th>
+                        </thead>
                         <tr>
-                            <td rowspan="2">
-                                <img src = "images/unidad2/2.5/tema2.5_abstraccion.png" alt="ejemplo_abstraccion">
+                            <td>
+                                Se tratan de un modelo. Una unidad del sistema, que encapsula estados y comportamientos.
+                                <i>Podemos verlo como si se tratara de un molde para galletas.</i>
                             </td>
                             <td>
-                                <b>Interfaz</b>
-                                <p>Es la manera en la que se las secciones de código se comunican. Se hace mediante métodos a los que cada clase puede acceder</p>
+                                Son la instancia de una clase. Representan un concepto.
                             </td>
                         </tr>
                         <tr>
-                            <td><b>
-                                Implementación
-                            </b>
-                            <p>Implementación de los métodos de la interfaz</p>
+                            <td >
+                                <img class="img-fluid" src="images/unidad2/2.5/tema2.5_clases.png" alt="Ejemplo_clase">
                             </td>
+                            <td >
+                                <img class="img-fluid" src="images/unidad2/2.5/tema2.5_objetos.png" alt="Ejemplo_objeto">
+                            </td>
+
                         </tr>
 
-                    </table>-->
-
-                    <li>
-                        <div>
-                            <h5>Herencia</h5>
-                            <p>Es el principio que le permite a las clases derivar de otras. El ejemplo más común es verlo como los ordenes de animales existentes:</p>
-                            <!--<img src="images/unidad2/2.5/tema2.5_herencia.png" alt = "Ejemplo_herencia">-->
-                            <p>Podemos distinguir dos partes esenciales:</p>
-                            <ul>
-                                <li><b>Superclase: </b> Contiene los atributos y métodos comunes de todas las clases</li>
-                                <li><b>Subclase: </b> Heredan de la superclase (clases hijas)</li>
-                            </ul>
-                        </div>
-                        
-                    </li>
+                        </tbody>
+                    </table>
                     
-                    <li>
-                        
-                        <div>
-                            <h5>Polimorfismo</h5>
-                            <p>Pilar que describe a los métodos que pueden tomar varias formas.
-                                Podemos llamar a los dos formas de polimorfismo como:
-                            </p>
-                        </div>
-                        </li>
-                    
-                   <!-- <table>
-                        <tr>
-                            <td>
-                                <p><b>Sobreescritura</b></p>
-                                <p>Cuando los <i>métodos tienen el mismo nombre</i> pero con <i>diferente implementación</i></p>
-                            </td>
-                            <td>
-                                <img src="images/unidad2/2.5/tema2.5_sobrescritura.png", alt="sobreescritura">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><b>Sobrecarga</b></p>
-                                <p>Cuando los múltiples <i> métodos tienen el mismo nombre</i>, aunque con <i>diferentes argumentos</i></p>
-                            
-                            </td>
-                            <td>
-                                <img src="images/unidad2/2.5/tema2.5_sobrecarga.png", alt="sobrecarga">
-                            </td>
-                        </tr>
-
-                    </table>-->
-
-
-                </ul>
-
-
-
-            </section>
-            <a href="">Volver a los contenidos☝️</a>
-        </article>
-        <hr>
-
-        <article id="tema6" class="article-format estilo-subtitulos vuelta-inicio">
-            <h3>2.6 Práctica de Java y MySQL</h3>
-            <section class="estilo-letra-articulo">
-                <p>Este laboratorio presenta una integración entre Java With Maven y MySQL bajo el patrón de <b>Modelo-Vista-Controlador (MVC)</b></p>
-                <h4>Base de Datos en motor MySQl</h4>
-                <div class="contenedor-imagen">
-                    <img class="imagen-generica" src="images/unidad2/2.6/tema2.6_BD.png">
                 </div>
                 
-                <h4>CRUD en Java with Maven</h4>
-                <div class="dos-columnas">
-                    <div>
-                        <p>El CRUD, hace referencia al conjunto de métodos o acciones que se pueden realizar con los datos de una una fuente de datos.
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 mb-4">
+                    <h4>Pilares de la Programación Orientada a Objetos</h4>
+                </div>
+
+                <div class="row py-2">
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center topicos">
+                        <h5>Encapsulación</h5>
+                    </div>
+                    <div class="col-lg-8 card">
+                        <p>
+                            Se refiera a agrupar datos con métodos que puedan operar dentro de una clase.
+                            Dichos métodos no son más que funciones para recuperar <b>Getters</b> y cambiar<b>Setters</b> información. Con la encapsulación se previene cualquier interacción directa de la clase con su exterior
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row py-2">
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center topicos">
+                        <h5>Abstracción</h5>
+                    </div>
+                    <div class="col-lg-8 card">
+                        <p>La abstraccción consta de mostrar solamente los detalles esenciales de una entidad.</p>
+                    </div>
+                </div>
+
+                <div class="row py-2">
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center topicos">
+                        <h5>Herencia</h5>
+                    </div>
+                    <div class="col-lg-8 card">
+                        <p>Es el principio que le permite a las clases derivar de otras. El ejemplo más común es verlo como los ordenes de animales existentes:</p>
+                           
+                        <p>Podemos distinguir dos partes esenciales:</p>
+                        <ul>
+                            <li><b>Superclase: </b> Contiene los atributos y métodos comunes de todas las clases</li>
+                            <li><b>Subclase: </b> Heredan de la superclase (clases hijas)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row py-2">
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center topicos">
+                        <h5>Polimorfismo</h5>
+                    </div>
+                    <div class="col-lg-8 card">
+                        <p>
+                            Pilar que describe a los métodos que pueden tomar varias formas.
+                            Podemos llamar a los dos formas de polimorfismo como:
+                        </p>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
+        <hr>
+
+        <article class="article-format vuelta-inicio subtitulos" id="tema6">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Práctica de Java y MySQL</h3>
+                </div>
+
+                <div class="col-lg-12">
+                    <p>
+                        Este laboratorio presenta una integración entre Java With Maven y MySQL bajo el patrón de <b>Modelo-Vista-Controlador (MVC)</b>
+                    </p>
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 p-3 border">
+                    <h4>CRUD</h4>
+                    <img class="img-fluid w-75 my-2" src="images/unidad2/2.6/tema2.6_crud.png">
+                     <p>
+                        El CRUD, hace referencia al conjunto de métodos o acciones que se pueden realizar con los datos de una una fuente de datos.
                         Haciendo alusión a las iniciales en inglés:
                         <ul>
                             <li><b>C</b>reate</li>
@@ -719,142 +711,128 @@
                         </ul>
 
                         Que significa: <b><i>Crear, Leer, Actualizar, Eliminar</i></b> respectivamente
-                        </p>
-                        <p>Para su implementación dentro de Java, se uso el principio de Interfaces:</p>
-                    </div>
-                    <div class="contenedor-imagen">
-                        <img class="imagen-generica" src="images/unidad2/2.6/tema2.6_crud.png">
-                    </div>
-                </div>
-                
-                <h4>Cadena de Conexión a MySQL desde Java</h4>
-                <div class="dos-columnas">
-                    <div>
-                        <p>La cadena de conexión es un elemento importante al trabajar con Bases de Datos dentro de un Lenguaje de programación</p>
-                        <p>Cada Gestor tiene su propia "conector" para cada lenguaje, en el caso de MySQL, debemos de declarar el conector dentro del archivo de configuración pom.xml. 
-                            Para después aplicar algo como:
-                        </p>
-                    </div>
-                    <div class="contenedor-imagen">
-                        <img class="imagen-generica" src="images/unidad2/2.6/tema2.6_conexion.png">
-                    </div>
-
-                </div>
-                
-               
-                
-                <h4>Sentencia SQL con más de una tabla</h4>
-                <div class="dos-columnas">
-                    <div><p>En la práctica fue necesaria la implementación de una sentencia SQL que involucrara más de una tabla dentro del gestor:</p></div>
-                <div class="contenedor-imagen">
-                     <img class="imagen-generica" src="images/unidad2/2.6/tema2.6_dostablas.png">
+                    </p>
+                    <p>Para su implementación dentro de Java, se uso el principio de Interfaces:</p>
+                    
+                    
                 </div>
 
-                </div>
-               
-                <h4>Modelo-Vista-Controlador</h4>
-                <div class="dos-columnas">
-                    <div>
-                        <p>El patrón MVC (Modelo-Vista-Controlador), se caracteriza por separar en módulos el proyecto:</p>
-                        <ul>
-                        <li><b>Modelo</b>. Podemos definirlos como las unidades más básicas en las que se tratan los datos, contienen atributos.</li>
-                        <li><b>Vista</b>. Se toma como la parte visual del programa. El modo en el que el usuario interactua con la aplicación.</li>
-                        <li><b>Controlador</b>. Los controladores son el puente entre las vistas con sus respectivos modelos, en ellos se encuentra la lógica de negocios (funcionalidades esperadas) para elementos como widgets en la vista.</li>
+                <div class="col-lg-6 p-3 border">
+                    <h4>Patrón Modelo - Vista - Controlador</h4>
+                    <p>El patrón MVC (Modelo-Vista-Controlador), se caracteriza por separar en módulos el proyecto:</p>
+                    <ul>
+                        <li>
+                            <b>Modelo</b>. Podemos definirlos como las unidades más básicas en las que se tratan los datos, contienen atributos.
+                        </li>
+                        <li>
+                            <b>Vista</b>. Se toma como la parte visual del programa. El modo en el que el usuario interactua con la aplicación.
+                        </li>
+                        <li>
+                            <b>Controlador</b>. Los controladores son el puente entre las vistas con sus respectivos modelos, en ellos se encuentra la lógica de negocios (funcionalidades esperadas) para elementos como widgets en la vista.
+                        </li>
                     </ul>
-                    </div>
-                    <div class="contenedor-imagen">
-                        <img class="imagen-generica" src="images/unidad2/2.6/tema2.6_mvc.png">
-                    </div>
+                    <img class="img-fluid w-75 my-2" src="images/unidad2/2.6/tema2.6_mvc.png">
                 </div>
-            </section>
-            <a href="">Volver a los contenidos☝️</a>
-        </article>
+
+
+                <div class="col-lg-6 p-3 border">
+                    <h4>Cadena de Conexión</h4>
+                    
+                    
+                    <p>La cadena de conexión es un elemento importante al trabajar con Bases de Datos dentro de un Lenguaje de programación</p>
+                    <p>Cada Gestor tiene su propia "conector" para cada lenguaje, en el caso de MySQL, debemos de declarar el conector dentro del archivo de configuración pom.xml. 
+                        Para después aplicar algo como:
+                    </p>
+                
+                    <img class="img-fluid w-75 my-2" src="images/unidad2/2.6/tema2.6_conexion.png">
+                
+
+                </div>
+                <div class="col-lg-6 p-3 border">
+                    <h4>Consulta SQL con más de una tabla</h4>
+                    
+                    <p>En la práctica fue necesaria la implementación de una sentencia SQL que involucrara más de una tabla dentro del gestor:</p>
+               
+                    <img class="img-fluid w-75 my-2" src="images/unidad2/2.6/tema2.6_dostablas.png">
+                
+
+                </div>
+                
+            </div>
+
+           
+      
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
+
+                </div>
+            </div>
+        </article> 
         <hr>
 
-        <article id="tema7" class="article-format estilo-subtitulos vuelta-inicio"> 
-            <h3>2.7 API</h3>
-            <section class="estilo-letra-articulo">
-                <div class="dos-columnas-desiguales">
-                    <div>
-                        <h4>Arquitecturas de Software</h4>
-                        <p>Una arquitectura de Software se entiende como el proceso de análisis, diseño e implementación de estructuras de alto nivel en sistemas informáticos.</p>
-                        <p>Determinan cómo los diferentes componentes del software interactúan entre sí, estableciendo las bases para un desarrollo escalable y mantenible</p>
-                        <p>Las arquitecturas más conocidas son:</p>
-                        <ul>
-                            <li>Modelo Cliente-Servidor</li>
-                            <li>Modelo-Vista-Datos</li>
-                            <li>Navegador-Web-Negocio-Datos</li>
-                        </ul>
+        <article class="article-format vuelta-inicio subtitulos" id="tema7">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>API</h3>
+                </div>
+            </div>
 
-                    </div>
-                    <div class="contenedor-mayor contenedor-imagen">
-                         <img class="imagen-generica-dos" src="images/unidad2/2.7/arquitecturas.svg">
-                    </div>
+           <div class="row">
+
+                <div class="col-lg-5">
+                    <h4>Arquitecturas de Software</h4>
+                    <p>Una arquitectura de Software se entiende como el proceso de análisis, diseño e implementación de estructuras de alto nivel en sistemas informáticos.</p>
+                    <p>Determinan cómo los diferentes componentes del software interactúan entre sí, estableciendo las bases para un desarrollo escalable y mantenible</p>
+                    <p>Las arquitecturas más conocidas son:</p>
+                    <ul>
+                        <li>Modelo Cliente-Servidor</li>
+                        <li>Modelo-Vista-Datos</li>
+                        <li>Navegador-Web-Negocio-Datos</li>
+                    </ul>
 
                 </div>
 
-                <br>
-               <div class="lista-a-tarjetas lista-nueva">
-                    <div>
-                        <h4>Frontend</h4>
-                        <p>En el desarrollo web, existen dos capas principales de elementos, la primera de ellas, es el llamado <b>Frontend</b></p>
-                        <p>El <b>Frontend</b> representa la capa de presentación de la aplicación, es decir, donde los usuarios interactúan con el sistema, mediante los elementos gráficos</p>
-                        
-                        <section class="contenedor-imagen">
-                            <img class="imagen-generica-tres" src="images/unidad2/2.7/frontend.svg" alt="frontend">
-                        </section>
-                        
+                <div class="col-lg-7 d-flex justify-content-center align-items-center">
+                    <img class="img-fluid" src="images/unidad2/2.7/arquitecturas.svg">
+                </div>
 
-                       
-                    </div>
-                    <div>
-                        <h4>Backend</h4>
-                        <p>Por otra parte, el <b>Backend</b> simboliza el motor del sistema. Es la lógica, datos e infraestructura que hacen que la aplicación funciones detrás de escena.</p>
-                        <p>Todo el código desarrollado en Backend se ejecuta dentro de un servidor. Y tiene como funciones clave:</p>
-                        <ul>
-                            <li><b>Lógica de negocio.</b> Procesamiento de reglas empresariales, algoritmia y requerimientos del usuario.</li>
-                            <li><b>Autenticación y Seguridad.</b> Se verifican credenciales y realiza autorización y cifrado.</li>
-                            <li><b>Gestión de Bases de Datos.</b> Conexión a Bases de Datos relacionales y no SQL para persistencia de datos.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>API</h4>
-                        <p>Una <b><i>API</i></b> del inglés <i>Aplication Programming Interface</i> se trata de un conjunto de definiciones y protocolos que se utiliza para permitir  la comunicación entre 2 aplicaciones de software.</p>
-                        <p>Son principlamente usadas para no tener que reinventar una solución ya existente, y pueden trabajar con información en los formatos JSON o XML. Dentro de ellas, se encuentran otras subcategorías que veremos:</p>
-                        <section class="contenedor-imagen">
-                            <img class="imagen-generica-tres" src="images/unidad2/2.7/frontend.svg" alt="frontend">
-                        </section>
-                    </div>
+                <div class="col-lg-4 card p-4 mt-4">
+                    <h4>Frontend</h4>
+                    <p>En el desarrollo web, existen dos capas principales de elementos, la primera de ellas, es el llamado <b>Frontend</b></p>
+                    <p>El <b>Frontend</b> representa la capa de presentación de la aplicación, es decir, donde los usuarios interactúan con el sistema, mediante los elementos gráficos</p>
+                    <img class="imagen-generica-tres" src="images/unidad2/2.7/frontend.svg" alt="frontend">
 
-               </div>
+                </div>
+                <div class="col-lg-4 card p-4 mt-4">
+                    <h4>Backend</h4>
+                    <p>Por otra parte, el <b>Backend</b> simboliza el motor del sistema. Es la lógica, datos e infraestructura que hacen que la aplicación funciones detrás de escena.</p>
+                    <p>Todo el código desarrollado en Backend se ejecuta dentro de un servidor. Y tiene como funciones clave:</p>
+                    <ul>
+                        <li><b>Lógica de negocio.</b> Procesamiento de reglas empresariales, algoritmia y requerimientos del usuario.</li>
+                        <li><b>Autenticación y Seguridad.</b> Se verifican credenciales y realiza autorización y cifrado.</li>
+                        <li><b>Gestión de Bases de Datos.</b> Conexión a Bases de Datos relacionales y no SQL para persistencia de datos.</li>
+                    </ul>
 
-                
-                
-                <h4>Servicios Web</h4>
-                <div class="dos-columnas">
-                    <div>
-                        <blockquote class="bloque">Todos los Servicios Web son APIs, pero no todas las APIs son Servicios Web.</blockquote>
-                        <p>Los servicios web son una definición de API las cuales operan para las acciones del protocolo <b><i>HTTP</i></b>.</p>
-                        <p>Estas usan un lenguaje estandarizado de <i>peticiones</i> y <i>respuestas</i></p>
-                    </div>
-                    <div>
-                        <!--<img src="images/unidad2/2.7/tema2.7_servicios_web.png">-->
+
+                </div>
+                <div class="col-lg-4 card p-4 mt-4">
+                    <h4>API</h4>
+                    <p>Una <b><i>API</i></b> del inglés <i>Aplication Programming Interface</i> se trata de un conjunto de definiciones y protocolos que se utiliza para permitir  la comunicación entre 2 aplicaciones de software.</p>
+                    <p>Son principlamente usadas para no tener que reinventar una solución ya existente, y pueden trabajar con información en los formatos JSON o XML. Dentro de ellas, se encuentran otras subcategorías que veremos:</p>
+
+                </div>
+
+                <div class="col-lg-6 mt-4">
+                    <div class="ratio ratio-4x3">
+
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/SXZ0kDZbOas?si=pqhebuSEdBvtgOzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
 
                 </div>
-                
 
-                <div class="lista-a-tarjetas caso-dos">
-                    <div>
-                        <h4>API REST</h4>
-                        <p>Relacionado a los <i>Servicios Web</i>, nos encontramos a las <b><i>API REST</i></b>.</p>
-                        <p>Las cuales, no son más que un tipo de API que además de operar bajo HTTP, está basada en el uso de recursos.
-                            Es decir, el modelo o modelos de una aplicación.
-                        </p>
-                    </div>
-                    <div>
-                        <h4>Estándar de Peticiones y Respuestas</h4>
+                <div class="col-lg-6 mt-4">
+                    <h4>Estándar de Peticiones y Respuestas</h4>
                         <p>Básicamente, el estándar aplica tanto para los <b>Servicios Web</b> y las <b>API REST</b> </p>
 
                             <p>Para la <b>Petición</b> se usa una combinación de <b>Verbo HTTP + URL</b>.</p>
@@ -872,28 +850,41 @@
                                     </ul>
                                 <li>El cuerpo del mensaje, que es meramente opcional para incluir</li>
                             </ul>
-                    </div>
-
+                    
+                    <h4>API REST</h4>
+                    <p>Relacionado a los <i>Servicios Web</i>, nos encontramos a las <b><i>API REST</i></b>.</p>
+                    <p>Las cuales, no son más que un tipo de API que además de operar bajo HTTP, está basada en el uso de recursos.
+                        Es decir, el modelo o modelos de una aplicación.
+                    </p>
 
                 </div>
                 
-                
 
-            </section>
+           </div>         
+      
+            <div class="row mt-3">
+                <div class="col-12">
+                    <a href="">Volver a los contenidos☝️</a>
 
-            <a href="">Volver a los contenidos☝️</a>
-        </article>
+                </div>
+            </div>
+        </article> 
         <hr>
-    </div>
+
+        
+    </main>
 </body>
 
-<footer class="footer-format">
-    <p>
-        Designed By <b><i>Iván Arturo Chi Mut</i></b>
-    </p>
-    <p>
-       @2025 Células Plenum | Micrositio HTML Laboratorio 3.2-3.3
-    </p>
-</footer>
+<footer class="footer-format row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <p>
+            Designed By <b><i>Iván Arturo Chi Mut</i></b>
+        </p>
+        <p>
+            arturochi_m@outlook.com
+        </p>
+
+    </div>
+</footer> 
 
 </html>
