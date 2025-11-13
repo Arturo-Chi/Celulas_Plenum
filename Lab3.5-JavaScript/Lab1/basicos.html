@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Fundamenteos de JavaScript</h1>
+
+
+        <script>
+            var hola = "Hola mundo!";
+            let hello = "Hello World!"
+            console.log(hola);
+            /*las variables en los lenguajes de programación hasta hace unos años tenían un scope
+            Es decir un ámbito*/
+
+            if(true){
+                var a= 3;
+                /*Todas las variables solamente tenían alcance dentro de los bloques de código*/
+                console.log(a);
+            }
+
+            console.log(window.hola);
+            console.log(window.hello);
+
+            console.log("El detalle de usar var y let dentro de JS es bastante obvio");
+
+
+            console.log("********************* VAR ******************");
+
+
+            var musica = "rock";
+            console.log("Variable música antes del bloque", musica);
+
+            //Esto es un bloque
+            var musica = "pop";
+            {
+                console.log("Variable Música dentro del Bloque", musica);
+            }
+
+            console.log("Variable música después del bloque: ",musica);
+
+
+            console.log("******************* LET ********************");
+            
+
+            let musica2 = "rock";
+            console.log("Variable música antes del bloque", musica2);
+
+            //Esto es un bloque
+            {
+                let musica2 = "pop";
+                console.log("Variable Música dentro del Bloque", musica2);
+            }
+
+            console.log("Variable música después del bloque: ",musica2);
+
+
+
+
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+hay 3 extensiones bastante útiles para VS Code:
+- ESLint
+Sugerirá mensajes y autocompletados de la documentación de Moziila Development Network
+
+- Live Server
+Para ver el proyecto
+
+- Prettier
+Permite purgar html, css y también js
+
+
+Una variable en javascript es unligar en memroai para almacenar datos.
+
+
+
+VARIABLES
+    Diferencia entre VAR y LET
+
+    - Si declaramos una variable con la palabra var
+        Esa variable va a ser de scope global.
+
+    - Si declaramos una variable con la variable LET
+        Esa variable va a tener un scope de bloque.
+
+    Resulta incluso una mala práctica usar VAR, lo mejor para evitar problemas de reasignación de valores es usar LET
+
+    Las var se guardan dentro del objeto WINDOW
+    console.log("********************* VAR ******************");
+
+
+                var musica = "rock";
+                console.log("Variable música antes del bloque", musica);
+
+                //Esto es un bloque
+                var musica = "pop";
+                {
+                    console.log("Variable Música dentro del Bloque", musica);
+                }
+
+                console.log("Variable música después del bloque: ",musica);
+
+
+                console.log("******************* LET ********************");
+
+
+                let musica2 = "rock";
+                console.log("Variable música antes del bloque", musica2);
+
+                //Esto es un bloque
+                {
+                    let musica2 = "pop";
+                    console.log("Variable Música dentro del Bloque", musica2);
+                }
+
+                console.log("Variable música después del bloque: ",musica2);
+
+CONSTANTES
+
+Para el uso de constantes dentro de JS usamos CONST.

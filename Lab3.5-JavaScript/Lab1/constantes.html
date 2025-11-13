@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const PI = 3.1416;
+        //Esto está mal, no se pueden inicializar constantes vacías.
+        //const NUEVE;
+
+        console.log(PI);
+
+        //Para hacer eso usamos solamente let,
+        //Ya que let permite inicializar variables vacías.
+        let a;
+
+        //Otro detalle con las constantes es que no pueden volver a asignarse
+        //Nunca durante el flujo dentro de mi programa:
+
+        PI = 3.14;
+        console.log(PI);
+
+
+        //Esto no pasa cuando declaramos como constantes a un
+        //arreglo o un objeto:
+
+        // {} -> Objeto
+        // [] -> Arreglo
+
+
+        let objeto = {
+            nombre: "Tony",
+            edad: 35
+        }
+
+        let colores = [
+            "verde", "blanco", "rojo"
+        ]
+
+        console.log(objeto);
+        console.log(colores);
+
+    </script>
+    
+</body>
+</html>
