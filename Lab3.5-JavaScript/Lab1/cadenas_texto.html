@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Cadena de Texto</h1>
+<p>Podemos encontrar Documentación de Js dentro de la pagina de mdn</p>
+<p>String - Es el constructor para cadenas de caracteres</p>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eius fuga rem unde blanditiis. Earum quia, voluptates a nisi unde nemo debitis quae consectetur reiciendis dicta, soluta accusantium, rem animi.</p>
+
+
+
+<h1>Fundamentos Js</h1>
+<ul>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+</ul>
+<script>
+
+//Se crea con new String( cadena )
+
+
+//Métodos
+//Cada objeto tiene dos propiedades:
+//Atributos -> string tiene .prototype y length.
+
+
+//Cadenas de texo aka Strings
+//Pueden usanse comillas simples o dobles
+
+let nombre = "Ivan";
+let apellido = 'Chi Mut';
+
+let saludo = new String("Hola Mundo");
+
+let lorem = "                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus eius fuga rem unde blanditiis. Earum quia, voluptates a nisi unde nemo debitis quae consectetur reiciendis dicta, soluta accusantium, rem animi.";
+
+console.log(nombre, apellido, saludo);
+
+console.log(nombre.length,
+    apellido.length,
+    saludo.length,
+    saludo.toUpperCase(),
+    saludo.toLowerCase(),
+    lorem.includes("amet"),
+    lorem.includes("arturo"),
+    lorem,
+    //Quita los espacios en blanco alrededor del texto(al inicion y al fin)
+    lorem.trim(),
+
+    //Para convertir texto a un arreglo, recibe como parámetro el caracter con el que se van a separar
+    lorem.split(" "),
+    lorem.split(",")
+
+);
+
+
+
+
+console.log("*********** TEMPLATE STRINGS **********");
+
+console.log("Concatenar");
+let n = "ivan";
+let ap = "chi mut"
+
+let saludo2 = "Hola mi nombre es: "+n+ " "+ ap;
+//Para concatenar usamos +
+console.log(saludo2);
+
+
+console.log("Interpolar");
+//Template string: altgr + }
+let saludo3 = `Hola mi nombre es ${n} ${ap}` ;
+
+
+console.log();
+//Cuando se crea con el constructor pues básicamente se va a imprimir como varios caracteres
+
+//Método s más usados de las cadenas
+
+
+//Si queremos poner texto en una página web:
+let ul = "<ul> <li>Primavera</li> <li>Verano</li> <li>Otoño</li>  <li>Invierno</li> </ul>";
+
+let aviso = "Este es una prueba con template strings:";
+let ul2 = `<ul> 
+    <li>Primavera</li> 
+    <li>Verano</li> 
+    <li>Otoño</li>  
+    <li>Invierno</li> 
+</ul>`;
+
+console.log(aviso + ul2);
+
+
+//Las template strings son una característica bastante dinámica en el desarrollo web
+
+</script>
+
+    
+</body>
+</html>

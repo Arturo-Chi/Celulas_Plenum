@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Numeros</h1>
+    <script>
+        //En JS solo tenemos la palabra number
+        //Para conocer los atributos y métodos visitar, mozilla developer network
+
+        let a = 2;
+        let b = new Number(3);
+        let c = 7.19;
+        let d = "5.6";
+
+
+
+        console.log(a+b);
+        //Redondeo para números
+        console.log(c.toFixed(1));
+
+
+        //metodo parse int
+        console.log(parseInt(c));
+        console.log(typeof c, typeof d);
+        console.log(a + b);
+
+
+        // En este caso, si se suma un número con una cadena, el resultado es una cadena
+        console.log(c + d);
+
+        //Se puede convertir:
+        console.log(c + parseInt(d));
+
+        //TODOS ESTOS MÉTODOS USADOS CUELGAN DEL CONSTRUCTOR DE LOS NUMBER.
+        //SI QUEREMOS SER MÁS ESPECÍFICOS, PODEMOS USAR: Number.método:
+
+        console.log(c + Number.parseInt(d));
+    </script>
+
+
+
+    <h1>Booleanos</h1>
+    <script>
+        //Esta vez veremos el tipo último tipo de datos de los lenguajes de programación
+        let verdadero = true;
+        let falso = false;
+
+        console.log(verdadero, falso);
+        console.log(typeof verdadero, typeof falso);
+
+
+        //Podemos hacer booleanos con el propio constructor
+        let t = Boolean(true);
+        let f = Boolean(false);
+
+        // no es lo  más adecuado a  menos que trabajemos con valores que no pueden ser v ni f
+
+        console.log(Boolean(0));
+        console.log(Boolean(-7));
+        console.log(Boolean(""));
+        console.log(Boolean(" "));
+
+
+
+        //Hay otros tipos de datos que son truthy y falsy:
+        // true, {}, [], 42, "0" "false", new Date(), -42, 12n, 3.14, -3.14, Infinity, -Infinity
+        //false, null, undefined, false, NaN, 0, -0, 0n, "", document.all
+    
+    </script>
+
+    <h1>Undefined, null y NaN</h1>
+    <script>
+        //Estos 3 son casos muy particulares en JS:
+
+
+        //Creemos una variable no inicializada:
+        let indefinidad; //--> Así JS la detecta como indefinida
+
+        //console.log(indefinida);
+
+        //Nulo es un valor asignado por meramente el programador
+        //Ambas significan que la variable está vacía, sin embargo la segunda ha sido creada así:
+
+        let nulo = null;
+        console.log(nulo);
+
+
+        //El tercer valor se aplica cuando queremos hacer operaciones aritméticas con valores que no son numéricos:
+
+        //NaN -> Not a number
+        let noEsUnNumero = "hola"*3.7;
+        console.log(noEsUnNumero);
+
+    </script>
+
+
+
+</body>
+</html>

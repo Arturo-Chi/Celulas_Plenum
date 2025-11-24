@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Compuestos</title>
+</head>
+<body>
+
+    <article id="funciones">
+
+        <h1>Funciones</h1>
+        <p>Los datos compuestos incluyen a los siguientes:
+            object {} 
+            array []
+            function ()
+            Class{}
+        </p>
+
+        <p>Ordamiento de código: Importación de modulos, declaración de variables, declaración de funciones, ejecución del código</p>
+        <script>
+            //Primero veremos las funciones, son muy poderosas
+
+            //Las funciones son objetos, pueden definirse una vez y ejecutarse en cualquier momento, opcionalmente puede recibir parámetros y devolver valores
+
+            //CONCEPTOS BÁSICOS
+// ------------------ Función declarada
+
+            function funcionDeclarada(){
+                console.log("Esto es una función declarada, puede invocarse en cualquier parte de nuestro código incluso antes de que la función sea declarada");
+            }
+
+            //Pero por qué?, pues JS lo que hace es ordenar las funciones primero y luego, la ejecuta
+
+
+
+
+            function estoEsUnaFuncion(){
+                //Son bloques de líneas de código
+                
+                console.log("Uno");
+                console.log("Dos");
+                console.log("Tres");
+
+            }
+
+                //Función que devuelve valor:
+
+                function unaFuncionQueDevuelveValor(){
+                    //Cuando una función devuelve un valor usamos: return
+                    return "La función devuelve una String"
+
+                    //Para que veamos si la función está realmente devilviendo el valor, puede usarse dentro de un console.log() o simplemente la asignamos a una variable
+
+                    //El funcionamiento del return es que cuando el compilador encuentra la palabra, este sale del bloque de código.
+                }
+
+
+                //Función que recibe valores (parámetros):
+                function saludar(nombre, edad){
+                    console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+
+                }
+
+                //Podemos poner datos por defecto
+                 function saludar2(nombre="Desconocido", edad=0){
+                    console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+
+                }
+
+// ------------------ Funciones expresadas
+
+            //Crea una función y la asigania deinámicamente a una variable, en estas debemos usar const
+            //No le es necesario tener nombre (Función anónima)
+
+            //También puede hacerse así const funcionExpresada = () => {}
+
+            //Estas no pueden ser invocadas antes de su declaración funcionesExpresada();
+
+            const funcionesExpresada = function (){
+                console.log("Esto es una función EXPRESADA. Una función que se la sido asignada como valor a una variable, si invocamos esta función antes de su definción, JS nos dirá: ");
+            }
+            
+            funcionesExpresada();
+
+
+            //INVOCACIÓN DE FUNCIONES:
+            estoEsUnaFuncion(); //-> Los paréntesis indican que una función se va a ejecutar
+            
+            let valorDeFuncion = unaFuncionQueDevuelveValor();
+            console.log(valorDeFuncion);
+
+            saludar("Arturo", 20);
+            saludar2();
+
+
+        </script>
+    </article>
+
+    <article id="arreglos">
+        <h1>Arreglos</h1>
+        <p>Se tratan del segundo tipo de dato compuesto</p>
+        <script>
+            //tenemos diferentes maneras de declarar arreglos:
+
+            const a = [];
+            const b = [1, true, "Hola", ["A", "B", "C"]];          
+
+            console.log(a);
+            console.log(b);
+            console.log(b.length); //Para la longitud del arreglo
+            console.log(b[2]);
+            console.log(b[0]);
+            console.log(b[3]);
+            console.log(b[3][2]); //Accedemos al elemento del arreglo dentro del arreglo
+
+
+
+            const c = Array.of("X", "y", "z", 1, 2, 3); //Otra forma de crear arreglos
+            console.log(c);
+    
+            const d = Array(100).fill(false); //Crea un arreglo con 100 posiciones inicializadas con false
+            console.log(d);
+
+            //Antiguas formas de crear arreglos
+            const e = new Array();
+            console.log(e);
+
+            const f = new Array(1, 2, 3, true, false);
+            console.log(f);
+
+            const colores = ["Rojo", "Azul", "Verde"];
+            console.log(colores);
+
+            colores.push("Negro"); //Agrega elemento al final
+            console.log(colores);
+
+            colores.pop(); //Quita el elemento final
+            console.log(colores);
+
+
+
+            //Método que permite ejecutar una función por cada elemento en el arreglo:
+            colores.forEach(function (el, index){
+
+                //el -> elemento que se está iterando en ese momento
+                //index -> indice que tiene ese elemento
+                
+                console.log(`<li> ${index} ${el} </li>`);
+                //También puede usar una arrow Function
+
+
+            });
+        </script>
+
+
+
+    </article>
+
+
+    <article id="objetos">
+        <h1>Objetos</h1>
+        <script>
+            //Son una parte importante de JS, "En JS TODO es un objeto"
+            let palabra = new String("Hola");
+            console.log(palabra);
+
+
+            const objeto = {
+
+            }
+            console.log(objeto);
+
+
+            const objeto2 = new Object(); //Un objeto es una colección de llaves-valores
+            console.log(c);
+
+
+                //Dentro de un objeto, es posible poner varios tipos de valores, strings, numbers, arreglos, otros objetos e incluso funciones
+            const arturo = {
+                nombre: "Arturo",
+                apellido: "ChiMut",
+                edad: 20,
+                pasatiempos: ["Correr", "Programar", "Ciclismo"],
+                soltero: true,
+                contacto: {
+                    email: "iachimut101@gmail.com",
+                    telefono: "9961010493",
+                },
+                saludar: function (){
+                    console.log("Hola :D");
+                },
+
+                //otra funcion:
+                decirNombre: function (){
+
+                    //this. se refiere al contexto de donde nos encontramos, el mismo objeto
+                    console.log(`Hola me llamo ${this.nombre} ${this.apellido}`);
+                }   
+            };
+
+
+            console.log(arturo);
+
+            //Para acceder a una propiedad de un objeto:
+            console.log(arturo["nombre"]);
+            console.log(arturo.nombre);
+            console.log(arturo.soltero);
+            console.log(arturo.pasatiempos);
+            console.log(arturo.pasatiempos[0]);
+            console.log(arturo.contacto);
+            console.log(arturo.contacto.email);
+            
+            arturo.saludar();
+            arturo.decirNombre();
+
+            /*Dentro de un objeto a las variables se les van a llamar atributos
+            a las funciones se les llama métodos*/
+
+            //Para acceder a las llaves dentro del objeto se puede:
+            console.log(Object.keys(arturo));
+            console.log(Object.values(arturo));
+
+            console.log(arturo.hasOwnProperty("nombre")); //Para ver si dentro del objeto existe una propiedad
+
+            console.log(arturo.hasOwnProperty("nacimiento"));
+            
+        </script>
+
+    </article>
+
+</body>
+</html>

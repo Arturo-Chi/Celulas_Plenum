@@ -58,3 +58,4 @@ VARIABLES
 CONSTANTES
 
 Para el uso de constantes dentro de JS usamos CONST.
+Con ella podemos crear variables

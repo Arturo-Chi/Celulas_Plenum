@@ -8,6 +8,8 @@
 <body>
 
     <script>
+
+        //Vamos a usar const cuando necesitemos de variables cuyo valor no vaya a cambiar durante el flujo de la aplicación
         const PI = 3.1416;
         //Esto está mal, no se pueden inicializar constantes vacías.
         //const NUEVE;
@@ -21,28 +23,52 @@
         //Otro detalle con las constantes es que no pueden volver a asignarse
         //Nunca durante el flujo dentro de mi programa:
 
-        PI = 3.14;
+        //PI = 3.14;
         console.log(PI);
 
 
-        //Esto no pasa cuando declaramos como constantes a un
-        //arreglo o un objeto:
+        //Esto no pasa cuando declaramos como constantes a un arreglo o un objeto:
 
         // {} -> Objeto
         // [] -> Arreglo
 
+        //Un arreglo es una colección de datos.
+        //Un objeto es una colección de atributo y valores
 
-        let objeto = {
+        //El trabajo con const es diferentes para datos primitivos
+        // Accedemos directamente al valor: string number boolean null indefined NaN
+
+        //Que con objetos compuestos
+        // Se accede a la referencia de un objeto: object[] array{} function () class {} etc
+
+
+        //Primero lo declaramos como let
+        const objeto = {
             nombre: "Tony",
             edad: 35
         }
 
-        let colores = [
+        
+        //Primero lo declaramos como let
+        const arreglo = [
             "verde", "blanco", "rojo"
         ]
 
         console.log(objeto);
-        console.log(colores);
+        console.log(arreglo);
+       
+        //Para demostrarlo agreguemos datos al objeto:
+        objeto.correo = "iachimut101@gmail.com"
+
+        //Y para arreglos:
+        arreglo.push("anaranjado")
+
+        console.log(objeto);
+        console.log(arreglo);
+
+        //En conclusión, si definimos como constante a objetos primitivos no vamos a poder hacer cambios en ellos.
+        // Pero si declaramos un compuesto como const si podemos hacerle cambios
+
 
     </script>
     

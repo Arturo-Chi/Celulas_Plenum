@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script> //Video 1
+
+    //Se debe ver por las opciones de validaciones que pueden hacerse sobre las variables
+        //Ejercicio #1
+        const conteo = function(cadena = "Hola Mundo"){
+            (typeof cadena === "object")? console.log("Es un objeto"):
+            (cadena)? console.log(`Cadena: ${cadena} | Longitud: ${cadena.length}`): console.log("La cadena está vacía");
+        }
+
+        conteo("lorem ipsum");
+
+        //Ejercicio #2
+        function recortarPalabra(cadena = "Hola Mundo", lon = 4){
+            return cadena.substring(0, lon);
+        }
+
+        let nuevaCadena = recortarPalabra("Well I'm a Punckrocker yes I am", 10);
+        console.log(nuevaCadena);
+
+
+        //Ejercicio #3
+        function stringAArreglo(cadena = "Hola Mundo", corte = " "){
+            return (!cadena)? "Cadena vacía": cadena.split(corte);
+        }
+
+        let resultado = stringAArreglo("If you get out the bed, and find me standing all alone", " ");
+        console.log(resultado);
+
+        //Ejercicio #4
+        const repetirTexto = (cadena = "Hola Mundo", repetir = 3) => {
+            let resultado = cadena;
+            for (let i=0; i<repetir-1; i++) {
+                resultado += ` ${cadena}`
+            }
+            console.log(resultado);
+        }
+
+        repetirTexto("Let it Happen", 5);
+
+
+    </script>
+
+    <!--
+    5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+    6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+    7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+    8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+
+    -->
+    <script>
+        //Ejercicio #5
+
+        const invertir = (cadena = "") =>{
+            if (!cadena) return console.warn("La cadena está vacía");
+            let aArreglo = cadena.split("");
+            let invertido = aArreglo.reverse();
+            
+            console.log(invertido.toString().replaceAll(",", ""));
+
+
+        }
+
+        invertir("Ashly Nayibe Uc Berzunza");
+
+        //Ejercicio #6
+        const contar = (cadena = "", comodin = "") =>{
+            if(typeof cadena !== "string" || typeof comodin !== "string") return console.error("El valor debe ser de tipo STRING");
+
+            if (!cadena) return console.warn("La cadena está vacía");
+            if (!comodin) return console.warn("No se especificó la palabra a contar");
+            
+
+            let array = cadena.toLowerCase().split(" ");
+            let cont = 0;
+            array.forEach(element => {
+                if(element == comodin.toLowerCase()){
+                    cont++;
+                }
+            });
+
+
+            console.log(cont);
+        }
+
+        contar("Hola mundo adios mundo mundo mundo mundo hola adios adios genial ashly", "mundo");
+        
+
+        //Ejercicio #7
+        const esPalindromo = (cadena = "") =>{
+            if(!cadena) return console.warn("La cadena está vacía");
+            if(cadena.lenght === 1) return console.log(true);
+            
+            let subcadena = cadena.toLowerCase();
+            let apuntador = 0;
+            let cola = cadena.length-1;
+            let arreglo = [];
+
+
+            for (const caracter of subcadena) {
+                arreglo.push(caracter);
+                
+                if(subcadena.charAt(cola) === arreglo[arreglo.length-1]){
+                    console.log(arreglo);
+                    arreglo.pop();
+                    cola--;
+                }
+            }
+            
+            (arreglo.length === 0 )? console.log(true): console.log(false);
+
+
+
+        };
+        esPalindromo("AshlylhsA");
+
+        //Ejercicio #8
+        function eliminarPatron(cadena = "", patron = ""){
+            if(typeof cadena !== "string" || typeof patron !== "string") return console.error("Se espera un tipo string");
+            
+            if(!cadena) return console.warn("La cadena está vacía");
+            if(!patron) return console.warn("No hay patrón especificado");
+
+            return cadena.replaceAll("xyz", "");
+
+        }
+        
+        
+        let sinPatron = eliminarPatron("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+        console.log(sinPatron)
+    </script>
+
+
+    <script>
+        //Ejercicio #9
+            function obtenerAleatorio(){
+                
+                const generar = ()=>{return Math.floor(Math.random() * 601)}
+
+                let status = true;
+                let random = generar();
+                let numero;
+                do{
+                   
+                    if(random >= 501 && random <= 600){
+                        numero = random;
+                        status = false;
+                    }else{
+                        random = generar();
+                    }
+
+                }while(status);
+
+
+                
+                return numero;
+
+
+
+            }
+
+            console.log(obtenerAleatorio());        
+
+        //Ejercicio #10
+             function capicua(numero = undefined){
+                try {
+                    if(!numero) throw new Error("No hay parámetros");
+                    if(isNaN(numero) || typeof numero !== "number") throw new Error("El parámetro debe de ser un número");
+                    if(numero < 0) return false;
+                    //if(numero-10 <0) return true;
+
+                    
+                    let og = numero, copia = 0;
+
+                
+                    while (og > 0) {
+                        let digito = og%10;
+                        
+                        copia = (copia*10)+digito;
+                        
+                        og = Math.floor(og/10);
+                        
+                        //console.log(copia, numero);
+                    }
+
+                    return (numero === copia)? true: false;
+                
+                } catch (error) {
+                    console.log(error)
+                }
+             }
+
+             let capi = capicua(55);
+             console.log(`capicua: ${capi}`);
+             
+
+        //Ejercicio #11
+        console.log("EJERCICIO 11")
+        function factorial(numero = undefined){
+
+            try {
+                if(!numero) throw new Error("Parámetro no especificado");
+                if(typeof numero !== "number" || isNaN(numero)) throw new Error("El parámetro no es un número");
+                if(numero < 0) throw new Error("El número no es válido");
+
+                let resultado = 1;
+                for (let index = 1; index <= numero; index++) {
+                    resultado *= index;
+                }
+
+                console.log(`El factorial de ${numero} : ${resultado}`);
+            } catch (error) {
+                console.log(error);                
+            }
+
+        }
+        factorial(7);
+
+    </script>
+
+        
+    <script>
+        //EJERCICIO # 12
+        function esPrimo(numero = undefined){
+            try {
+                
+                if(isNaN(numero) || typeof numero !== "number") throw new Error("El dato numérico no es válido");
+                if(numero === 1) return false;
+
+                if(numero === 2 || numero === 3) return true;
+                if(numero%2 === 0) return false;
+
+                let raiz = Math.round(Math.sqrt(numero));
+             
+                for (let index = 3; index < raiz; index+=2) {
+                    if(raiz%index === 0){
+                        return false;
+                    }
+                }
+                 return true;
+
+            } catch (error) {
+                console.log(error);    
+            }
+        }
+        console.log("Ejercicio 12");
+        console.log(esPrimo(101));
+
+
+        //EJERCICIO # 13
+            function esPar(numero=undefined){
+                if(typeof numero !== "number" || isNaN(numero)) return console.error("Se espera un dato de tipo number");
+                 
+                console.log(numero&1);
+                return (numero&1) ? "Impar": "Par"
+
+            }
+
+            let numero = 71;
+            console.log(esPar(numero));
+            
+
+        //EJERCICIO #14
+            function convertirEscala(temperatura = undefined, escala = ""){
+                try {
+                    if(isNaN(temperatura) || typeof temperatura !== "number") throw new Error("La temperatura debe de ser un número");
+                    if(!escala) throw new Error("Escala no especificada");
+
+                    let unidad = escala.toLowerCase();
+                    let conversion = temperatura;
+                    switch (unidad) {
+                        case "c":
+                            
+                            return `${conversion * 1.8 + 32}° F`
+                            break;
+                    
+                        case "f":
+                            
+                            return `${(5/9)* conversion-32 }° C`;
+                            break;
+
+                        default:
+                            throw new Error("Escala no válida");
+                            break;
+                    }
+                } catch (error) {
+                    console.error(error);
+                } 
+            }
+
+            let nuevaTemp = convertirEscala(0,"C");
+            console.log(nuevaTemp);
+    </script>
+
+
+    <script>
+        //EJERCICIO 15
+        console.log("EJERCICIO 15")
+        const aDecimal = (valorBinario) =>{
+            let valor = valorBinario;
+            
+            let comodin = 1;
+            let resultado = 0;
+
+            for (let index = valorBinario.toString().length-1; index >= 0; index--) {
+                let digito = valor%10;
+                resultado += digito*comodin;
+
+                comodin*=2;
+                valor = Math.floor(valor/10)
+                
+            }
+
+            return `Binario: ${valorBinario} a Decimal: ${resultado}`;
+        }
+
+        const aBinario = (valorDecimal) =>{
+            let numero = valorDecimal;
+            let binario = "";
+            while(numero > 0){
+                
+                digito = (numero%2 === 0) ? "0": "1";
+
+                binario = digito + binario;
+                numero = Math.floor(numero/2); 
+                
+            }
+            return `Decimal: ${valorDecimal} a Binario: ${binario}`;
+         
+        }
+
+
+        function binarioADecimal(numero=undefined, base=undefined){
+            try {
+                if(!numero || !base) throw new Error("Parámetros necesarios");
+                if(typeof numero !== "number" || isNaN(numero)) throw new Error("Número inválido");
+                if(typeof base !== "number" || isNaN(base)) throw new Error("La base es incorrecta")
+                
+                switch (base) {
+                    case 2:
+                        console.log(aDecimal(numero));                       
+                        break;
+                
+                    case 10:
+                        console.log(aBinario(numero));
+                        break;
+
+                    default:
+                        throw new Error("El valor de la base solo puede ser 2 o 10")
+                        break;
+                }
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        binarioADecimal(101010111, 2);
+        binarioADecimal(1024, 10);
+
+
+        //EJERCICIO 16
+        console.log("EJERCICIO 16")
+        function descuento(precio= undefined, descuento = undefined){
+            try {
+                //if(!precio || !descuento) throw new Error("Parámetros requeridos");
+                if(typeof precio !== "number" || isNaN(precio)) throw new Error("El precio debe ser un número");
+                if(typeof descuento !== "number" || isNaN(descuento)) throw new Error("El descuento debe ser un número");
+                if(precio <= 0) throw new Error("El precio debe ser mayor a 0");
+                if(descuento <0 ) throw new Error("El descuento no puede ser negativo");
+
+                let menos = (precio*descuento)/100;
+                let resultado = precio -menos;
+
+                console.log(resultado);
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        descuento(5, 20);
+
+        //EJERCICIO 17
+        function diferenciaFechas(fecha){
+            try {
+                if(!(fecha instanceof Date)) throw new Error("El parámetro debe de ser una fecha");
+                console.log("Fecha dada: "+fecha);
+                console.log(2020 - fecha.getFullYear());
+                //console.log(new Date().getFullYear() - fecha);
+
+
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+
+        //Solución de JonMircha
+        //Hay un formato de tiempo que es el stamp, que se maneja con milisegundos, es útil para realizar operaciones aritméticas con fechas
+        //Realizar la operación y entonces ponerlo en formato que se ha dado
+
+        function calcularAnios(fecha = undefined){
+            if(fecha === undefined) return console.warn("No ingresaste la fecha");
+            if(!fecha instanceof Date) return console.error("El valor ingresado no es una fecha");
+
+            let tiempo = fecha.getTime()
+
+            let hoy = new Date().getTime();
+            let hoyMenosFecha = hoy-tiempo,
+            anioEnMS = 1000*60*60*24*365;
+
+            let resultado = Math.floor(hoyMenosFecha/anioEnMS);
+
+
+
+        }
+
+        //diferenciaFechas(new Date())
+        diferenciaFechas(new Date(1984, 4, 23))
+        //diferenciaFechas("Hola Mundo")
+
+    </script>
+
+
+    <script>
+        /*
+        18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+        19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+        20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.      
+        */
+
+        console.log("EJERCICIO 18");
+        function contarVocalesConsonantes (str = ""){
+            if(!str) return console.warn("No se ingresó el parámetro");
+            if(typeof str !== "string") throw new Error("Parámetro inválido");
+
+            let contVocales = 0;
+            let contConsonantes = 0;
+
+            let cadena = str.toLowerCase();
+            const isVocal = (caracter)=>{
+                return (caracter === 97 || caracter === 101 || caracter === 105 || caracter === 111 || caracter === 117)? true: false;
+            }
+
+
+            for (let index = 0; index < cadena.length; index++) {
+
+                let item = cadena.charCodeAt(index);
+                //console.log(`${cadena.charAt(index)} ==== ${item}`);
+                (isVocal(item)) ? contVocales++: contConsonantes++;
+                
+            }
+
+            return `Vocales = ${contVocales}, Consonantes = ${contConsonantes}`;
+
+
+
+        }
+
+        console.log(contarVocalesConsonantes("Hello World"));
+
+         console.log("EJERCICIO 19");
+         function nombreValido(){
+
+         }
+
+         function emailValido(){
+            
+         }
+
+
+    </script>
+
+
+        <script>
+        /*
+        21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+        22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+        23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+        */
+
+
+    </script>
+
+        <script>
+        /*
+       24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+        25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+        26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.        */
+
+
+    </script>
+
+
+    <!--
+
+        <script>
+            /*
+                1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+
+                2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+
+                3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+
+                4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+            */
+
+
+            //EJERCICIO 1
+            function ejercicio1(cadena="Hola Mundo"){
+                if(typeof cadena === "object"){
+                    console.log("Es un objeto");
+                    console.log(Object.values(cadena));
+                }else{
+                    console.log(`Es una cadena: "${cadena}", la longitud es ${cadena.length}`);
+                }
+            }
+
+
+
+            console.log("EJERCICIO 1");
+            const contar = function(cadena = "Hola Mundo"){
+                (typeof cadena === "object")? console.log("Es un objeto"):
+                (cadena)? console.log(`La cadena es: ${cadena} y su longitud es: ${cadena.length}`): console.log("Cadena Vacía");
+            }
+
+            contar("Hola a todos soy mr frog este es mi programa");
+
+            let objeto = {
+                nombre: "Arturo",
+                edad: 20,
+                crush: {
+                    nombre: "Ashly",
+                    edad: 23
+                },
+                rol: "programador"
+            }
+
+            let word = "Ashly Nayibe Uc Berzunza"
+
+            ejercicio1(word);
+
+
+
+            //EJERCICIO 2
+
+            function ejercicio2(cadena="Hola Mundo", comodin=" "){
+                return cadena.split(comodin);
+            }
+
+            let arreglo = ejercicio3("Ivan Arturo Chi Mut", " "); 
+
+        
+            console.log(arreglo);
+
+            //EJERCICIO 3
+            function ejercicio3(str="Hola Mundo", index=4){
+                return str.substring(0, index);
+            }
+
+            let nuevaCadena = new String(ejercicio3("Ashly Nayibe", 5));
+            console.log(nuevaCadena, nuevaCadena.length);
+
+
+
+
+            //EJERCICIO 4
+            function ejercicio4(str = "Hola Mundo", repeat = 3){
+                let palabraFinal = str;
+                for (let index = 0; index < repeat-1; index++) {
+                    palabraFinal += ` ${str}`;                
+                }
+                console.log(palabraFinal);
+            }
+
+            ejercicio4();
+            ejercicio4("IronMan", 5);
+        </script>
+
+    -->
+
+
+
+
+</body>
+</html>

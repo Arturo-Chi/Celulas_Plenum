@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales, Métodos REST, etc</title>
+</head>
+<body>
+    <script>
+        //Condicionales
+        let hora = 3;
+
+        //Se pueden usar condicionales como si se trataron de los intervalos matemáticos
+
+        // [ >= , ] <=
+        // ( >  , ) <
+
+        if(hora >= 0 && hora <=5){
+            console.log("Déjame Dormir");
+        }
+
+
+        //OPERADOR TERNARIO
+        // (condicion) ? verdadero : falso;
+
+        let edad = 15;
+        let eres = (edad>=18) ? "Eres mayor de edad" : "Eres menor de edad";
+        console.log(eres);
+
+        //También se pueden poner las condiciones dentro de una sola linea de código:
+        //if (edad > 18) return console.warn("Ya eres mayor de edad");
+
+        //SWITCH -- CASE
+        let dia = 2;
+        switch (dia) {
+            case 0:
+                console.log("Hoy es domingo");
+                
+                break;
+        
+            case 1:
+                console.log("Hoy es Lunes");
+
+                break;
+
+            case 2:
+                console.log("Hoy es Martes");
+
+                break;
+
+            default: //Es el caso en el que variable en cuestion no cae en ninguno de los casos
+                console.log("Fecha inválida");
+                break;
+        }
+
+
+        console.log("Ciclos (LOOPS)");
+        
+        //While
+        // Siempre va a comparar antes de ejecutar el código
+        let contador = 0;
+        while(contador < 10){
+            console.log("while"+contador);
+            contador++;
+        }
+
+        //Do-While, variante del while
+        //En esta estructura siempre se va a ejecutar el bloque de código al menos una vez
+
+        do{
+            console.log("do-while"+contador);
+            contador++;
+        }while(contador < 10);
+
+
+        //FOR
+        //Es el bucle más utilizado, consta de 3 partes
+        //index, variable que controla el código (se inicializa)
+        // condición que se está evaluando
+        //index++, incremento o decremeno de la variable de control
+
+         
+        
+        for (let i = 0; i < 10; i++) {
+            //const element = array[i];
+            console.log(i);
+
+        }
+
+        //Para leer arreglo, podemos hacer
+        let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+        for(let i= 0; i<numeros.length; i++){
+            console.log(`Arreglo ${i} : ${numeros[i]}`);
+        }
+
+    //Otras variantes
+    //FORIN -> Loop que permite recorrer las propiedades de un objeto
+    const arturo = {
+        nombre: "Arturo",
+        edad: "20",
+        carrera: "ingenieria en sistemas",
+    }
+
+
+    //key se trata de la varable dentro del object
+    for (const propiedad in arturo) {
+        console.log(propiedad);
+        //Y si queremops mostrar su nombre y propiedad
+        //Cuando queremos imprimir el valor de un objeto con un for, no sirve la notación punto, pero si de []
+        console.log(`key: ${propiedad} value: ${arturo[propiedad]}`);
+    }
+
+    //FOROF -> Este permite recorrer todos los elementos de cualquier elemento que se iterable en JS (Que pueda partirlo en pedacitos)
+    //Como arreglos, cadenas te texto, etc
+
+
+    for (const elemento of numeros) {
+        console.log(`: ${elemento}`);
+    }
+
+    let cadena = "Hola Mundo";
+    for (const caracter of cadena) {
+        console.log(caracter);
+    }
+
+    </script>
+
+
+    <script id="manejo-errores">
+        //En JS la estructura de manejo de errores es la llamada Try-Catch
+
+        try{
+            // Aqui se agrega el código a evaluar
+            console.log("En el try se agrega el código a evaluar");
+            noExiste; //-> Estamos lanzando un error
+            console.log("Segundo mensaje we");
+
+
+        }catch(error){
+            console.log("Catch, captura cualquier error surgido o lanzado en el try");
+
+            console.log(error);
+
+        }finally{
+            //Ya no es tan usado
+            console.log("Se ejecutará siempre al final de un bloque try-catch");
+        }
+
+
+        //Para personalizar nuestros propios mensajes
+        try {
+            let numero = "y";
+            if(isNaN(numero)){
+
+                //Existen varios tipos de errores.
+                //Si no estamos seguros sobre que tipo, podemos definirlo como general.
+                //throw new Error("mensaje");
+                throw new Error("El caracter no es un número");
+                //a partir de aquí, se corta el try, y se va al catch
+
+
+            }
+            console.log(numero*numero);
+
+        } catch (error) {
+            console.log(`Se produjo un error ${error}`);
+        }
+
+
+
+
+    </script>
+
+    <script id="break-continue">
+        //Veíamos antes en el switch la palabra break, que sirve para salir de la estructura.
+        //Existe otra palabra, continue
+
+        //Estas palabras estan hechas para usar en estructuras de control, com for y while (generales), ifs, switch
+
+
+        let arreglo = [1, 2, 3, 4, 5, 6, 7,8, 9, 10];
+        for (let i = 0; i<arreglo.length; i++){
+            
+            //Imaginemos que necesitamos que cuando i valga 5 se salga del for
+            
+            if(i===5) break;
+            console.log(arreglo[i]);
+
+        }
+
+
+         for (let i = 0; i<arreglo.length; i++){
+            //contunue lo que hace en este caso es omitir el valor que se encuentra en la posición especificada
+            
+            if(i===5) continue;
+            console.log(arreglo[i]);
+
+         }
+
+    </script>
+
+    <script id="destructuracion">
+        //La destructuración es una nueva forma de asignar valores a arreglos y objetos.
+
+        //Arreglos
+
+        //Sin destructuracion
+        const numbers = [1, 2, 3];
+        let uno = numbers[0], dos = numbers[1], tres = numbers[2];
+        console.log(uno, dos, tres);
+        
+        //Con destructuracion
+        const [one, two, three] = numbers;
+        console.log(one, two, three);
+
+        
+        //Objetos
+
+        let sujeto = {
+            nombre: "nombre",
+            apellido: "apellido",
+            edad: 35,
+        }
+
+        let {nombre, apellido} = sujeto;
+        console.log(nombre,apellido);
+
+
+        //Para que la destructuración funcione en los objetos es importante que las variable que trato de crear se llame igual que la variable que tratamos de aislar en una sola variable
+
+    </script>
+
+    <script id="Objetos-literales">
+        let nameDog = "Robbie", age = 12;
+
+        const perro = {
+            nombre: name,
+            edad: age,
+            ladrar: function(){
+                console.log("Wow wow");
+            }
+        }
+
+        console.log(perro);
+        perro.ladrar();
+
+
+        //Con las nuevas propiedades de los objetos literales podemos hacer:
+
+        const dog = {
+            //Si queremos poner como valor una variable con el mismo nombre que pensamos para la key, podemos ponerlo solamente así:
+            nameDog,
+            age,
+            //El nombre de la propiedad será el mismo al nombre de la variable
+
+            /*Para los métodos, podemos cambiar esto:
+            raza: "callejero",
+              ladrar: function(){
+                console.log("Wow wow woooooow");
+            }*/
+            // A esto:
+            ladrar (){
+                console.log("wow wow woooow");
+            }
+        }
+
+        console.log(dog);
+        dog.ladrar();
+
+    </script>
+
+
+<script id="parametro-rest">
+    //PARAMETROS REST
+    //parametros que recibe una función solamente
+    //Son formas virtuales de ir agregando parametros infinitos a una función o variables
+
+    //Para definirlos, usamos ... antes del nombre de donde estan guardados
+
+    function sumar(a,b){
+        return a+b;
+
+    }
+
+    //pero y si no sabemos cuantos numeros vamos a sumar?
+    function sumar2 (a, b, ...c){
+        let resultado = a+b;
+        //lo que llegue después se trata como arreglo
+        c.forEach(function (n){
+            resultado += n;
+        });
+
+        return resultado;
+    }
+
+    console.log(sumar2(1,2));
+    console.log(sumar2(1,2,3,4,5));
+
+
+    //OPERADOR DE PROPAGACIÓN
+    //Un caso muy útil es cuando ya tenemos ciertos elementos en los arreglos y necesitamos agregar más
+
+    const arr1 = [1, 2, 3, 4, 5];
+    const arr2 = [ 6, 7,8, 9, 0];
+
+    console.log(arr1, arr2);
+
+    //Imaginemos que tenemos que crear un tercer arreglo partiendo de los primeos dos
+
+    const arr3 = [arr1, arr2];
+    console.log(arr3);
+
+    //así tendremos un arreglo de dos elementos, que son propiamente los dos arreglos anteriores, para hacer que en verdad se junten los dos arreglos hacemos:
+
+    const arrGeneral = [...arr1, ...arr2];
+    console.log(arrGeneral);
+
+
+</script>
+
+
+<script id="arrow-function">
+    //Mencionabamos que hay varias formas de hacer funciones:
+    /*
+        
+        function nombre(parametros){
+            //logica
+        
+        }
+
+        const expresada = function(){
+            //logica
+        }
+            
+        Las arrow function son las hermanas de estas últimas, hay varias formas de construirlas:
+
+        Estre primer ejemplo, cuando se tratan de operaciones que tengan más de una línea de código
+        const arrow0 = (parametros) => {
+            //logica
+        }
+
+        const arrow1 = (parametros) => //logica console.log("Hola");
+        arrow1();
+
+
+        const arrow2 = parametros => //logica
+
+    */
+
+
+
+
+
+</script>
+
+<!--
+    <script id="prototipos">
+        /*
+        Clases: Modelo a seguir. (Una Idea)
+        Objetos: Es una instancia de una clase. 
+        Atributos: Es una característica o propiedad del objeto (variables dentro de un objeto)
+        Métodos: Son las acciones que un objeto puede realizar
+
+        Mecanismo por el cual un objeto podrá heredar atributos y métodos de un objeto padre.
+
+        
+        */
+
+        const animal = {
+            nombre: "Gato",
+            sonido(){
+                console.log("Hola soy u animal")
+            }
+        }
+
+        //Si quueremos hacer más objetos, podemos copiar y pegar la estrictura, pero no es optimo, lo mejor es usar el prototipado:
+
+        //funcion constructora
+        function Animal(nombre, genero){
+            this.nombre = nombre;
+            this.genero = genero;
+
+            this.sonar = function(){
+                console.log("Soy un animal");
+            }
+        }
+
+        //Con esto ya no tengo que estar copiando y pegando:
+        const snoopy = new Animal("Snoopy","macho");
+        const gato = new Animal("Gato", "macho");
+        console.log(snoopy);
+        console.log(gato);
+
+
+        //Sin embargo, hacer esto hará que se consuman muchos recursos al momento de trabajar con muchas instancias de este prototipo,
+        //Lo más adecuado entonces, es usar solamente los atributos dentro del prototipo
+
+        /*
+            function Animal(nombre, genero){
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+        
+            Y para asignarle los métodos a estas funciones constructores, usamos entonces:
+
+            Animal.prototype.sonar = function (){
+                console.log("Soy un Animal");
+            }
+        
+
+            Lo que hicimos así, es que el método esté colgado en el protipo del objeto.
+        */
+
+
+        //Herencia prototipica
+        function Perro(nombre, genero, tamanio){
+            this.super = Animal; //Aqui hacemos la asociación de la herencia
+            this.super(nombre, genero);
+            this.tamanio = tamanio;
+
+        }
+        //Con esta linea perro está heredando de Animal
+        Perro.prototype = new Animal();
+        //Ahora, al heredar de Animal, perro ya puede usar incluso los métodos del padre.
+
+
+        //Sobreescritura:
+        Perro.prototype.sonar = function(){
+            console.log("Soy un perro, woof, woof");
+        }
+
+        //Para un nuevo método que será de perro:
+        Perro.prototype.ladrar = function(){
+            console.log("woof wooooof"); 
+        };
+
+
+
+        /*
+            Cuando se le hagan instancias entonces cambiariamos:
+            const Snoopy = new Perro("Snoopy", "Macho", "Mediano");
+            snoopy.sonar();
+            snoopy.ladrar();
+
+
+        */
+
+    </script>
+-->
+
+    <script id="POO- Herencia">
+        //Veiamos que la POO en JS la programación orientada objetos está basada en prototipos:
+        //JS es un lenguaje orientado a objeto basado en prototipos
+
+
+        class Animal{
+
+            constructor(nombre, genero){
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+
+            //Los métodos se hacen de la siguiente forma:
+            sonar(){
+                console.log("Hola, hago sonidos porque estoy vivo")
+            }   
+
+            saludar(){
+                console.log("Hola me llamo "+this.nombre)
+            }
+
+        }
+
+       
+        //Para la herencia hacemos:
+
+        class Perro extends Animal{
+            //constructor de la clase perro debe tener super():
+            constructor(nombre, genero, tamanio){
+                super(nombre, genero);
+                this.tamanio = tamanio;
+            }
+
+            //sobreescritura del método:
+            sonar(){
+                console.log("Soy un perro y debo ladrar");
+            }
+
+            ladrar(){
+                console.log("wooof wooof")
+            }
+
+
+            //Hay ciertas caracteristicas que no existen aquí, como la encapsulación
+            //Pero otras que sí, como los métod estáticos.
+
+
+            static queEres(){
+                //Las clases estáticas son funciones que pertenecen directamente y de forma global a la clase, es decir, residen en la plantilla de la clase, siendo parte del diseñoo general de la clase y no del estado de un objeto individual.
+
+                console.log("Los perros somos animales mamíferos que pertenecemos a la familia de caninos. Somos considerados los mejores amigos del hombre");
+            }
+
+            //Los setters y getters:
+            //Para determinar en otros lenguajes la diferencia entre estos dos, se suele usar como prefijo el get o set
+
+
+            get getRaza(){
+                return this.raza;
+            }
+
+            set setRaza(raza){
+                this.raza =  raza;
+            }
+        }
+
+        const mimi = new Animal("Mimi", "Hembra"),
+        scooby = new Perro("Scooby", "Macho", "Mediano");
+        Perro.queEres();
+
+        console.log(mimi);
+        mimi.saludar();
+        mimi.sonar();
+
+        console.log(scooby);
+        scooby.saludar();
+        scooby.sonar();
+        scooby.ladrar();
+
+        //En ambos casos, tras bambalinas todo es lo mismo, se siguen interpretando las clases como si fueran objetos, las clases llegaron para hacer las cosas un poco más simples
+
+        //Y ahora, para usar getters, JS los compilará como si fueran atributos:
+        console.log(scooby.getRaza); //No puede ejecutarse como una función, sino como un método
+
+        scooby.setRaza = "Grán danés";
+        console.log(scooby.getRaza);
+
+    </script>
+
+    <script id="objeto-math">
+    //OBJETO MATH
+    //Math es un objeto estático, para poder usar sus métodos, siempre tenemos que poner: Math. método
+    console.log(Math);
+
+    /* Algunos métodos que incluye:
+    abs - valor absoluto
+    ceil - redondea al número entero posterior inmediato
+    floor - redondea al número enteror anterior inmediato
+    round - para no forzar a un inmediato posterior o anterior, si no al más cercano
+    sqrt - raíz cuadrada de un número
+    pow - elevar a potencias (x, y) x- numero base, y- exponente
+
+    sing - indica si un número es positivo o negativo
+
+    random - da un valor aleatorio, comprendido entre 0 y 1
+    para que nos de un número entre 0 y x, usamos = Math.random() * x -> que es el máximo número
+    Se puede complementar con round para quitar la parte fraccionaria
+
+    */
+
+
+
+
+    </script>
+
+    <script id="objeto-date">
+        console.log(Date());
+        let fecha = new Date();
+        console.log(fecha);
+
+        console.log(fecha.getDate());
+        
+        //dia de la semana D L M Mi J V S -> 0 1 2 3 4 5 6 
+        console.log(fecha.getDay());
+
+        console.log(fecha.getMonth()); //Empieza a contar desde el 0
+
+        console.log(fecha.getYear());
+         console.log(fecha.getFullYear());
+         console.log(fecha.getHours());
+         console.log(fecha.getMinutes());
+         console.log(fecha.getSeconds());
+
+    </script>
+</body>
+</html>
