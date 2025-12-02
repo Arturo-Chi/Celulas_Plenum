@@ -10,21 +10,23 @@
 
     <script> //Video 1
 
-    //Se debe ver por las opciones de validaciones que pueden hacerse sobre las variables
+   
+        console.log("EJERCICIO 1");
         //Ejercicio #1
         const conteo = function(cadena = "Hola Mundo"){
-            (typeof cadena === "object")? console.log("Es un objeto"):
+            if(typeof cadena !== "string") return console.warn("La entrada debe ser una cadena de texto");
             (cadena)? console.log(`Cadena: ${cadena} | Longitud: ${cadena.length}`): console.log("La cadena está vacía");
         }
 
-        conteo("lorem ipsum");
+        conteo("Cadena de prueba del ejercicio 1");
 
         //Ejercicio #2
         function recortarPalabra(cadena = "Hola Mundo", lon = 4){
+            if(typeof cadena !== "string") return console.warn("La entrada debe de ser una cadena")
             return cadena.substring(0, lon);
         }
 
-        let nuevaCadena = recortarPalabra("Well I'm a Punckrocker yes I am", 10);
+        let nuevaCadena = recortarPalabra("", 10);
         console.log(nuevaCadena);
 
 
@@ -58,16 +60,13 @@
 
     -->
     <script>
-        //Ejercicio #5
-
+       
+       //Ejercicio #5
         const invertir = (cadena = "") =>{
             if (!cadena) return console.warn("La cadena está vacía");
             let aArreglo = cadena.split("");
-            let invertido = aArreglo.reverse();
-            
+            let invertido = aArreglo.reverse();     
             console.log(invertido.toString().replaceAll(",", ""));
-
-
         }
 
         invertir("Ashly Nayibe Uc Berzunza");
@@ -104,8 +103,6 @@
             let apuntador = 0;
             let cola = cadena.length-1;
             let arreglo = [];
-
-
             for (const caracter of subcadena) {
                 arreglo.push(caracter);
                 
@@ -117,9 +114,6 @@
             }
             
             (arreglo.length === 0 )? console.log(true): console.log(false);
-
-
-
         };
         esPalindromo("AshlylhsA");
 
@@ -142,30 +136,20 @@
 
     <script>
         //Ejercicio #9
-            function obtenerAleatorio(){
-                
+            function obtenerAleatorio(){       
                 const generar = ()=>{return Math.floor(Math.random() * 601)}
-
                 let status = true;
                 let random = generar();
                 let numero;
-                do{
-                   
+                do{       
                     if(random >= 501 && random <= 600){
                         numero = random;
                         status = false;
                     }else{
                         random = generar();
                     }
-
                 }while(status);
-
-
-                
                 return numero;
-
-
-
             }
 
             console.log(obtenerAleatorio());        
@@ -176,29 +160,17 @@
                     if(!numero) throw new Error("No hay parámetros");
                     if(isNaN(numero) || typeof numero !== "number") throw new Error("El parámetro debe de ser un número");
                     if(numero < 0) return false;
-                    //if(numero-10 <0) return true;
-
-                    
                     let og = numero, copia = 0;
-
-                
                     while (og > 0) {
-                        let digito = og%10;
-                        
-                        copia = (copia*10)+digito;
-                        
+                        let digito = og%10;           
+                        copia = (copia*10)+digito;             
                         og = Math.floor(og/10);
-                        
-                        //console.log(copia, numero);
                     }
-
                     return (numero === copia)? true: false;
-                
                 } catch (error) {
                     console.log(error)
                 }
              }
-
              let capi = capicua(55);
              console.log(`capicua: ${capi}`);
              
@@ -305,6 +277,7 @@
     <script>
         //EJERCICIO 15
         console.log("EJERCICIO 15")
+        //función para pasar de Decimal a Binario
         const aDecimal = (valorBinario) =>{
             let valor = valorBinario;
             
@@ -322,7 +295,7 @@
 
             return `Binario: ${valorBinario} a Decimal: ${resultado}`;
         }
-
+         //función para pasar de Binario a Decimal
         const aBinario = (valorDecimal) =>{
             let numero = valorDecimal;
             let binario = "";
@@ -420,8 +393,6 @@
 
             let resultado = Math.floor(hoyMenosFecha/anioEnMS);
 
-
-
         }
 
         //diferenciaFechas(new Date())
@@ -442,28 +413,19 @@
         function contarVocalesConsonantes (str = ""){
             if(!str) return console.warn("No se ingresó el parámetro");
             if(typeof str !== "string") throw new Error("Parámetro inválido");
-
             let contVocales = 0;
             let contConsonantes = 0;
-
             let cadena = str.toLowerCase();
             const isVocal = (caracter)=>{
                 return (caracter === 97 || caracter === 101 || caracter === 105 || caracter === 111 || caracter === 117)? true: false;
             }
-
-
             for (let index = 0; index < cadena.length; index++) {
 
                 let item = cadena.charCodeAt(index);
-                //console.log(`${cadena.charAt(index)} ==== ${item}`);
-                (isVocal(item)) ? contVocales++: contConsonantes++;
-                
+
+                (isVocal(item)) ? contVocales++: contConsonantes++;          
             }
-
             return `Vocales = ${contVocales}, Consonantes = ${contConsonantes}`;
-
-
-
         }
 
         console.log(contarVocalesConsonantes("Hello World"));
@@ -493,7 +455,7 @@
                 if(!email) return console.warn("No hay ningún Email");
                 if(typeof email !== "string") throw new Error("El parámetro no es una cadena");
 
-                //const patron = /^[a-z0-9@(gmail|outlook|hotmail).com]/;
+                
                 const patron = /^[a-z0-9\.\-_]+@(gmail|outlook|hotmail)\.com$/;
 
                 let isValido = patron.test(email);
@@ -531,30 +493,21 @@
         23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
         */
         console.log("EJERCICIO 21")
-        function arregloAlCuadrado(arreglo = undefined){
-            
+        function arregloAlCuadrado(arreglo = undefined){  
             try {
                 if(!arreglo) return console.warn("No se ha especificado un arreglo");
-                if(!(arreglo instanceof Array)) throw new Error("La entrada no es un arreglo");
-                
+                if(!(arreglo instanceof Array)) throw new Error("La entrada no es un arreglo");   
                 let copia = [...arreglo];
-
                 for (let index = 0; index < copia.length; index++) {
                     if(isNaN(copia[index]) || typeof copia[index] !== "number") throw new Error(`El elemento ${index}: ${copia[index]} no es numérico`);
-                    copia[index] *= copia[index];
-                    
+                    copia[index] *= copia[index];           
                 }
-
-                return `original: ${arreglo}, cuadrado: ${copia}`;
-            
+                return `original: ${arreglo}, cuadrado: ${copia}`;      
             } catch (error) {
                 console.log(error);
             }
-
         }
 
-        //arregloAlCuadrado();
-        //arregloAlCuadrado();
         arregloAlCuadrado("Hola Mundo");
         arregloAlCuadrado(123);
 
@@ -571,21 +524,16 @@
                     return (typeof elemento !== "number" || isNaN(elemento))? true: false;
                });
                if(ContieneInvalido) throw new Error("El arreglo contiene valores NO NUMÉRICOS");
-
-                
+ 
                 let copia = [...arreglo];
                 copia.sort();
-
                 return `[Mayor: ${copia[copia.length-1]}, Menor: ${copia[0]}]`;
-
             } catch (error) {
                 console.log(error);
             }
-            
-        
         }
 
-        //buscaEnArreglo();
+      
         buscaEnArreglo(1234);
         buscaEnArreglo("Arreglo");
         const ARRAY = [1, 4, 5, -120, -60];
@@ -611,8 +559,6 @@
             }
 
         }
-
-        //arregloParesImpares("golden brown");
         let respuesta = arregloParesImpares([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
         console.log(respuesta)
 
@@ -655,8 +601,7 @@
                 try {
                     if(!input) return console.warn("NO se ingresó el parámetro");
                     if(!(input instanceof Array)) throw new Error(`La entrada debe ser un arreglo, no :${typeof input}`);
-                    //if(contieneInvalidos(input)) throw new Error("El arreglo contiene elementos no numéricos");
-
+      
                     console.log(input)
                     let nuevaLista = Array();
                     console.log(nuevaLista);
@@ -727,6 +672,10 @@
                 
         */
 
+        class Pelicula{
+            
+
+        }
 
 
     </script>

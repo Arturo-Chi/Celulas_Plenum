@@ -353,6 +353,149 @@
 
 </script>
 
+<script id="operador-cortocircuito">
+    //Funcionan con la operación de dos operadores lógicos: OR o AND
+
+    /*
+    OR - cuando el valor de la izquiera en la expresión siempre pueda validar a true, es el valor que cargará por defecto.
+
+    AND - Cuando el valor de la izquierda en la expresión siempre pueda validar a false, es el valor que se cargará por defecto
+    
+    */
+
+    function saludar(nombre = "desconocido"){
+        //antes la validación por cortocircuito se hacía de la manera:
+        nombre = nombre || "desconocido";
+
+
+        //Esto es con los valores de true
+        console.log("hola"+nombre);
+        console.log("cadena" || "valor de la derecha");
+        console.log(19 || "valor de la derecha");
+        console.log(true || "valor de la derecha");
+        console.log({} || "valor de la derecha");
+        console.log([] || "valor de la derecha");
+
+        //Esto con los valores de false
+        console.log(false || "valor de la derecha");
+        console.log(null || "valor de la derecha");
+        console.log(undefined || "valor de la derecha");
+        console.log("" || "valor de la derecha");
+        console.log(-1 || "valor de la derecha");
+        console.log(0 || "valor de la derecha");
+
+
+        //AHORA REVISANDO EL OPERADOR AND
+        console.log(false && "valor de la derecha");
+        console.log(null && "valor de la derecha");
+        console.log(undefined && "valor de la derecha");
+        console.log("" && "valor de la derecha");
+        console.log(-1 && "valor de la derecha");
+        console.log(0 && "valor de la derecha");
+
+        console.log("cadena" && "valor de la derecha");
+        console.log(19 && "valor de la derecha");
+        console.log(true && "valor de la derecha");
+        console.log({} && "valor de la derecha");
+        console.log([] && "valor de la derecha");
+        
+    }
+
+    console.log();
+    saludar("jon");
+
+</script>
+
+<script id="alert-confirm-prompt">
+    //Son métodos usados para la interacción en los navegadores.
+    //Cuelgan del objeto Window de JavaScript
+
+    console.log(window);
+    //window.alert("Esto es una alerta");
+    //window.confirm("esto es una confirmación");
+    //window.prompt("Esto es un prompt y permite ingresar un valor al usuario");
+
+    //Incluso no es necesario poner el window, solo basta con poner los métodos:
+
+     let alerta = alert("Esto es una alerta");
+     let confirmacion = confirm("esto es una confirmación");
+     let aviso = prompt("Esto es un prompt y permite ingresar un valor al usuario");
+     
+     //Podemos guardarlos en variables:
+     console.log(alerta) //Solo manda mensaje
+     console.log(confirmacion) //aceptar = true cancelar = false
+     console.log(aviso) //prompt + aceptar = se guarda en variable, si cancelamos, será null
+
+</script>
+
+<script id="funciones-anonimas-autoejecutables">
+    //Tiene que ver con las funciones anonimas, permiten pasar parametros de forma más amable
+    //poder pasar parametros y usar funciones como parametros?¿  
+
+    //cuerpo de una faa
+    /*
+        //El cuerpo de una funcion normal es:
+        function nombre (parámetros){
+        }
+    
+
+        Para hacer una anónima autoejecutable:
+        (function () {
+        
+        })();
+    
+    
+    
+    */
+
+    (function (){
+        console.log("Mi primer FAA");
+    })();
+
+    
+    (function (d, w, c){
+        console.log("Mi segunda FAA");
+        console.log(d);
+        console.log(w);
+        c.log(w);
+    })(document, window, console); //--> Esto asigna los variables
+
+    //FORMAS DE ESCRIBIR LAS FUNCIONES ANÓNIMAS AUTOEJECUTABLES
+
+    //CLÁSICA
+    (function (){
+        console.log("clásica");
+    })();
+    //CROCKFORD
+    ((function () {
+        console.log("crockford");
+    }))
+
+    //UNARIA
+    +function() {
+        console.log("version unaria")
+    }();
+
+    //FACEBOOK
+    !function(){
+        console.log("version facebook");
+    }();
+
+
+
+
+
+
+</script>
+
+
+<script id="modulos">
+    //Los modulos permiten 
+
+
+</script>
+
+
 <!--
     <script id="prototipos">
         /*

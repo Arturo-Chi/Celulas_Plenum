@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>EXPRESIONES REGULARES</title>
+</head>
+<body>
+    <h1>Expresiones Regulares</h1>
+
+    <script>
+        /*
+        Las expresiones regulares son poderosas herramientas para validar datos y cadenas de texto
+        
+        La mejor herramienta para visualizar el funcionamiento es regex.com:       
+        */
+
+
+        /*
+        Coincidencias Basicas
+        .       - Cualquier Caracter, excepto nueva linea
+        \d      - Cualquier Digitos (0-9)
+        \D      - No es un Digito (0-9)
+        \w      - Caracter de Palabra (a-z, A-Z, 0-9, _)
+        \W      - No es un Caracter de Palabra.
+        \s      - Espacios de cualquier tipo. (espacio, tab, nueva linea)
+        \S      - No es un Espacio, Tab o nueva linea.
+
+        Limites
+        \b      - Limite de Palabra
+        \B      - No es un Limite de Palabra
+        ^       - Inicio de una cadena de texto
+        $       - Final de una cadena de texto
+
+        Cuantificadores:
+        *       - 0 o Más
+        +       - 1 o Más
+        ?       - 0 o Uno
+        {3}     - Numero Exacto
+        {3,4}   - Rango de Numeros (Minimo, Maximo)
+
+        Conjuntos de Caracteres
+        []      - Caracteres dentro de los brackets
+        [^ ]    - Caracteres que NO ESTAN dentro de los brackets
+
+        Grupos
+        ( )     - Grupo
+        |       - Uno u otro
+        
+        Banderas (Flagts)
+
+        [sin bandera] Realiza la búsqueda hasta una primera coincidencia
+        /g -> Realiza la busqueda del patrón en todo el texto
+        /i -> No tiene en cuenta las mayúsculas, las toma como coincidencia también
+
+
+        USOS y aplicaciones
+
+        /./gi -> digito global que encuentra todo
+
+        /\d/g -> así encontramos todo lo que sea un número del 0 al 9
+        /\D/g -> Así selecciona todo lo que no sea un número
+
+
+        expresión regular para números: \d\d\d\s\d\d\d \d\d \d\d -> 449 123 45 67
+
+        para nombres = /^\w+\s?\w+?\s?$/gim
+
+        usando conjuntos de caracteres:
+        /\d{3}[\s-]\d{3}[\s-]\d{2}[\s-]\d{2}/gm
+
+
+        para seleccionar de un rango de caracteres
+        /[A-Za-z]+/gm
+
+        grupos
+        /44[89][\s-]\d{3}[\s-]\d{2}[\s-]\d{2}/gm
+
+        /(449|448|447|446)[\s-]\d{3}[\s-]\d{2}[\s-]\d{2}/gm
+         /(449|448|447|446)[\s-]\d{3}([\s-]\d{2}){2}/gm
+
+        correos = /\w+@\w+\.[a-zA-Z]/gm
+
+        /[a-zA-Z0-9._-]@\w+\.[a-zA-Z]/gm
+        
+
+        internet = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.(com|com\mx|net)/gm
+        */
+
+        let cadena = "Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa aliquid ab ducimus recusandae sapiente esse magnam quis lorem saepe. Cumque corrupti, perferendis quo repellat fuga voluptate tenetur qui quos aut!"
+
+        /*Declaración de una Expresión regular:*/
+        let expReg = new RegExp("lorem","i");
+
+        let expReg2 = /lorem/;
+
+        console.log(expReg.test(cadena))
+        console.log(expReg.exec(cadena))
+
+
+
+    </script>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. A ipsa aliquid ab ducimus recusandae sapiente esse magnam quis saepe. Cumque corrupti, perferendis quo repellat fuga voluptate tenetur qui quos aut!
+</body>
+</html>

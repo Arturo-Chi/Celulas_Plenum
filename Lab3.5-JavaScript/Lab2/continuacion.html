@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Asincronía en JavaScript</title>
+</head>
+<body>
+    <p>Ya pasamos la parte de Lógica de programación, lo que sigue es el trabajo con programación asícrona</p>
+
+
+    <p>JavaScript tiene temporizadores: funciones que nos van a permitir lasnzar otras acciones después de cierto tiempo o una n cantidad de veces</p>
+
+    <script>
+        console.log("inicio")
+        let timeout = setTimeout(() => {
+            //Recibe una acción a ejecutar
+            console.log("Ejecutando setTimeOut, esto se ejecuta una sola vez")
+        }, 2000);
+        //Y un tiempo especificado en segundos 
+
+
+        //Y si queremos ejecutar con base a un intervalo de tiempo ciertas acciones?
+        /*setInterval(() => {
+            //También recibe una función    
+            console.log("SetInterval, esto se ejecuta indefinidamente cada cierto intervalo de tiempo")
+        
+        
+        }, 1000);
+        */
+        //También recibe un intervalo de tiempo
+
+
+        //Una idea algo loca, es que podemos con esto hacer un reloj dentro de la página web.
+
+
+        /*let reloj = setTimeout(() => {
+           console.log(new Date().toLocaleTimeString()) 
+        }, 1000);
+        */
+
+        //Hay funciones que son como la contraparte de estas primeras:
+
+        clearTimeout(timeout);
+        console.log("Después del clearTimeout");
+        //Solo que, para que esta funcione se tiene que guardar antes al setTimeout.
+
+        /*
+        let temporizador = setTimeout(() => {
+            console.log(new Date().toLocaleTimeString())
+        }, 1000);
+        
+        Y entonces el clearTimeout(temporizador) recibe como parámetro la variable en donde almacenamos temporizador.
+
+        Para el caso de los setInterval, su función neutralizador es clearInterval();
+        */
+
+        let cancelarInterval = setInterval(() => {
+            console.log(new Date().toLocaleTimeString()); 
+        }, 2000);
+
+        clearInterval(cancelarInterval);
+        console.log("Después del clear Interval")
+
+    </script>
+
+
+</body>
+</html>

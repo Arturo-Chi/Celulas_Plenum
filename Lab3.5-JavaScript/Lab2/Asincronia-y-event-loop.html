@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronia y event loop</title>
+</head>
+<body>
+    <h1>Asincronia y event loop</h1>
+    <p>
+        JavaScript es un lenguaje de un solo hilo (Single Thread)
+        Esa principal ventaja hace que nosotros no tengamos porque preocuparnos por temas como la concurrencia, ya que se trabaja solo una tarea a la vez.
+
+
+        JavaScripr es single thread, (sus hermanos simplifican código) por lo tanto no se pueden realizar operaciones largas como el acceso a la red sin que se bloquee el hilo principal.
+        Imaginemos que solictamos datos a una API, puede tardar o no en procesar la solicitud, por lo tanto el resto del código se bloquearía hasta tener un response.
+
+        Para eso es la asincronía, poder realizar operaciones largas sin hacer bloqueos en el resto del código.
+
+
+        
+        conceptos básicos:
+        -- EVENT LOOP EN JavaScript
+        AL ser JS un lenguaje de un solo hilo, el procesamiento se da en los threads, unidades básicas de cada proceso que realiza nuestra máquina.
+
+        Requests
+        EventLoop
+        Register Callback
+        INTENSIVE OPERATION [FileSystem, Database, Computation]
+        Operation complete
+        EventLoop
+        TriggerCallBack
+
+        -> JS trabaja con la metodología LIFO
+
+
+
+        - Operaciones de CPU y operaciones de I/O
+        En un procesamiento del código de una operación pueden aparecer.
+
+        Las de CPU son aquellas que van a pasar el mayor tiempo consumiendo los procesos del CPU.
+        Las de Input/Output son aquellas que van a pasar la mayor parte del tiempo esperando la petición del recurso qhe han solicitado
+
+
+
+        - Operaciones concurrentres y paralelas
+        - Operaciones bloqueantes y no bloqueantes    
+        - Operaciones síncronas y asíncronas
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+</body>
+</html>
