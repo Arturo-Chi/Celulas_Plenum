@@ -44,9 +44,34 @@
 
 
         - Operaciones concurrentres y paralelas
-        - Operaciones bloqueantes y no bloqueantes    
-        - Operaciones síncronas y asíncronas
+        Concurrentes -> Se refiere a la capacidad de un sistema para gesationas varias tares que progresan simultaneamente, aunque no necesariamente al mismo tiempo, intercalando su ejecucón para mantener un avance constante.
 
+        Paralelismo -> Implica la ejecución literalmente simultánea de múltiples tareas en el mismo instante de tiempo, generalmente aprovechando múltiples núcleos de procesamiento o hilos.
+
+        EL concepto de event lopp entra ya que como de decíamos, JS es un lenguaje Singlethread, por usa un modelo de concurrencia basado en un buble de evettos que permite manejar operaciones asíncronas de forma no bloqueante.
+
+
+
+        - Operaciones bloqueantes y no bloqueantes   
+        Bloqueantes -> Son operaciones que no devuelven el control a la aplicación hasta que se completa la operación, esto provoca que el hilo de ejecución quede bloqueado en estado de espera durante el tiempo necesario para ejecutar la operación.
+
+        Se usan comúnmente en contextos donde se requiere que el resultado este disponible inmediatamente, como la lectura de archivos, o solicutdes de red sincrónicas.
+
+
+        No Bloqueantes -> Devuelven el control a la aplicación inmediatamente, independientemente de si la operación hya finalizado o no, permitiendo que el programa continué con otras tareas mientras se completa la operación en segundo plano.
+        Son especialmente útiles en entornos donde se requiere de alta concurrencia, como servidores web.
+
+
+        En SO una de estas puede intentar leer datos y retornar cuantos bytes se leyeron efectivamente, sin esperar a que todos los datos estén disponibles.
+
+
+
+        
+        - Operaciones síncronas y asíncronas
+        Sincronas - Se ejecutan de manera secuencial, donde cada tarea debe completarse antes de que la siguiente pueda comenzar. Haciendo que el flujo principal del programa se bloquee mientras espera la finalización  de una operación.
+
+        -Asíncronas - Permiten que el programa continué ejecutandose sin esperar la finalización de una tarea.
+        Una vez que se inicia una de estas operaciones, como una solicitud a un API o una operación de lectura de archivo, el control se devielve inmediatamente al flujo principal, permitiendo que otras tareas se ejecuten mientras se espera del resultado.
 
 
 
