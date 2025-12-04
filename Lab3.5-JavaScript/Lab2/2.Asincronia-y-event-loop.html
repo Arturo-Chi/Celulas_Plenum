@@ -50,35 +50,90 @@
 
         EL concepto de event lopp entra ya que como de decíamos, JS es un lenguaje Singlethread, por usa un modelo de concurrencia basado en un buble de evettos que permite manejar operaciones asíncronas de forma no bloqueante.
 
-
-
         - Operaciones bloqueantes y no bloqueantes   
         Bloqueantes -> Son operaciones que no devuelven el control a la aplicación hasta que se completa la operación, esto provoca que el hilo de ejecución quede bloqueado en estado de espera durante el tiempo necesario para ejecutar la operación.
 
         Se usan comúnmente en contextos donde se requiere que el resultado este disponible inmediatamente, como la lectura de archivos, o solicutdes de red sincrónicas.
 
-
         No Bloqueantes -> Devuelven el control a la aplicación inmediatamente, independientemente de si la operación hya finalizado o no, permitiendo que el programa continué con otras tareas mientras se completa la operación en segundo plano.
         Son especialmente útiles en entornos donde se requiere de alta concurrencia, como servidores web.
 
-
         En SO una de estas puede intentar leer datos y retornar cuantos bytes se leyeron efectivamente, sin esperar a que todos los datos estén disponibles.
-
-
-
-        
+  
         - Operaciones síncronas y asíncronas
         Sincronas - Se ejecutan de manera secuencial, donde cada tarea debe completarse antes de que la siguiente pueda comenzar. Haciendo que el flujo principal del programa se bloquee mientras espera la finalización  de una operación.
 
         -Asíncronas - Permiten que el programa continué ejecutandose sin esperar la finalización de una tarea.
         Una vez que se inicia una de estas operaciones, como una solicitud a un API o una operación de lectura de archivo, el control se devielve inmediatamente al flujo principal, permitiendo que otras tareas se ejecuten mientras se espera del resultado.
 
-
+        Herramienta para visualizar el EventLoop Lifo:
+        latentflip.com
 
 
     </p>
 
+    <script>
+        //En un single thread con la may
 
+    //Código Síncrono Bloqueante
+        //Cada operación de hace de una vez bloqeuando el flujo del hilo principal
+
+        (()=>{
+
+            //Este es un ejemplo de una función secuencial 
+            console.log("Código Síncrono");
+            console.log("Inicio");
+
+            function dos(){
+                console.log("Dos");
+            }
+
+            function uno(){
+                console.log("uno");
+                dos();
+                console.log("tres");
+            }
+
+            uno();
+            console.log("Fin");
+
+
+        })();
+        //Como a esto podríamos ponerle Asincronismo?
+
+
+    //Código Asíncrono No Bloqueante
+        (()=>{
+            console.log("Código Asíncrono");
+            console.log("Inicio");
+
+            function dos(){
+                setTimeout(() => {
+                    console.log("Dos");
+                }, 1000);
+            }
+
+            function uno(){
+                setTimeout(function() {
+                    console.log("Uno");
+                }, 0);
+                dos();
+                console.log("tres");
+            }
+
+            uno();
+            console.log("Fin");
+
+            //El setTime es un método de asincronismo
+            //En este nuevo ejemplo, al ejecutar, podemos ver fácilmente que "uno" y "dos" se ejecutan hasta después "fin", esto pasa porque por asincronía uno() y dos() entran al stack de la eventloop que es lo último en vaciarse
+
+
+          
+        })();
+          console.log("JS usa un modelo aíncrono y no bloqueante, con un loop de eventos implementado en un sólo hilo (single thread) para operaciones de entrada y salida (input/output)");
+
+
+    </script>
 
 
 

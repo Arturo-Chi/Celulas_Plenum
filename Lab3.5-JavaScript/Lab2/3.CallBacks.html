@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBacks</title>
+</head>
+<body>
+    <h1>CallBacks</h1>
+    <script>
+        //Los CallBacks son uno de los mecanismos para trabajar la asincronía dentro de JavaScript
+        //Es el mecanismo por excelencia para invocar algunas funciones
+
+        //al trabajar con demasiadas callbacks pueden darse ciertos problemas
+
+        function cuadradoCallBack(value, callback){
+            setTimeout(() => {
+                callback(value, value*value);
+            }, 0 | Math.random()*100);
+        }
+        //Aqui podemos ver un poco de recursividad
+
+        cuadradoCallBack(0, (value, result) => {
+            console.log("Inicia callbak");
+            console.log(`Callback: ${value}, ${result}`);
+            cuadradoCallBack(1, (value, result) => {
+            console.log(`Callback: ${value}, ${result}`);
+                cuadradoCallBack(2, (value, result) => {
+                console.log(`Callback: ${value}, ${result}`);
+                    cuadradoCallBack(3, (value, result) => {
+                    console.log(`Callback: ${value}, ${result}`);
+                    
+                    });
+                });
+            });
+        });
+
+        //De este modo nuestro ejemplo se va volviendo un CallBack Hell, pero también son vuelven operaciones asíncronas.
+
+    </script>
+
+
+    
+</body>
+</html>

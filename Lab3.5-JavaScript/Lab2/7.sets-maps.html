@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets y Maps</title>
+</head>
+<body>
+    <h1>Sets y Maps</h1>
+    <script>
+        //Los sets son como arreglos mejorados, que solo acepta valores único (hablando de datos primitivos)
+
+        //Creación:
+        const set = new Set([1, 2, 3, 3, 4, 5, true, false, false, {}, {}, "hola", "HOla"]); //-> Para pasarle valores de una vez, abrimos corchetes
+        console.log(set);
+
+        const set2 = new Set();
+        set2.add(1);
+        set2.add(2);
+        set2.add(2);
+        set2.add(3);
+        set2.add(4);
+        set2.add(5);
+
+        console.log(set2);
+
+        //Como recorrer los elementos
+
+        //Método forof
+        console.log("Recorriendo set");
+        for (item of set) {
+            console.log(item);
+        }
+        
+        //Método foreach
+        console.log("Recorriendo set2");
+        set2.forEach(item => console.log(item));
+
+        //acceder a datos mediante posicion
+        //Tenemos que convertir el set a arreglo: Array.from
+
+        let arr= Array.from(set);
+        console.log(`Elemento 0: ${arr[0]}`)
+        
+        //Eliminar valores:
+        set.delete("HOla");
+        console.log(set);
+
+        //Método que verifica si existe un elemento
+        console.log(set.has("hola"))
+        console.log(set.has(9))
+        //Método para limpiar el set:
+        set2.clear();
+        console.log(set2)
+
+    </script>
+    <script>
+        //Maps, trabajan de manera muy similar a los getters y setters de una clase, hablando de la orientación a objetos:
+
+        //Construcción de Maps
+        let mapa = new Map();
+        mapa.set("nombre", "artuto");
+        mapa.set("apellido", "chi");
+        mapa.set("edad",21 );
+        console.log(mapa);
+        console.log(mapa.size)
+        console.log(mapa.has("nombre")) //-> Para verificar si existe una llave
+        console.log(mapa.get("nombre")) //-> Obtiene el valor de la llave
+    
+        //Para cambiar el valor de una de las propiedades:
+        mapa.set("nombre", "Hola Mundo");
+         console.log(mapa);
+
+
+         //Para eliminar el valor y clave:
+         mapa.delete("apellido")
+
+
+         //Para recorrer un mapa:
+        for(let [key, value] of mapa){ //-> Usando destructuración
+            console.log(`Llave: ${key}, Valor: ${value}`)
+        }
+
+        //En los mapas podemos generar claves locas, que pueden ser de otro tipo de dato como numbers, booleans, etc, etc
+
+
+        //Para crear un map y ponerle datos:
+        const mapa2 = new Map([
+            ["nombre", "ashly"],
+            ["apellido", "Berzunza"],
+            [null, "nulo"],
+        ]);
+
+        console.log(mapa2);
+
+
+        //aplicando destructuración para extraer elementos del map:
+        const llavesMapa2 = [...mapa2.keys()];
+        const valoresMapa2 = [...mapa2.values()];
+
+        console.log(llavesMapa2);
+        console.log(valoresMapa2);
+
+    </script>
+
+    <script>
+        //Iterables e Iterators
+
+        //Iterable: Es el elemento el cual se puede recorrer su contenido
+
+        //Iterador: Es la interfaz que es una especie de apuntador que va reccoriendo los elementos de una estructura de datos
+
+      const iterable = [1, 2, 3, 4, 5, 6]; //-> Funciona para todo tipo de dato que sea iterable, como arreglos, mapas, sets
+      
+        
+        //Como acceder a la interfaz del iterador del elemento iterable:
+        const iterador = iterable[Symbol.iterator]();
+
+        console.log(iterable)
+        console.log(iterador)
+
+        /*
+        console.log(iterador.next())
+        console.log(iterador.next())
+        console.log(iterador.next())
+        console.log(iterador.next())
+        console.log(iterador.next())
+        console.log(iterador.next())
+        console.log(iterador.next())
+        */
+
+
+        let next = iterador.next();
+        while(!next.done){
+            console.log(next.value);
+            next = iterador.next();
+        }
+
+
+
+    </script>
+
+
+    <h1>Generators</h1>
+    <script>
+        //Los generators permiten trabajar más facil con la interfaz de iterable, son funciones y para indicarlas usamos: *
+
+         //Para volver iterables a una función
+        function* iterabler (){
+           
+             yield "hola";
+            console.log("Hola consola");
+            yield "hola2";
+
+            console.log("Seguimos con más instrucciones de nuestro código")
+            yield "hola3"
+            yield "hola4"
+
+             //-> Es como un return que va a indicar a la función mandar el primer valor, deja el cursor
+
+
+        }
+
+
+        /* Ejemplo de Yield
+        
+        function* iterable(){
+            yield "hola";
+            console.log("Hola consola");
+            yield "hola2";
+
+            console.log("Seguimos con más instrucciones de nuestro código")
+            yield "hola3"
+            yield "hola4"
+        
+        }
+
+        Cada vez que la función se vaya ejecutando va a dar diferentes valores de retorno;
+        
+        
+        
+        */
+        let iterator = iterabler();
+        console.log(iterator.next())
+        console.log(iterator.next())
+        console.log(iterator.next())
+        console.log(iterator.next())
+        console.log(iterator.next())
+
+        //Esto puede hacer de forma automática:
+        for (let y of iterator) {
+            console.log(y)
+            
+        }
+
+        //Para ir guardando cada yield en un arreglo:
+        const arr2 = [...iterabler()];
+        console.log(arr2)
+
+
+        //Ejercicio de los cuadrados
+
+
+        function cuadrado(valor){
+            setTimeout(() => {
+                return {
+                    valor,
+                    resultado : valor*valor,
+
+                };
+            },Math.random() * 1000 );
+        
+            return {
+                    valor,
+                    resultado : valor*valor,
+
+            };
+        
+        
+        }
+
+        //Para usar dentro de una función iterador:
+        function* generador(){
+            console.log("inicia generador")
+            yield cuadrado(0);
+            yield cuadrado(1);
+            yield cuadrado(2);
+            yield cuadrado(3);
+            yield cuadrado(4);
+            yield cuadrado(5);
+            console.log("Termina generador");
+        }
+
+
+
+       let gen = generador();
+       for (let i of gen) {
+            console.log(i)
+       }
+
+    </script>
+
+
+</body>
+</html>

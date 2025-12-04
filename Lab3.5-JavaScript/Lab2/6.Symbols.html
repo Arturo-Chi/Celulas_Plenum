@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+    
+</head>
+<body>
+    
+    <h1>Los nuevos tipos de datos de JavaScript</h1>
+    <script>
+        //Los nuevos tipos de datos en JavaScript
+        
+        //Symbol()
+        //Suelen agregarse como caracteristcas de algunos objetos, como lo creamos?
+        //Permiten crear identificadores de referencia:
+
+        //Se crean de la siguiente manera, así estamos creandole a las variables un identioficador único
+ 
+        //Symbol(description?: string | number): symbol -> PERMITE PONER NÚMEROS O STRINGS
+
+        let id= Symbol("id");
+        let id2 = Symbol("id2");
+
+        console.log(id === id2);
+        console.log(id,id2);
+        console.log("Analizando tipo de dato de cada uno "+typeof id, typeof id2);
+
+        //Entonces, como le agregamos un symbol como propiedad a un objeto?
+        const NAME = Symbol("nombre");
+        const SALUDAR = Symbol("saludar");
+
+        const persona = {
+            [NAME]: "ivan",
+
+        }
+
+        console.log(persona)
+    
+        persona.NAME = "Arturo Chi Mut";
+
+        console.log(persona)
+
+
+        //Como usamos la propiedad definida como símbolo?
+        console.log(persona.NAME) //-> Para acceder a propiedad del objeto
+        console.log(persona[NAME]) //-> Para acceder a propiedad definida como objeto
+
+        persona[SALUDAR] = function(){
+            console.log("Holaaa");
+        };
+
+        console.log(persona)
+
+        //Metodo para obtener los simbolos de un objeto
+        console.log(Object.getOwnPropertySymbols(persona));
+
+
+    </script>
+
+</body>
+</html>

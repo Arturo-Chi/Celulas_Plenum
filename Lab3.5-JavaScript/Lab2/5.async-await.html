@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aync y Await</title>
+</head>
+<body>
+    <h1>Async y await</h1>
+
+    <script>
+        function cuadradoPromise(value){
+            if(typeof value !== "number"){
+                return Promise.reject("Error, el valor ingresado no es un número");
+            } 
+            return new Promise((resolve, reject) => { 
+                setTimeout(() => {
+                resolve({ 
+                    value: value,
+                    result: value*value,
+                });   
+                
+                
+                }, 0 | Math.random()*100);
+            }) 
+        }
+
+
+        //Este tipo de funciones también son para gestionar la asincronia
+        //Hay varias formas de usar async y await
+
+        async function funcionAsincronaDeclarada(){
+            //Para el manejo de errores, esta usa el bloque try-catch
+            //Si probamos esto así, entonces al imprimir todos nos saldrá en indefinido, porque no le estamos dando tiempo al método de devolvernos la variable, entonces usamos await:
+
+            try {
+                console.log("Inicio de función asíncrona");
+                let obj = await cuadradoPromise(0);
+                console.log(`Async function: ${obj.value}, ${obj.result}`);
+                
+                obj = await cuadradoPromise(1);
+                console.log(`Async function: ${obj.value}, ${obj.result}`)
+
+                obj = await cuadradoPromise(2);
+                console.log(`Async function: ${obj.value}, ${obj.result}`)
+                obj = await cuadradoPromise(3);
+                console.log(`Async function: ${obj.value}, ${obj.result}`)
+                obj = await cuadradoPromise(4);
+                console.log(`Async function: ${obj.value}, ${obj.result}`)
+                obj = await cuadradoPromise(5);
+                console.log(`Async function: ${obj.value}, ${obj.result}`)
+
+                console.log("Fin de async function");
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        
+
+        const funcionAsincronaExpresada = async () => {
+             try {
+                console.log("Inicio de función asíncrona expresada");
+                let obj = await cuadradoPromise(6);
+                console.log(`Async function: ${obj.value}, ${obj.result}`);
+                
+                obj = await cuadradoPromise(7);
+                console.log(`Async function: ${obj.value}, ${obj.result}`);
+
+                obj = await cuadradoPromise(8);
+                console.log(`Async function: ${obj.value}, ${obj.result}`);
+                obj = await cuadradoPromise(9);
+                console.log(`Async function: ${obj.value}, ${obj.result}`);
+                obj = await cuadradoPromise(10);
+                console.log(`Async function: ${obj.value}, ${obj.result}`);
+                
+
+                console.log("Fin de async function expresada");
+
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        
+        funcionAsincronaDeclarada();
+        funcionAsincronaExpresada();
+
+        //La diferencia entre async y await es que ahora podemis usar variables para la gestión de la respuesta y ya no usar then de manera indiscriminada
+
+        //Solo que las funciones asincronas no reemplazan a las promesas, porque pueden incluso tarabajar en conjunto
+
+        //OJO: NO PUEDES USAR AWAIT FUERA DE UNA OPERACIÓN QUE NO ES ASÍNCRONA 
+    </script>
+
+
+
+</body>
+</html>

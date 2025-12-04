@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxies</title>
+</head>
+<body>
+    <h1>Proxies</h1>
+    <script>
+        /*Es un tema que va de la mano con la orientación a objetos: Los Proxies
+
+        Son un mecanismo que permiten crear objetos basado en un objeto literal inicial.
+        Como cuando se generan instancias de una clase en la POO, con la diferencia de que es a partir de un objeto literal
+
+
+        Se ve el uso de un manejador (handler).
+        */
+
+        const persona = {
+            nombre:"",
+            apellido:"",
+            edad:0
+        } //-> Objeto Base, del que vamos a generar más personas
+
+        const manejador = {
+            set(obj, prop, valor){ //-> Siempre va en los manejadores
+                 //Validación de propiedad que no se encuentra dentro del molde:
+                if(Object.keys(obj).indexOf(prop) === -1){
+                    return console.error(`La propiedad ${prop} no existe en el molde Persona`)                    
+                }
+
+                if(
+                ((prop === "nombre" || prop === "apellido") && 
+                !(/^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+/g.test(valor))) || typeof value !=="string"
+                )
+                {
+                    return console.error("La propiedad solo acepta letras y espacios en blanco")
+                }
+
+                obj[prop] = valor; //-> Esta linea hace que se asignen los valores en cada atributo del objeto
+
+            }
+        } //--Mandejador con el trabajaremos las validaciones
+
+
+        const comstock = new Proxy(persona, manejador);
+
+        //comstock.nombre = "nooker";
+        //comstock.apellido = "Dewitt";
+        //comstock.edad = 76;
+
+        //comstock.afiliation = "vox populi"; //-> Si asignamos una característica así, se le pondrá tanto al proxy como al molde
+        
+        console.log(comstock);
+        console.log(persona);
+
+    </script>
+
+    <h1>Propiedades dinámicas de los objetos</h1>
+    <script>
+        //Compute properties. Hay veces que cuando desarrollamos se da la necesidad de crear propiedades de manera dinámica de un objeto, como la creación de objetos por usuario de una lista.
+
+
+        const objUsuarios = {
+            //imaginemos que el nombre de la propiedad id-1 se genere    
+        }
+
+        //comencemos dejando vacío el objeto:
+
+        const usuarios = ["booker", "arturo", "ashly", "zachary", "elizabeth", "anna"];
+
+        console.log(objUsuarios)
+
+        usuarios.forEach((usuario, index) => objUsuarios[`id_${index}`] = usuario);
+
+        console.log(objUsuarios)
+
+
+        //También puede hacerse dentro de los objetos:
+        let aleatorio = Math.round(Math.random()*100+5);
+        const objUsuarios2 = {
+            prpiedad : "Valor",
+            [`id_${aleatorio}`] : "Valor Aleatorio"
+        };
+
+        console.log(objUsuarios2);
+
+
+        //Carga dinámica de Objetos:
+        
+
+
+    </script>
+
+
+    <h1>this</h1>
+    <script>
+        //La palabra this, es una palabra que hace referencia al objeto con el que estamos trabajando
+
+        //En JavaScript se usa también para eso, pero también para diferentes contextos.
+
+        console.log(this);
+        console.log(window);
+        console.log(this === window)
+
+        this.nombre = "Contexto global"
+
+        console.log(this.nombre)
+
+        function imprimir(){
+            console.log(this.nombre)
+        }
+
+        imprimir();
+
+
+
+        const objeto = {
+            nombre: "Contexto Objeto",
+            imprimir: function (){
+                console.log(this.nombre)
+            }
+        }
+
+        objeto.imprimir();
+
+        const obj2 = {
+            nombre: "Contexto Objeto 2",
+            imprimir
+        }
+        obj2.imprimir();
+        //Dependiendo de función esta se adecúa al scope de donde se use
+
+
+        const objeto3 = {
+            nombre: "Contexto Objeto 3",
+            imprimir: () =>{ //Las arrow function no manejan su propio scope, y agarra el scope de donde se encuentra colgada la función donde se usa
+                console.log(this.nombre)
+            }
+        }
+        objeto3.imprimir();
+
+        function Persona(nombre){
+            const that = this;
+            that.nombre = nombre;
+            //return console.log(this.nombre);
+        
+        
+            return function (){
+                console.log(that.nombre);
+            }//En una clase de este tipo, al usar una función anónima no tiene un contexto, y al no tenerlo está tomando el del contexto global
+
+            //Por lo tanto las arrow function si funcionan así:
+            //return () => console.log(that.nombre)
+        }
+
+        let jon = new Persona("Jon");
+        jon();
+        //Podemos solucionar problemas a scope externo usando una variable que encapsule el contexto local: 
+
+
+
+
+        //Los scopes en JavaScript son por documentos o por funciones al usar funciones anónimas, sin embargo si usamos una arrow function el scope de la función será el mismo que de donde se encuentra, es decir, no sufrirá de ningún ajuste
+
+    </script>
+
+
+    <h1>Call Aply Bind</h1>
+    <script>
+        console.log(this)
+        this.lugar = "Contexto Global"
+
+        function saludar(){
+            console.log(`${this.lugar}`)
+        }
+
+        saludar();
+
+        const obj = {
+            lugar: "Contexto Objeto",
+
+            //Vimos antes que solo usabamos la función saludar dentro de un objeto como este,   
+            //Pero podemos evitarlo usando lo métodos call y apply, veamos
+
+        }
+        saludar.call(obj) //-> Con esto estamos llamando la función dentro de un nuevo contexto, que es el del objeto que pasemos como parámetro
+
+        //Lo mismo con apply
+        saludar.apply(obj);
+
+        //Ahora, cual es la diferencia entre call y apply? Imaginemos que a la funcion queremos pasarle más parámetros
+
+         function saludar2(saludo, aQuien){
+            console.log(`${saludo}! ${aQuien} desde: ${this.lugar}`)
+        }
+        //Pues la diferencia es en como se reciben esos parámetros después del contexto con el que quiere trabajar:
+
+        saludar2.call(obj, "Hola", "Dewitt") //Separacion por comas
+        saludar2.apply(obj, ["Adios", "Commstock"])
+
+        // Usar null en el espacio del objeto, es como volver al objeto global
+
+
+        //MÉTODO BIND
+        //Se trata de un método que realiza un enlace;
+
+        this.nombre = "Ventana"
+
+        const nuevaPersona = {
+            nombre: "Zachary",
+            saludar : function() {
+                console.log(`Hola ${this.nombre}`)
+            }
+        }
+
+        nuevaPersona.saludar();
+
+        //Creemos otro objeto
+        const otraPersona = {
+            saludar: nuevaPersona.saludar.bind(this) //Referencia a la propiedad salidar //Aqui se le asigna el contexto de donde está
+        }
+
+
+        otraPersona.saludar();
+    </script>
+
+
+    <h1>JSON</h1>
+    <script>
+        //Json es una herramienta importante dentro de JS
+        //JavaScript Object Notation
+
+        //Json es como un traductor que funciona para el envío de datos entre lengaujes diferentes.
+        //un formato común para el envío de información, antes de JSON, se usaba XML (muy similar a html), pero poco a poco fue siendo desplazado por JSON
+
+        /*
+            No es exclusivo de JavaScript, pues cada lenguaje de programación que se jacte de serlo, debe tener soporte para JSON:
+            
+            https://www.json.org/json-es.html     Hasta el final de la página
+            Libro: ELOQUENT JAVASCRIPT Thrid Edition eloquentjavascript.net
+
+
+            Además de que acepta varios tipos de datos:
+            string, number, object, array, booleans, y null
+        */
+
+
+        //veamos un objeti de javascript:
+        const json = {
+            cadena: "Hola",
+            numero: 45,
+            boolean: true,
+            arreglo: ["correr", "caminar", "programa"],
+            objeto: {
+                twitter: "Hola",
+                email: "iachimut101@gmail.com"
+            },
+            nulo: null
+
+        }
+
+        console.log(json)
+
+
+
+        /*
+        Se ve similar a como se vería un JSON, ya que en realidad se vería como:
+        {
+            "cadena": "Hola",
+            "numero": 45,
+            "boolean": true,
+            "arreglo": ["correr", "caminar", "programa"],
+            "objeto": {
+                "twitter": "Hola",
+                "email": "iachimut101@gmail.com"
+            },
+            "nulo": null
+        }      
+
+        Json sirve para el Js de los navegadores, y el de los servidores con node js
+
+
+
+        De acuerdo al Mozilla Developer Network de JS, hay dos métodos que se pueden con JSON:
+        */
+        console.log(JSON)
+
+        //console.log(JSON.parse()) //-> Analiza cadena de texto y lo convierte a JSON en la medida de lo posible
+
+        console.log(JSON.parse("[]"))
+        console.log(JSON.parse("{}"))
+        console.log(JSON.parse("[1, 2, 3, 4]"))
+        console.log(JSON.parse("false"))
+        console.log(JSON.parse("19"))
+
+        console.log(JSON.parse('{"cadena":"Hola","numero":45,"boolean":true,"arreglo":["correr","caminar","programa"],"objeto":{"twitter":"Hola","email": "iachimut101@gmail.com"},"nulo": null}'))
+
+
+
+
+        //Stringify, convierte un objeto de JavaScript y lo convierte a una cadena de texto en formato JSON:
+        console.log(JSON.stringify({}))
+         console.log(JSON.stringify({}))
+        console.log(JSON.stringify([1, 2, 3, 4]))
+        console.log(JSON.stringify(false))
+        console.log(JSON.stringify(19))
+        console.log(JSON.stringify(null))
+        console.log(JSON.stringify(undefined))
+        console.log(JSON.stringify({x:2, y:3}))
+
+
+        console.log(JSON.stringify(json))
+
+    </script>
+
+</body>
+</html>

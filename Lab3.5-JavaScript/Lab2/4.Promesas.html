@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+
+
+</head>
+<body>
+    <h1>Promesas</h1>
+    <script>
+        console.log("Promesas en JavaScript")
+        //Ya vimos que una de las maneras de trabajar asincronía se hace con las llamadas callbacks
+
+        //Pero son dificiles de trabajar cuando hay varias de ellas anidadas, es ahí donde entran las promesas.
+
+
+        /*
+        Trabajan con dos recursos: result/ reject
+        Podemos verla como un if-else, si se tiene un resultado, se ejecuita el result, sino se ejecuta el reject:
+            Trabajemos con la función de elevar el número al cuadrado:
+        */
+
+        function cuadradoPromise(value){
+            if(typeof value !== "number"){
+                return Promise.reject("Error, el valor ingresado no es un número");
+            } //Con una estructura similar podemos lanzar un error que atrapará al catch
+            return new Promise((resolve, reject) => { //Las dos partes de la Promise
+                setTimeout(() => {
+                resolve({ //ES COMO LA EJECUCIÓN EN CASO DE POSITIVO
+                    value: value,
+                    result: value*value,
+                });   
+                
+                
+                }, 0 | Math.random()*100);
+            }) //-> El objeto Promise lleva como parámetro una arrow function o una función anónima autoejecutable
+        }
+
+        //Uso de promesa:
+        cuadradoPromise(1)
+        .then((obj) => {
+            //console.log(obj)
+            console.log("Inicia Promise")
+            console.log(`Promise: ${obj.value}, ${obj.result}`)
+            return cuadradoPromise(1);
+        })
+        .then((obj) => {
+            console.log(`Promise: ${obj.value}, ${obj.result}`)
+            return cuadradoPromise(2);
+        })
+        .then((obj) => {
+            console.log(`Promise: ${obj.value}, ${obj.result}`)
+            return cuadradoPromise(3);
+        })
+        .then((obj) => {
+            console.log(`Promise: ${obj.value}, ${obj.result}`)
+            return cuadradoPromise(4);
+        })
+        .then((obj) => {
+            console.log(`Promise: ${obj.value}, ${obj.result}`)
+            return cuadradoPromise(5);
+
+        })
+        .then((obj) => {
+            console.log(`Promise: ${obj.value}, ${obj.result}`)
+            console.log("Fin de la promesa")
+        })
+        .catch(err => console.error(err));
+        /*
+        Then -> Recibe la parte positiva del Promise (Pueden haber más de un then) recibe una función
+        catch -> Captura el error que se genere
+        
+        */
+
+
+        //Las promesas convienen cuando tenemos una concatenación grande de varias callbacks
+
+    </script>    
+</body>
+</html>
