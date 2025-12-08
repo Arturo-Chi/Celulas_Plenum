@@ -10,11 +10,58 @@
     <p>DOM es como la API (Aplication Programming Interface)</p>
     <script>
         //Muchos desarrolladores, piensan que JS solo sirve para esto, pero no, JavaScript es más que la APIS de la Web
+        console.log(window)
+        console.log(DocumentFragment)
+
+
+        const hablar = (text) =>{
+            speechSynthesis.speak(new SpeechSynthesisUtterance(texto))
+        }
+
+
+        //let texto = "Hola, oye, no quiero que pienses que estaba molesto, no lo estaba, simplemente no sabía que decir"
+        //let texto = "Solo quiero decir que te quiero mucho, y que me gusta pasar tiempo contigo, no sé, a veces me sentía confundido, pero realmente estoy dispuesto a volver a la escuela, bueno, si es que tu quieres, tengo un secreto que me he estado guardando desde hace mucho, pero sé que es incorrecto, es malo, un error, tu tienes pareja y eres más que feliz así. Pero la verdad, Es que me ME GUSTAS ASHLY";
+       
+        //hablar(texto);
+
+
+        
+       
+    </script>
+
+    <h1>DOM (Document Object Model)</h1>
+    <h2>Introducción a DOM</h2>
+    <script>
+        console.log("******* Elementos del Documento *******")
+        console.log(window.document)
+        console.log(document)
+        console.log(document.head)
+        console.log(document.body)
+        console.log(document.documentElement) //-> Para obtener la etiqueta de html del documento
+        console.log(document.title)
+        console.log(document.charset)
+
+        console.log(document.links) //-> Devuelve colecciones y tiene propiedad length, pero no es un arreglo
+
+
+
+        //Formularios
+        console.log(document.forms)
+
+        //Colección de hojas de estilos:
+        console.log(document.styleSheets)
+
+        //Colección de scripts:
+        console.log(document.scripts)
+
+        //Método getSelection
+        console.log(document.getSelection())
 
 
     </script>
 
-    <h1>DOM (Document Object Model)</h1>
+
+
     <h1>BOM (Browser Object Model)</h1>
     <h1>CSSOM (Css Object Model)</h1>
     <h2>Web APIS</h2>
