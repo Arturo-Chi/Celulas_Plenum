@@ -231,6 +231,9 @@
     </script>
 
     <script id="Objetos-literales">
+
+        //No son mas que una nueva forma de escribir metodos y atrobutos y com se asignan
+
         let nameDog = "Robbie", age = 12;
 
         const perro = {
@@ -267,6 +270,8 @@
         console.log(dog);
         dog.ladrar();
 
+        //Básicamente se trata de poner variables directamente como atributos o funciones dentro de un objeto
+        //De modo que el nombre de la variable se vuelve el nombre de la variable del objeto
     </script>
 
 
@@ -297,7 +302,7 @@
     console.log(sumar2(1,2,3,4,5));
 
 
-    //OPERADOR DE PROPAGACIÓN
+    //OPERADOR DE PROPAGACIÓN (Spread Operator)
     //Un caso muy útil es cuando ya tenemos ciertos elementos en los arreglos y necesitamos agregar más
 
     const arr1 = [1, 2, 3, 4, 5];
@@ -311,7 +316,7 @@
     console.log(arr3);
 
     //así tendremos un arreglo de dos elementos, que son propiamente los dos arreglos anteriores, para hacer que en verdad se junten los dos arreglos hacemos:
-
+    
     const arrGeneral = [...arr1, ...arr2];
     console.log(arrGeneral);
 
@@ -399,6 +404,9 @@
         console.log({} && "valor de la derecha");
         console.log([] && "valor de la derecha");
         
+        //Mientras el valor de la izquierda sea false, se carga ese mismo valor
+
+
     }
 
     console.log();
