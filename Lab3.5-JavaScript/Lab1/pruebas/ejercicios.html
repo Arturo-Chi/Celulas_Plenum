@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Ejercicios Laboratorio</title>
+
+    <script>
+        //Espacio de pruebas para los ejercicios del laboratorio
+           
+
+        
+       
+             //EJERCICIO 15
+        console.log("EJERCICIO 15")
+        //función para pasar de Decimal a Binario
+        const aDecimal = (valorBinario) =>{
+            let valor = valorBinario;
+            
+            let comodin = 1;
+            let resultado = 0;
+
+            for (let index = valorBinario.toString().length-1; index >= 0; index--) {
+                let digito = valor%10;
+                resultado += digito*comodin;
+
+                comodin*=2;
+                valor = Math.floor(valor/10)
+                
+            }
+
+            return `Binario: ${valorBinario} a Decimal: ${resultado}`;
+        }
+         //función para pasar de Binario a Decimal
+        const aBinario = (valorDecimal) =>{
+            let numero = valorDecimal;
+            let binario = "";
+            while(numero > 0){
+                
+                digito = (numero%2 === 0) ? "0": "1";
+
+                binario = digito + binario;
+                numero = Math.floor(numero/2); 
+                
+            }
+            return `Decimal: ${valorDecimal} a Binario: ${binario}`;
+         
+        }
+
+
+        function binarioADecimal(numero=undefined, base=undefined){
+            try {
+                if(!numero || !base) throw new Error("Parámetros necesarios");
+                if(typeof numero !== "number" || isNaN(numero)) throw new Error("Número inválido");
+                if(typeof base !== "number" || isNaN(base)) throw new Error("La base es incorrecta")
+                
+                switch (base) {
+                    case 2:
+                        console.log(aDecimal(numero));                       
+                        break;
+                
+                    case 10:
+                        console.log(aBinario(numero));
+                        break;
+
+                    default:
+                        throw new Error("El valor de la base solo puede ser 2 o 10")
+                        break;
+                }
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        binarioADecimal(101010111, 2);
+        binarioADecimal(1024, 10);
+
+
+        
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

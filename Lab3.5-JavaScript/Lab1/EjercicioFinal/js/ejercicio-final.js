@@ -1,8 +1,4 @@
-console.log("Hola mundo");
 
-
-
-//Clase Auxiliar
 
 class Validation {
 
@@ -150,6 +146,10 @@ const data = {
     rating: 9.8
 };
 
+
+
+
+
 let arregloPeliculas = [
     {
         id:"tt3027834",
@@ -165,7 +165,7 @@ let arregloPeliculas = [
         title:"The Velocipastor",
         director:"Brendan Steere",
         year: 2018,
-        countries: ["China", "EEUU"],
+        countries: ["Ukraine", "EEUU"],
         genres: ["Action","Adventure","Comedy"],
         rating: 5.1,
     },
@@ -180,9 +180,6 @@ let arregloPeliculas = [
     }
 
 ]
-
-
-
 
 const pelicula = new Pelicula(data);
 console.log(pelicula.getfichaTecnica())
