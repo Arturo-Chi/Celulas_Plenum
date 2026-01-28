@@ -1,6 +1,8 @@
 
 
+/*Color amarillo: rgb(251, 214, 23*/
 .header{
+    color: #0095bf;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -41,4 +43,39 @@
     left: calc(100% - 200px);
     
     
+}
+
+
+.menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(162, 160, 160, 0.95);
+    height: 100%;
+    width: 70%;  
+}
+
+.menu .seccion{
+    margin: 30px;
+}
+
+
+.seccion{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: none;
+    font-weight: lighter;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    /*color: rgb(251, 141, 23);*/
+    
+}
+
+.seccion:hover{
+    background-color: lightgray;
+    color: black
+
 }

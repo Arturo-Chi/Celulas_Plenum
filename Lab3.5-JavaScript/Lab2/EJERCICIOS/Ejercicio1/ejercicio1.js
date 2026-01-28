@@ -1,11 +1,15 @@
-let flag = false;
-
+let bandera = false;
+const menu = document.querySelector(".menu")
+const element = document.querySelector(".btn");
 function botonPresionado(){
-    console.log("flag está en: ", flag)
-    if(flag===true) flag= false;
-    if(flag===false) flag= true;
-    console.log("cambiando flag a: ", flag)
-
+    if(bandera === false){
+        menu.style.display = "block";
+        bandera = true;
+    }else{
+        menu.style.display = "none";
+        bandera = false;
+    }
 }
 
 
+console.log(element.get)
