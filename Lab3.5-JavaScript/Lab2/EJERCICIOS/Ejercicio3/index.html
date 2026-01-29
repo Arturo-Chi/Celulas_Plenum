@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ejercicio3</title>
 </head>
 <body>
     <div class = "header">
@@ -11,12 +11,12 @@
     </div>
 
     <div class = "container">
-        <h1>Ashly</h1>
+        <!--<h1>Ashly</h1>-->
         
 
         <div class = "button-container">
             <button class = "btn" onclick="buttonPressd()">
-                BUTTON
+                Ver Contenidos
             </button>
         </div>
     </div>
@@ -25,8 +25,8 @@
 
    <aside class="menu">
         <nav>
-            <a href="#seccion1" class="item">Sección 1</a>
-            <a href="#seccion2" class="item">Sección 2</a>
+            <a href="#seccion1" class="item">Reloj Digital y Alarma Sonora</a>
+            <a href="#seccion2" class="item">Eventos del Teclado</a>
             <a href="#seccion3" class="item">Sección 3</a>
             <a href="#seccion4" class="item">Sección 4</a>
             <a href="#seccion5" class="item">Sección 5</a>
@@ -36,16 +36,26 @@
    <main>
         <section class="section" id="seccion1">
             <h2>Reloj Digital y Alarma Sonora</h2>
-            <div class="reloj">
-                <button>Iniciar Reloj</button>
-                <button>Detener Reloj</button>
-                <button>Iniciar Alarma</button>
-                <button>Detener Alarma</button>
+            <div class="reloj"></div>
+            
+            <div>
+                <button id="iniciar-reloj">Iniciar Reloj</button>
+                <button id="detener-reloj">Detener Reloj</button>
+                <button id="iniciar-alarma">Iniciar Alarma</button>
+                <button id="detener-alarma">Detener Alarma</button>
             </div>
+            
 
         </section>
         <section class="section" id="seccion2">
-            <h2>Sección 2</h2>
+            <h2>Eventos del Teclado</h2>
+            <!--Escenario para dibujar una pelota-->
+            <article class="stage">
+                <div class="ball">
+                    
+                </div>
+            </article>
+
         </section>
         <section class="section" id="seccion3">
             <h2>Sección 3</h2>
@@ -62,6 +72,7 @@
 
 
     <link rel="stylesheet" href="styles.css">
-    <script src="ejercicio1.js"></script>
+    <script src="ejercicio3.js"></script>
+    <script type="module" src="use.js"></script>
 </body> 
 </html>
