@@ -30,7 +30,7 @@ export function alarm(play, stop){
         if(e.target.matches(play)){
             setTimeout(() => {
                 alarmTempo = setInterval(() => {
-                    audio.play()
+                    audio.play() 
                     console.log()
                 });
             }, 500);
