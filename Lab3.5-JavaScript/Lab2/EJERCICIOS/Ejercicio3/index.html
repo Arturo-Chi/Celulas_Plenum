@@ -29,12 +29,13 @@
             <a href="#seccion2" class="item">Eventos del Teclado</a>
             <a href="#seccion3" class="item">Cuenta regresiva</a>
             <a href="#seccion4" class="item">Responsive con JavaScript</a>
-            <a href="#seccion5" class="item">Sección 5</a>
-            <a href="#seccion6" class="item">Sección 6</a>
-            <a href="#seccion7" class="item">Sección 7</a>
-            <a href="#seccion8" class="item">Sección 8</a>
-            <a href="#seccion9" class="item">Sección 9</a>
-            <a href="#seccion10" class="item">Sección 10</a>
+            <a href="#seccion5" class="item">Responsive Tester</a>
+            <a href="#seccion6" class="item">Detección de dispositivos(User Agent)</a>
+            <a href="#seccion7" class="item">Detección de la conexión</a>
+            <a href="#seccion8" class="item">Detección de la WebCam</a>
+            <a href="#seccion9" class="item">Detección de la Geolocalización</a>
+            <a href="#seccion10" class="item">Filtros de Búsqueda</a>
+            <a href="#seccion11" class="item">Responsive Slider</a>
         </nav>
    </aside>
 
@@ -78,15 +79,94 @@
 
         </section>
         <section class="section" id="seccion-5">
-            <h2>Sección 5</h2>
+            <h2>Responsive Tester</h2>
+            <form action="" id="responsive-tester">
+                <input type="url" name="direccion" placeholder="URL" required>
+                <br>
+                <input type="text" name="ancho" placeholder="Ancho" required>
+                <br>
+                <input type="text" name="alto" placeholder="Alto" required>
+                <br>
+                <input name = "probar" type="submit" value="Probar" required>
+                <input name = "cerrar" type="button" value="Cerrar" required>
+
+            </form>
         </section>
-                <section class="section" id="seccion-5">
-            <h2>Sección 5</h2>
+        <section class="section" id="seccion-6">
+            <h2>>Detección de Dispositivos <br> (User Agent)</h2>
+            <div id="user-device"></div>
+
         </section>
-                <section class="section" id="seccion-5">
-            <h2>Sección 5</h2>
+        <section class="section" id="seccion-7">
+            <h2>Detección de la conexión</h2>
+
+        </section>
+        <section class="section" id="seccion-8">
+            <h2>Detección de la WebCam</h2>
+            <video src="" id="webcam"></video>
+        </section>
+        <section class="section" id="seccion-9">
+            <h2>Detección de la geolocalización</h2>
+            <div id="geolocation">
+
+            </div>
         </section>
         
+        <section class="section" id="seccion-10">
+            <input type="search" placeholder="Buscar... " class="card-filter">
+            <article class="cards">
+                <figure class="card">
+                    <img src="https://picsum.photos/200/200" alt="Any">
+                    <figcaption>Any</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://picsum.photos/200/200" alt="Tech">
+                    <figcaption>Tech</figcaption>
+
+                </figure>
+                <figure class="card">
+                    <img src="https://picsum.photos/200/200" alt="Nature">
+                    <figcaption>Nature</figcaption>
+
+                </figure>
+                <figure class="card">
+                    <img src="https://picsum.photos/200/200" alt="Animal">
+                    <figcaption>Animals</figcaption>
+
+                </figure>
+                <figure class="card">
+                    <img src="https://picsum.photos/200/200" alt="People">
+                    <figcaption>People</figcaption>
+
+                </figure>
+                </figure>
+                <figure class="card">
+                    <img src="https://picsum.photos/200/200" alt="Architecture">
+                    <figcaption>Architecture</figcaption>
+
+                </figure>
+            </article>
+        </section>
+
+        <section class="section" id="seccion-11">
+            <h2>Sorteo Digital</h2>
+            <ul class="players">
+                <li class="player">JavaScript</li>
+                <li class="player">PHP</li>
+                <li class="player">Java</li>
+                <li class="player">C</li>
+                <li class="player">Python</li>
+                <li class="player">Ruby</li>
+                <li class="player">Go</li>
+                <li class="player">Visual Basic</li>
+                <li class="player">Rust</li>
+                <li class="player">Perl</li>
+            </ul>
+            <button id="winner-btn">Obtener ganador</button>
+        </section>
+        
+
+        <!--Agregar la propiedad de overflow-y:auto en el contenedor de las opciones de la lista de despliegue-->
 
 
    </main>

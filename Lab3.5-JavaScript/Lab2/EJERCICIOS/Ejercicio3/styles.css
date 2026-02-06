@@ -194,3 +194,53 @@ img{
     background-color: var(--second-color);
     color: var(--bg)
 }
+
+
+/*DETECCIÓN DEL ESTADO DE LA RED**/
+.online,
+.offline{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1b5e20;
+    color: #fff;
+}
+
+.offline{
+    background-color: #b71c1c;
+}
+
+
+
+/*FILTROS DE BUSQUEDA**/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
+}
+
+
+.card{
+    background-color: var(--second-color);
+    color: var(--bg);
+    transition: all 0.3s ease-out;
+}
+
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+.card figcaption{
+    padding: 1rem
+}
+
+.filter{
+    display: none;
+}
