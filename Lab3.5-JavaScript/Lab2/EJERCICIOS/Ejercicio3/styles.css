@@ -1,6 +1,7 @@
 :root{
     --bg: rgb(251, 179, 23);
-    --second-color: gray
+    --second-color: rgb(34, 34, 34);
+    --border: rgb(118, 114, 114);
 
 }
 html{
@@ -13,6 +14,13 @@ html{
 body{
     margin: 0;
     overflow-x: hidden;
+    
+}
+h1{
+    margin-bottom: 10px;
+    font-size: 3rem;
+    color: var(--second-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 img{
@@ -22,7 +30,7 @@ img{
 
 
 .header{
-    color: #001150;
+    color: var(--second-color);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -108,11 +116,55 @@ img{
 .section{
     padding: 30px;
     border-style: solid;
-    border-color: lightgray;
+    border-color: var(--border);
+    border-radius:80px ;
     text-align: center;
     margin: 10px;
     min-height: 100vh;
 }
+
+.section h2{
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+/***** RELOJ Y ALARMA *******/
+.clock{
+    margin: auto 0;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overclock button{
+    font-size: 18px;
+    border-radius: 3rem;
+    border-width: 3px;
+    padding: 5px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.overclock .reloj{
+    background-color: var(--second-color);
+    height: 70px;
+    width: 60%;
+    margin: 10px auto;
+    border-style: solid;
+    border-radius: 2rem;
+    border-color: var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg);
+    font-size: 50px;
+    padding: 10px 0;
+}
+
+
 
 
 /******EVENTOS DEL TECLADO*******/
@@ -121,6 +173,9 @@ img{
     display: flex;
     min-height: 50vh;
     background-color: var(--second-color);
+    border-style: solid;
+    border-color: var(--border);
+    background-color: lightgray;
 }
 
 .ball{
@@ -128,9 +183,21 @@ img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #001150;
+    background-color: #020e3b;
 }
 
+/**** COUNTDOWN ******/
+.down{
+    background-color: var(--second-color);
+    border-radius: 3rem;
+    border-style: solid;
+    border-color: var(--border);
+    border-width: 5px;
+    color: var(--bg);
+    font-size: 30px;
+
+
+}
 
 /*SCROLL TOP BTN**/
 
@@ -243,4 +310,148 @@ img{
 
 .filter{
     display: none;
+}
+
+
+/*RESPONSIVE SLIDE**/
+.slider{
+    position: relative;
+    width:90%;
+    margin: 1rem auto;
+    text-align: center;
+
+}
+
+
+.slider-slides{
+    position: relative;
+    height: 400px;
+}
+
+.slider-slide{
+    position: absolute;
+    top:0;
+    left:0;
+    transition: opacity 1s ease;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider-slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider-slide img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+.slider a{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: thin solid #000;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.slider a:hover{
+    color: #4d4d4d;
+}
+
+.slider-btns{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    
+}
+
+
+/*SCROLLSPY
+@media screen and (min-width: 1024px){
+
+    body{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: 
+        "header header",
+        "main panel",; 
+        
+    }
+
+    .header{
+        grid-area: header;
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    .panel{
+        grid-area: panel;
+        position: sticky;
+        top:4rem;
+    }
+
+    .panel-btn{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+}*/
+
+
+/***** FORMULARIO DE CONTACTO *******/
+
+
+.validation-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.validation-form input, textarea{
+    border-style: solid;
+    border-color: var(--bg);
+    border-width: 1px;
+    height: 25px;
+    margin-bottom: 15px;
+    padding: 1px 3px 1px 3px;
+}
+
+.validation-form input.valid{
+    border-color: green;
+}
+
+.validation-form input.invalid{
+    border-color: red;
+}
+
+.validation-form input.comentary{
+    height: 100px;
+}
+
+.validation-form .submit-form{
+    width: 250px;
+    margin: 0 auto;
+    border-color: black;
+    font-weight: bold;
 }

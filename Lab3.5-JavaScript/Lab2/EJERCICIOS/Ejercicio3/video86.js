@@ -36,7 +36,7 @@ export default function countdown(id, limit, message){
 
 
 
-        $countdown.innerHTML = `<h3>${days} días; ${hours} horas; ${minutes} minutos; ${seconds} segundos</h3>`
+        $countdown.innerHTML = `<h3>${days} D: ${hours} H: ${minutes} M: ${seconds} S</h3>`
 
     }, 1000);
 }

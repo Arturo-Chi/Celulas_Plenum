@@ -24,7 +24,7 @@ export function digitalClock(clock, play, stop){
 
 
 export function alarm(play, stop){
-    const audio = new Audio("alarms/alarm.mp3");
+    const audio = new Audio("alarms/overclock.mp3");
     let alarmTempo;
     d.addEventListener("click", e=> {
         if(e.target.matches(play)){
