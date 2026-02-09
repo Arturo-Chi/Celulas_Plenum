@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ejercicio3</title>
+    <title>Ejercicios DOM | Curso de JavaScript</title>
 </head>
 <body data-dark="">
     <div class = "header">
-        <h1>Ejercicios del DOM</h1>
+        <h1>Data Object Model</h1>
+        <h3><i>Ejercicios Prácticos</i></h3>
     </div>
 
     <div class = "container">
@@ -25,35 +26,39 @@
 
    <aside class="menu">
         <nav>
-            <a href="#seccion1" class="item">Reloj Digital y Alarma Sonora</a>
-            <a href="#seccion2" class="item">Eventos del Teclado</a>
-            <a href="#seccion3" class="item">Cuenta regresiva</a>
-            <a href="#seccion4" class="item">Responsive con JavaScript</a>
-            <a href="#seccion5" class="item">Responsive Tester</a>
-            <a href="#seccion6" class="item">Detección de dispositivos(User Agent)</a>
-            <a href="#seccion7" class="item">Detección de la conexión</a>
-            <a href="#seccion8" class="item">Detección de la WebCam</a>
-            <a href="#seccion9" class="item">Detección de la Geolocalización</a>
-            <a href="#seccion10" class="item">Filtros de Búsqueda</a>
-            <a href="#seccion11" class="item">Responsive Slider</a>
+            <a href="#seccion1" class="item" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
+            <a href="#seccion2" class="item" data-scroll-spy>Eventos del Teclado</a>
+            <a href="#seccion3" class="item" data-scroll-spy>Cuenta regresiva</a>
+            <a href="#seccion4" class="item" data-scroll-spy>Responsive con JavaScript</a>
+            <a href="#seccion5" class="item" data-scroll-spy>Responsive Tester</a>
+            <a href="#seccion6" class="item" data-scroll-spy>Detección de dispositivos(User Agent)</a>
+            <a href="#seccion7" class="item" data-scroll-spy>Detección de la conexión</a>
+            <a href="#seccion8" class="item" data-scroll-spy>Detección de la WebCam</a>
+            <a href="#seccion9" class="item" data-scroll-spy>Detección de la Geolocalización</a>
+            <a href="#seccion10" class="item" data-scroll-spy>Filtros de Búsqueda</a>
+            <a href="#seccion11" class="item" data-scroll-spy>Responsive Slider</a>
         </nav>
    </aside>
 
    <main>
-        <section class="section" id="seccion1">
+        <section class="section overclock" id="seccion1">
             <h2>Reloj Digital y Alarma Sonora</h2>
-            <div class="reloj"></div>
             
-            <div>
-                <button id="iniciar-reloj">Iniciar Reloj</button>
-                <button id="detener-reloj">Detener Reloj</button>
-                <button id="iniciar-alarma">Iniciar Alarma</button>
-                <button id="detener-alarma">Detener Alarma</button>
+            
+            <div class="clock">
+                <div class="reloj"></div>
+                
+                <div>
+                    <button id="iniciar-reloj">Iniciar Reloj</button>
+                    <button id="detener-reloj">Detener Reloj</button>
+                    <button id="iniciar-alarma">Iniciar Alarma</button>
+                    <button id="detener-alarma">Detener Alarma</button>
+                </div>
+            
             </div>
-            
 
         </section>
-        <section class="section" id="seccion2">
+        <section class ="section" data-scroll-spy id="seccion2">
             <h2>Eventos del Teclado</h2>
             <!--Escenario para dibujar una pelota-->
             <article class="stage">
@@ -63,22 +68,23 @@
             </article>
 
         </section>
-        <section class="section" id="seccion3">
+        <section class ="section" data-scroll-spy id="seccion3">
             <h2>Cuenta Regresiva</h2>
-            <div id="countdown">
-
+            <div class="clock">
+                 <div id="countdown" class="down">
+            </div>
             </div>
         </section>
-        <section class="section" id="seccion-4">
+        <section class ="section" data-scroll-spy id="seccion-4">
             <h2>Responsive con JavaScript</h2>
-            <p>En lugar de embeber un recurso lo mejor resulta linkearlo</p>
+            <p>Hacer que en móvil el recurso esté linkeado; embeber si se trata de un navegador</p>
 
             <div id="youtube"></div>
             <div id="gmaps"></div>
 
 
         </section>
-        <section class="section" id="seccion-5">
+        <section class ="section" data-scroll-spy id="seccion-5">
             <h2>Responsive Tester</h2>
             <form action="" id="responsive-tester">
                 <input type="url" name="direccion" placeholder="URL" required>
@@ -92,27 +98,28 @@
 
             </form>
         </section>
-        <section class="section" id="seccion-6">
+        <section class ="section" data-scroll-spy id="seccion-6">
             <h2>>Detección de Dispositivos <br> (User Agent)</h2>
             <div id="user-device"></div>
 
         </section>
-        <section class="section" id="seccion-7">
+        <section class ="section" data-scroll-spy id="seccion-7">
             <h2>Detección de la conexión</h2>
 
         </section>
-        <section class="section" id="seccion-8">
+        <section class ="section" data-scroll-spy id="seccion-8">
             <h2>Detección de la WebCam</h2>
             <video src="" id="webcam"></video>
         </section>
-        <section class="section" id="seccion-9">
+        <section class ="section" data-scroll-spy id="seccion-9">
             <h2>Detección de la geolocalización</h2>
             <div id="geolocation">
 
             </div>
         </section>
         
-        <section class="section" id="seccion-10">
+        <section class ="section" data-scroll-spy id="seccion-10">
+            <h2>Filtros de Búqueda</h2>
             <input type="search" placeholder="Buscar... " class="card-filter">
             <article class="cards">
                 <figure class="card">
@@ -148,7 +155,7 @@
             </article>
         </section>
 
-        <section class="section" id="seccion-11">
+        <section class ="section" data-scroll-spy id="seccion-11">
             <h2>Sorteo Digital</h2>
             <ul class="players">
                 <li class="player">JavaScript</li>
@@ -168,6 +175,84 @@
 
         <!--Agregar la propiedad de overflow-y:auto en el contenedor de las opciones de la lista de despliegue-->
 
+        <section class ="section" data-scroll-spy id="seccion-12">
+            <h2>Carrusel responsivo</h2>
+
+            <div class="slider">
+                <div class="slider-slides">
+                    <div class="slider-slide active">
+                        <img src="https://picsum.photos/200/200" alt="">
+                    </div>
+                    <div class="slider-slide">
+                        <h4>Diapositiva 2</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ratione magni porro repudiandae recusandae deleniti, nam voluptatem error fuga distinctio aperiam minima! Dolores ipsa nihil aperiam adipisci repellendus. Officiis, nisi?</p>
+                    </div>
+                    <div class="slider-slide">
+                        <img src="https://picsum.photos/200/200" alt="">
+                    </div>
+                    <div class="slider-slide">
+                        <h4>Diapositiva 4</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ratione magni porro repudiandae recusandae deleniti, nam voluptatem error fuga distinctio aperiam minima! Dolores ipsa nihil aperiam adipisci repellendus. Officiis, nisi?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi enim natus impedit, nihil at distinctio labore repellat rerum, modi cum eligendi, ratione iure explicabo minus amet mollitia nobis. Animi, nobis.</p>
+                    </div>
+                </div>
+                <div class="slider-btns">
+                    
+                    <a class="next" href="#">&laquo;
+                    <a class="prev" href="#">&raquo;</a>
+                    
+
+                </div>
+            </div>
+
+            
+        </section>
+        <section class ="section" data-scroll-spy id="seccion-13">
+            <h2>SCROLLSPY CON INTERSECTION OBSERVER</h2>
+            <div id="geolocation">
+
+            </div>
+        </section>
+        <section class ="section" data-scroll-spy id="seccion-16">
+            <h2>Video Inteligente</h2>
+            <video src="assets/video-hero.mp4" muted  loop data-smart-video></video>
+            <h3>Hero: The movie</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
+            
+            <video src="assets/video-hero.mp4" muted loop data-smart-video></video>
+            <video src="assets/video-hero.mp4" muted loop data-smart-video></video>
+            <video src="assets/video-hero.mp4" muted loop data-smart-video></video>
+            <video src="assets/video-hero.mp4" muted loop data-smart-video></video>
+            
+        </div>
+    </section>
+    <section class ="section" data-scroll-spy id="seccion-17">
+        <h2>Formulario de Contacto</h2>
+        <h3>Envíanos tus comentarios</h3>
+
+        <form action="" class="validation-form">
+            <input title="El nombre solo debe tener letras y espacios en blanco" required type="text" id="field" placeholder="Escribe tu nombre" class="name">
+            <input title ="Email incorrecto" required type="email" id="field" placeholder="Escribe tu email" class="email">
+            <input title = "El asunto es requerido" required type="text" id="field" placeholder="Asunto a tratar" class="subject">
+            <input required type="text" id="field" class="comentary" placeholder="Escribe tus comentarios">
+            <textarea title="El comentario no debe exceder los 255 caracteres" placeholder="Escribe tus comentarios" cols="50" rows="6" id="field"></textarea>
+            <input type="submit" class="submit-form" value="Enviar">
+
+
+            <div class="form-loader">
+                <img src="assets/loading-mark.svg" alt="cargando">
+            </div>
+
+            <div class="confirmation-response">
+                <p>Los datos han sido enviados</p>
+            </div>
+        </form>
+    </section>
+    
 
    </main>
 
