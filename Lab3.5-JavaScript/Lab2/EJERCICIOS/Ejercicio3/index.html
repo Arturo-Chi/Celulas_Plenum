@@ -12,14 +12,7 @@
     </div>
 
     <div class = "container">
-        <!--<h1>Ashly</h1>-->
-        
-
-        <div class = "button-container">
-            <button class = "btn" onclick="buttonPressd()">
-                Ver Contenidos
-            </button>
-        </div>
+    
     </div>
 
  
@@ -28,7 +21,7 @@
         <nav>
             <a href="#seccion1" class="item" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
             <a href="#seccion2" class="item" data-scroll-spy>Eventos del Teclado</a>
-            <a href="#seccion3" class="item" data-scroll-spy>Cuenta regresiva</a>
+            <a href="#seccion3" class="item" data-scroll-spy>Cuenta regresiva</a>m 
             <a href="#seccion4" class="item" data-scroll-spy>Responsive con JavaScript</a>
             <a href="#seccion5" class="item" data-scroll-spy>Responsive Tester</a>
             <a href="#seccion6" class="item" data-scroll-spy>Detección de dispositivos(User Agent)</a>
@@ -36,38 +29,40 @@
             <a href="#seccion8" class="item" data-scroll-spy>Detección de la WebCam</a>
             <a href="#seccion9" class="item" data-scroll-spy>Detección de la Geolocalización</a>
             <a href="#seccion10" class="item" data-scroll-spy>Filtros de Búsqueda</a>
-            <a href="#seccion11" class="item" data-scroll-spy>Responsive Slider</a>
+            <a href="#seccion11" class="item" data-scroll-spy>Sorteo Digital</a>
+            <a href="#seccion12" class="item" data-scroll-spy>ScrollSpy con Intersection Observer</a>
+            <a href="#seccion13" class="item" data-scroll-spy>Smart Video</a>
+            <a href="#seccion14" class="item" data-scroll-spy>Formulario de Contacto (Validaciones)</a>
+            <a href="#seccion15" class="item" data-scroll-spy>Responsive Slider</a>
+            
         </nav>
    </aside>
 
    <main>
         <section class="section overclock" id="seccion1">
             <h2>Reloj Digital y Alarma Sonora</h2>
-            
-            
             <div class="clock">
-                <div class="reloj"></div>
-                
+                <div class="reloj"></div>    
                 <div>
                     <button id="iniciar-reloj">Iniciar Reloj</button>
                     <button id="detener-reloj">Detener Reloj</button>
                     <button id="iniciar-alarma">Iniciar Alarma</button>
                     <button id="detener-alarma">Detener Alarma</button>
                 </div>
-            
             </div>
-
         </section>
-        <section class ="section" data-scroll-spy id="seccion2">
+
+        <section class ="section"
+             data-scroll-spy 
+             id="seccion2">
             <h2>Eventos del Teclado</h2>
-            <!--Escenario para dibujar una pelota-->
+        
             <article class="stage">
-                <div class="ball">
-                    
+                <div class="ball">     
                 </div>
             </article>
-
         </section>
+
         <section class ="section" data-scroll-spy id="seccion3">
             <h2>Cuenta Regresiva</h2>
             <div class="clock">
@@ -75,7 +70,7 @@
             </div>
             </div>
         </section>
-        <section class ="section" data-scroll-spy id="seccion-4">
+        <section class ="section" data-scroll-spy id="seccion4">
             <h2>Responsive con JavaScript</h2>
             <br>
             <h3>Linkeo y Embebido de recursos</h3>
@@ -89,7 +84,7 @@
 
 
         </section>
-        <section class ="section" data-scroll-spy id="seccion-5">
+        <section class ="section" data-scroll-spy id="seccion5">
             <h2>Responsive Tester</h2>
             <form action="" id="responsive-tester" class = "tester">
                 <input type="url" name="direccion" placeholder="URL" required>
@@ -118,27 +113,26 @@
 
             </form>
         </section>
-        <section class ="section" data-scroll-spy id="seccion-6">
+        <section class ="section" data-scroll-spy id="seccion6">
             <h2>Detección de Dispositivos <br> (User Agent)</h2>
             <div id="user-device"></div>
 
         </section>
-        <section class ="section" data-scroll-spy id="seccion-7">
+        <section class ="section" data-scroll-spy id="seccion7">
             <h2>Detección de la conexión</h2>
 
         </section>
-        <section class ="section" data-scroll-spy id="seccion-8">
+        <section class ="section" data-scroll-spy id="seccion8">
             <h2>Detección de la WebCam</h2>
             <video src="" id="webcam"></video>
         </section>
-        <section class ="section" data-scroll-spy id="seccion-9">
+        <section class ="section" data-scroll-spy id="seccion9">
             <h2>Detección de la geolocalización</h2>
             <div id="geolocation">
 
             </div>
         </section>
-        
-        <section class ="section" data-scroll-spy id="seccion-10">
+        <section class ="section" data-scroll-spy id="seccion10">
             <h2>Filtros de Búqueda</h2>
             <input type="search" placeholder="Buscar... " class="card-filter">
             <article class="cards">
@@ -174,8 +168,7 @@
                 </figure>
             </article>
         </section>
-
-        <section class ="section" data-scroll-spy id="seccion-11">
+        <section class ="section" data-scroll-spy id="seccion11">
             <h2>Sorteo Digital</h2>
             <ul class="players">
                 <li class="player">JavaScript</li>
@@ -190,12 +183,10 @@
                 <li class="player">Perl</li>
             </ul>
             <button id="winner-btn">Obtener ganador</button>
+            <button id="clean-btn">Limpiar</button>
         </section>
         
-
-        <!--Agregar la propiedad de overflow-y:auto en el contenedor de las opciones de la lista de despliegue-->
-
-        <section class ="section" data-scroll-spy id="seccion-12">
+        <section class ="section" data-scroll-spy id="seccion12">
             <h2>Carrusel responsivo</h2>
 
             <div class="slider">
@@ -227,13 +218,13 @@
 
             
         </section>
-        <section class ="section" data-scroll-spy id="seccion-13">
+        <section class ="section" data-scroll-spy id="seccion13">
             <h2>SCROLLSPY CON INTERSECTION OBSERVER</h2>
             <div id="geolocation">
 
             </div>
         </section>
-        <section class ="section" data-scroll-spy id="seccion-16">
+        <section class ="section" data-scroll-spy id="seccion14">
             <h2>Video Inteligente</h2>
             <video src="assets/video-hero.mp4" muted  loop data-smart-video></video>
             <h3>Hero: The movie</h3>
@@ -242,37 +233,35 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
-            
-            <video src="assets/video-hero.mp4" muted loop data-smart-video></video>
-            <video src="assets/video-hero.mp4" muted loop data-smart-video></video>
-            <video src="assets/video-hero.mp4" muted loop data-smart-video></video>
-            <video src="assets/video-hero.mp4" muted loop data-smart-video></video>
-            
+        
+          
         </div>
-    </section>
-    <section class ="section" data-scroll-spy id="seccion-17">
-        <h2>Formulario de Contacto</h2>
-        <h3>Envíanos tus comentarios</h3>
+        </section>
+        <section class ="section" data-scroll-spy id="seccion15">
+            <h2>Formulario de Contacto
+            </h2>
+            <h3>Validaciones</h3>
+            <legend>Envíanos tus comentarios</legend>
 
-        <form action="" class="validation-form">
-            <input title="El nombre solo debe tener letras y espacios en blanco" required type="text" id="field" placeholder="Escribe tu nombre" class="name">
-            <input title ="Email incorrecto" required type="email" id="field" placeholder="Escribe tu email" class="email">
-            <input title = "El asunto es requerido" required type="text" id="field" placeholder="Asunto a tratar" class="subject">
-            <input required type="text" id="field" class="comentary" placeholder="Escribe tus comentarios">
-            <textarea title="El comentario no debe exceder los 255 caracteres" placeholder="Escribe tus comentarios" cols="50" rows="6" id="field"></textarea>
-            <input type="submit" class="submit-form" value="Enviar">
+            <form action="" class="validation-form">
+                <input title="El nombre solo debe tener letras y espacios en blanco" required type="text" id="field" placeholder="Escribe tu nombre" class="name">
+                <input title ="Email incorrecto" required type="email" id="field" placeholder="Escribe tu email" class="email">
+                <input title = "El asunto es requerido" required type="text" id="field" placeholder="Asunto a tratar" class="subject">
+                <input required type="text" id="field" class="comentary" placeholder="Escribe tus comentarios">
+                <textarea title="El comentario no debe exceder los 255 caracteres" placeholder="Escribe tus comentarios" cols="50" rows="6" id="field"></textarea>
+                <input type="submit" class="submit-form" value="Enviar">
 
 
-            <div class="form-loader">
-                <img src="assets/loading-mark.svg" alt="cargando">
-            </div>
+                <div class="form-loader">
+                    <img src="assets/loading-mark.svg" alt="cargando">
+                </div>
 
-            <div class="confirmation-response">
-                <p>Los datos han sido enviados</p>
-            </div>
-        </form>
-    </section>
-    
+                <div class="confirmation-response">
+                    <p>Los datos han sido enviados</p>
+                </div>
+            </form>
+        </section>
+        
 
    </main>
 
@@ -283,6 +272,8 @@
    <button class="dark-theme-btn">
     🌙
    </button>
+
+   <button class = "btn-menu" onclick="buttonPressd()">Ver Contenidos</button>
 
     <link rel="stylesheet" href="styles.css">
     <script src="ejercicio3.js"></script>

@@ -10,19 +10,7 @@ export default function countdown(id, limit, message){
     let countTempo = setInterval(() => {
         let now = new Date().getTime();
         let limitTime = date-now, days, hours, minutes, seconds;
-        //Dentro del intervalo debemos detectar la fecha actual, el momento actual
-        //console.log(date, now, limitTime, seconds)
-        //Deben de hacer operaciones para calcular el tiempo hasta la fecha dada
-
-        //Cuantos milisegundos hay en un día?
-        /*
-        1 segundo -> 1000 milisegundos
-        1 minuto = 60 segundos 
-        1 hora = 60 minutos
-        1 día = 24 horas
-
-        
-        */
+   
         days = Math.floor(limitTime/(1000*60*60*24));
         hours = (
             "0"+Math.floor((limitTime%(1000*60*60*24))/(1000*60*60))
@@ -34,12 +22,22 @@ export default function countdown(id, limit, message){
             "0"+Math.floor((limitTime%(1000*60))/(1000))
         ).slice(-2)
 
-
-
         $countdown.innerHTML = `<h3>${days} D: ${hours} H: ${minutes} M: ${seconds} S</h3>`
 
     }, 1000);
 }
 
-//Para hacer operaciones con fechas es importante realizarlo con milisegundos.
 
+//Para hacer operaciones con fechas es importante realizarlo con milisegundos.
+//Dentro del intervalo debemos detectar la fecha actual, el momento actual
+//console.log(date, now, limitTime, seconds)
+//Deben de hacer operaciones para calcular el tiempo hasta la fecha dada
+
+//Cuantos milisegundos hay en un día?
+
+/*
+1 segundo -> 1000 milisegundos
+1 minuto = 60 segundos 
+1 hora = 60 minutos
+1 día = 24 horas
+*/

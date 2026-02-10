@@ -31,12 +31,12 @@ export function shortcuts(e){
 
 
 let x = 0, y = 0;
-//Ejercicio 4
+
 export function moveBall(e, ball, stage){
     const $ball = d.querySelector(ball),
     $stage = d.querySelector(stage)
     let flag = e.keyCode;
-    //console.log(e.keyCode)
+    
     console.log(e)
 
     switch (flag) {
