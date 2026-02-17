@@ -6,7 +6,8 @@ export default function carrusel(){
 
     const $slides = d.querySelectorAll(".slider-slide")
     const longi = $slides.length
-    const $btnPrev = d.querySelector(".slider-btns .prev"), $btnNext = d.querySelector(".slider-btns .next");
+    const $btnPrev = d.querySelector(".slider-btns .prev"),
+     $btnNext = d.querySelector(".slider-btns .next");
     let index = 0;
 
     d.addEventListener("click", e => {
@@ -19,7 +20,6 @@ export default function carrusel(){
 
             if(index<0){
                 index = longi-1;
-
             }
             $slides[index].classList.add("active")
         }
@@ -27,10 +27,8 @@ export default function carrusel(){
             e.preventDefault();
             $slides[index].classList.remove("active");
             index++;
-
             if(index>=longi){
                 index = 0;
-
             }
             $slides[index].classList.add("active")
         }

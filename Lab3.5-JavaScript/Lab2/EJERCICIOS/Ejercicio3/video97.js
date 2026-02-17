@@ -22,16 +22,10 @@ export default function sorteo(btn, cleanBtn, selector){
                 $players[pivote].classList.remove("ronding");
             }, 250);
         }, 500);
-
-        //console.log($players, random, winner)
-        //console.log("GANADOR:",  winner)
-        
         return `JACKPOT! el ganador es: ${winner.textContent}`
     }
 
     d.addEventListener("click", e=>{
-        //
-        
         if(e.target.matches(btn)){
             if (winner) winner.classList.remove("ronding")
             let resultado = getWinner(selector);

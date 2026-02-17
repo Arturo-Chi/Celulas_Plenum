@@ -54,7 +54,7 @@ export function moveBall(e, ball, stage){
             break;
     
         default:
-            //do nothing
+            //Caso de invalidez.
             break;
     }
 

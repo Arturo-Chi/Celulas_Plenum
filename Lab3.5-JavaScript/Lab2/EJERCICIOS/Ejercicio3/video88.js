@@ -40,7 +40,7 @@ export default function darkTheme(btn, classDark){
     //Refactorización para el localStorage
     //Asi no funciona por que se está invocando dentro de un evento del mismo tipo
     d.addEventListener("DOMContentLoaded", e=>{
-        console.log(ls.getItem("theme"))
+        //console.log(ls.getItem("theme"))
         if(ls.getItem("theme") === null){
             ls.setItem("theme", "light");
         }

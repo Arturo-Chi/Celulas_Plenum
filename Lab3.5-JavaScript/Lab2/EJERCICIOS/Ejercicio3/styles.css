@@ -541,30 +541,22 @@ input[name="cerrar"]{
 /***** FORMULARIO DE CONTACTO *******/
 
 
+
 .validation-form{
     display: flex;
     flex-direction: column;
 }
 
-.validation-form input, textarea{
-    border-style: solid;
+.validation-form [required], textarea{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-color: var(--bg);
-    border-width: 1px;
-    height: 25px;
+    font-size: 18px;
+    padding-left: 5px;
+    border-style: solid;
     margin-bottom: 15px;
-    padding: 1px 3px 1px 3px;
-}
+    border-width: 2px;
+    border-radius: 5px;
 
-.validation-form input.valid{
-    border-color: green;
-}
-
-.validation-form input.invalid{
-    border-color: red;
-}
-
-.validation-form input.comentary{
-    height: 100px;
 }
 
 .validation-form .submit-form{
@@ -573,6 +565,37 @@ input[name="cerrar"]{
     border-color: black;
     font-weight: bold;
 }
+
+.validation-error{
+    background-color: #b71c1c;
+    margin-bottom: 10px;
+    font-size: 80%;
+    color: white;
+    transition: all 800ms ease;
+    margin-top: -15px;
+}
+
+.validation-error.now-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+    display: none;
+}
+
+.validation-form .loader{
+    margin: 15px;
+}
+.validation-form .response{
+    margin: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--bg)
+}
+
+
+
 
 /*media query para despliegue del menú*/
 @media (max-width: 768px){

@@ -21,7 +21,7 @@
         <nav>
             <a href="#seccion1" class="item" data-scroll-spy>Reloj Digital y Alarma Sonora</a>
             <a href="#seccion2" class="item" data-scroll-spy>Eventos del Teclado</a>
-            <a href="#seccion3" class="item" data-scroll-spy>Cuenta regresiva</a>m 
+            <a href="#seccion3" class="item" data-scroll-spy>Cuenta regresiva</a>
             <a href="#seccion4" class="item" data-scroll-spy>Responsive con JavaScript</a>
             <a href="#seccion5" class="item" data-scroll-spy>Responsive Tester</a>
             <a href="#seccion6" class="item" data-scroll-spy>Detección de dispositivos(User Agent)</a>
@@ -88,11 +88,8 @@
             <h2>Responsive Tester</h2>
             <form action="" id="responsive-tester" class = "tester">
                 <input type="url" name="direccion" placeholder="URL" required>
-                <br>
-                
+                <br> 
                 <div class="row-format">
-
-
                     <div>
                         <input type="text" name="ancho" placeholder="Ancho" required>
                         <label for=""> px</label>
@@ -105,12 +102,8 @@
                     <div class="col-format">
                         <input name = "probar" type="submit" value="Probar" required>
                         <input name = "cerrar" type="button" value="Cerrar" required>
-    
                     </div>
-
                 </div>
-
-
             </form>
         </section>
         <section class ="section" data-scroll-spy id="seccion6">
@@ -196,23 +189,19 @@
                     </div>
                     <div class="slider-slide">
                         <h4>Diapositiva 2</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ratione magni porro repudiandae recusandae deleniti, nam voluptatem error fuga distinctio aperiam minima! Dolores ipsa nihil aperiam adipisci repellendus. Officiis, nisi?</p>
+                        <p>Lorem ipsum, dolor sit amet ...</p>
                     </div>
                     <div class="slider-slide">
                         <img src="https://picsum.photos/200/200" alt="">
                     </div>
                     <div class="slider-slide">
                         <h4>Diapositiva 4</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ratione magni porro repudiandae recusandae deleniti, nam voluptatem error fuga distinctio aperiam minima! Dolores ipsa nihil aperiam adipisci repellendus. Officiis, nisi?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi enim natus impedit, nihil at distinctio labore repellat rerum, modi cum eligendi, ratione iure explicabo minus amet mollitia nobis. Animi, nobis.</p>
+                        <p>Lorem ipsum, dolor sit amet ...</p>
                     </div>
                 </div>
                 <div class="slider-btns">
-                    
                     <a class="next" href="#">&laquo;
                     <a class="prev" href="#">&raquo;</a>
-                    
-
                 </div>
             </div>
 
@@ -223,51 +212,59 @@
             <div id="geolocation">
 
             </div>
-        </section>
+        </section>  
+        
         <section class ="section" data-scroll-spy id="seccion14">
             <h2>Video Inteligente</h2>
             <video src="assets/video-hero.mp4" muted  loop data-smart-video></video>
             <h3>Hero: The movie</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur necessitatibus qui sapiente sequi incidunt, fuga explicabo. Maiores, sed illum perspiciatis, esse dolorum exercitationem harum natus nisi veritatis dolor nemo!</p>
-        
           
         </div>
         </section>
+        
         <section class ="section" data-scroll-spy id="seccion15">
-            <h2>Formulario de Contacto
+            <h2>Formulario de Comentarios
             </h2>
-            <h3>Validaciones</h3>
-            <legend>Envíanos tus comentarios</legend>
+            <h3>Ejercicio de validaciones</h3>
+       
 
             <form action="" class="validation-form">
-                <input title="El nombre solo debe tener letras y espacios en blanco" required type="text" id="field" placeholder="Escribe tu nombre" class="name">
-                <input title ="Email incorrecto" required type="email" id="field" placeholder="Escribe tu email" class="email">
-                <input title = "El asunto es requerido" required type="text" id="field" placeholder="Asunto a tratar" class="subject">
-                <input required type="text" id="field" class="comentary" placeholder="Escribe tus comentarios">
-                <textarea title="El comentario no debe exceder los 255 caracteres" placeholder="Escribe tus comentarios" cols="50" rows="6" id="field"></textarea>
+                <input title="El nombre solo debe tener letras y espacios en blanco" required type="text" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$" name="name">
+                <input title ="Email requerido" required type="email" placeholder="Escribe tu email" pattern="^[a-z0-9\.\-_]+@(gmail|outlook|hotmail)\.com$" name="email">
+                <input title = "El asunto es requerido" required type="text" placeholder="Asunto a tratar" pattern ="^.{1,255}$" name="asunto">
+                <textarea title="El comentario no debe exceder los 255 caracteres" placeholder="Escribe tus comentarios" cols="50" rows="6" data-pattern="^.{1,255}$"></textarea>
+                
                 <input type="submit" class="submit-form" value="Enviar">
 
-
-                <div class="form-loader">
+                <div class="loader none">
                     <img src="assets/loading-mark.svg" alt="cargando">
                 </div>
 
-                <div class="confirmation-response">
+                <div class="response none">
                     <p>Los datos han sido enviados</p>
                 </div>
             </form>
         </section>
-        
+     
+        <section class ="section" data-scroll-spy id="seccion17">
+            <h2>Lector de Voz</h2>
+            <div class="col-format">
+                <select name="" id="speech-select">
+                    <option value="">---Elige una voz---</option>
+               
+                </select>
+                <br></br>
+                <textarea name="" id="speech-text" cols="50" rows="5" placeholder="Ingresa un párrafo de texto para la lectura"></textarea>
+                <button id="speech-btn">Click para leer el texto</button>
+
+            </div>
+        </section>
 
    </main>
 
-   <button class="scroll-top-btn hidden">
-    &#11014; 
-   </button>
+   <button class="scroll-top-btn hidden">&#11014;</button>
 
    <button class="dark-theme-btn">
     🌙

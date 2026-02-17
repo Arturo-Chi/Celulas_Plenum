@@ -1,9 +1,9 @@
 //Detección de Geolocalización
+//trabajaremos con información de latitud y longitud terrestre
 
 const d = document, n = navigator, w = window;
 
 export default function getGeolocation(id){
-    //trabajaremos con información de latitud y longitud terrestre
     const $id = d.getElementById(id),
     options = {
         enableHighAccuracy: true,
@@ -19,16 +19,17 @@ export default function getGeolocation(id){
                 <li>Latitud: <b>${coords.latitude}</b></li>
                 <li>Longitud: <b>${coords.longitude}</b></li>
                 <li>Precisión: <b>${coords.accuracy}</b> metros</li>
-                
             </ul>
-            <a href = "https://www.google.com/maps/@${coords.latitude},${coords.longitude},25z" target = "_blank" rel="noopener">Ver en el mapa</a>
-
+            <a href = "https://www.google.com/maps/@${coords.latitude},
+            ${coords.longitude},
+            25z" target = "_blank" 
+            rel="noopener">Ver en el mapa</a>
         `
-        console.log(position)
+        //console.log(position)
     };
     const error= (error) => {
         $id.innerHTML = `<p><mark>Error : ${error.code}:${error.message}</mark></p>`
-        console.error(`Error ${error.code} : ${error.message}`)
+        //console.error(`Error ${error.code} : ${error.message}`)
     };
     n.geolocation.getCurrentPosition(sucess, error, options)
 }

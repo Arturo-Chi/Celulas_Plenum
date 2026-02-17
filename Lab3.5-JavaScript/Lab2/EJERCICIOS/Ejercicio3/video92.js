@@ -47,8 +47,7 @@ export default function userDeviceInfo(id){
         }
     }
     
-    //console.log(ua)
-    //console.log(isMobile.ios())
+   
     $id.innerHTML = `
     <ul>
         <li>User Agent: <b>${ua}</b></li>
