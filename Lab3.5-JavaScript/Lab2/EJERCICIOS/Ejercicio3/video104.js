@@ -10,19 +10,15 @@ export default function navigatorReader(){
     let voces = []
 
     d.addEventListener("DOMContentLoaded", (e)=>{
-        
         w.speechSynthesis.addEventListener("voiceschanged", (e) =>{
-          
             voces = w.speechSynthesis.getVoices();
             console.log(voces)
             voces.forEach((voz) => {
-        
                 const $option = d.createElement("option")
                 $option.value = voz.name;
                 $option.textContent = `${voz.name} - ${voz.lang}`;
                 $speechSelect.appendChild($option)
             })  
-
         })
     });
     d.addEventListener("change", (e)=>{

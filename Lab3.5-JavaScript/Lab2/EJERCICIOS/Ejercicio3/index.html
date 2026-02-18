@@ -231,10 +231,28 @@
        
 
             <form action="" class="validation-form">
-                <input title="El nombre solo debe tener letras y espacios en blanco" required type="text" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$" name="name">
-                <input title ="Email requerido" required type="email" placeholder="Escribe tu email" pattern="^[a-z0-9\.\-_]+@(gmail|outlook|hotmail)\.com$" name="email">
-                <input title = "El asunto es requerido" required type="text" placeholder="Asunto a tratar" pattern ="^.{1,255}$" name="asunto">
-                <textarea title="El comentario no debe exceder los 255 caracteres" placeholder="Escribe tus comentarios" cols="50" rows="6" data-pattern="^.{1,255}$"></textarea>
+                <input title="El nombre solo debe tener letras y espacios en blanco"
+                    required 
+                    type="text" 
+                    placeholder="Escribe tu nombre" 
+                    pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$" 
+                    name="name">
+                <input title ="Email requerido" 
+                    required type="email" 
+                    placeholder="Escribe tu email" 
+                    pattern="^[a-z0-9\.\-_]+@(gmail|outlook|hotmail)\.com$"
+                    name="email">
+                <input title = "El asunto es requerido" 
+                    required type="text" 
+                    placeholder="Asunto a tratar" 
+                    pattern ="^.{1,255}$" 
+                    name="asunto">
+                <textarea title="El comentario no debe exceder los 255 caracteres" 
+                    placeholder="Escribe tus comentarios" 
+                    cols="50" 
+                    rows="6" 
+                    data-pattern="^.{1,255}$">
+                </textarea>
                 
                 <input type="submit" class="submit-form" value="Enviar">
 
@@ -253,12 +271,15 @@
             <div class="col-format">
                 <select name="" id="speech-select">
                     <option value="">---Elige una voz---</option>
-               
                 </select>
                 <br></br>
-                <textarea name="" id="speech-text" cols="50" rows="5" placeholder="Ingresa un párrafo de texto para la lectura"></textarea>
+                <textarea name="" id="speech-text"
+                    cols="50" 
+                    rows="5"
+                    placeholder="Ingresa un párrafo de texto para la lectura"
+                >
+                </textarea>
                 <button id="speech-btn">Click para leer el texto</button>
-
             </div>
         </section>
 

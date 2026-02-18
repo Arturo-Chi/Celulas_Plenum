@@ -52,7 +52,7 @@ export default function formValidation(){
         $span.textContent = input.title;
         $span.classList.add("validation-error", "none")
         input.insertAdjacentElement("afterend", $span);
-        //console.log($span)
+       
     });
 
     d.addEventListener("keyup",(e) => {
@@ -73,16 +73,9 @@ export default function formValidation(){
 
     d.addEventListener("submit", (e)=>{
         e.preventDefault();
-        //alert("Enviando datos");
-
         const $loader = d.querySelector(".loader");
         const $response = d.querySelector(".response");
-
-        //console.log("loader", $loader)
-        //console.log("response tag ",$response)
-
         $loader.classList.remove("none")
-
         setTimeout(
             () =>{
                 $loader.classList.add("none");
@@ -90,6 +83,5 @@ export default function formValidation(){
                 $form.reset();
             }, 2000
         );
-
     });
 }

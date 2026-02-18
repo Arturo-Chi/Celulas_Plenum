@@ -1,5 +1,42 @@
 const d = document;
 
+export default function scrollSpy() {
+  const d = document;
+  const $sections = d.querySelectorAll("section[data-scroll-spy]");
+  const $links = d.querySelectorAll("a[data-scroll-spy]");
+
+  const cb = (entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute("id");
+
+      const $link = d.querySelector(`a[href="#${id}"]`);
+
+      if (!$link) return; // evita crash
+
+      if (entry.isIntersecting) {
+        $link.classList.add("active");
+      } else {
+        $link.classList.remove("active");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(cb, {
+    threshold: 0.5  // 50% visible
+  });
+
+  $sections.forEach(section => observer.observe(section));
+}
+
+
+
+
+
+
+
+
+
+/*
 
 export default function scrollSpy(){
     const $sections = d.querySelectorAll("section[data-scroll-spy]")
@@ -25,4 +62,4 @@ export default function scrollSpy(){
     })
     //console.log(observador)
     $sections.forEach(el => observador.observe(el))
-}
+}¨*/
