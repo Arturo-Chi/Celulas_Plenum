@@ -10,13 +10,24 @@ const d = document;
     .then( res =>{
         console.log(res)
         console.log(res.data)
+
+        let json = res.data
+        json.forEach(el => {
+            const $li = d.createElement("li")
+            $li.innerHTML = `${el.name} - ${el.id}`
+            $fragment.appendChild($li)
+        });
+        $axios.appendChild($fragment)
     })
     .catch( (err)=>{
         console.log(err)
+        $axios.innerHTML = `Error ${err.status}: ${err.message}`
     })
     .finally( () => console.log("finally de axios"))
 
     //En este formato, trabajando con AXIOS, obtendremos como respuesta un objeto:
     // {data: Array(10), status: 200, statusText: '', headers: r, config: {…}, …}
-    //Para acceder a los datos, debemos a acceder a su propiedad data
+    //Para acceder a los datos, debemos a acceder a su propiedad data que es una lista de objetos JSON
+
+    //AXIOS Ya da un manejo de errores de manera predeterminada
 })();
