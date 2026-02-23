@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main data-video="video105">
+        <h1>AJAX: Asynchronous JavaScript and XML</h1>
+        <p>AjAX significa Asyncronous JavaScript & XML</p>
+        <p>En pocas palabras, es el uso del objeto XMLHttpRequest para comunicarse con los servidores</p>
+        <p>Puede enviar y recibir información en varios formatos:
+            <i>JSON</i><i>XML</i><i>HTML</i> y Archivos de texto
+        </p>
+        
+        <img src="assets/ajax.png" alt="AJAX">
+        <h2>Modelo Web Traidicional vs Modelo Web AJAX</h2>
+        
+        <mark>Flujo del Modelo Tradicional</mark>
+        <ol>
+            <li>El usuario reraliza una acción</li>
+            <li>El navegador envía una petición HTTP completa al sservidor</li>
+            <li>El servidor consulta una base de datos</li>
+            <li>El servidor responde enviando: HTML, CSS, JS, Imágenes</li>
+            <li>La página se recarga complertamente</li>
+        </ol>
+        <b><i>Browser -> Server -> Database -> Server -> Browser (recarga completa)</i></b>
+        <br>
+        <legend>En pocas palabras: Se recarga toda página, Se vuelve a renderizar todo, Es más lento, Experiencia menos fluida</legend>
+        <mark>Flujo del Modelo AJAX</mark>
+        <ol>
+            <li>El usuario interactua con la interfaz</li>
+            <li>JavaScript (AJAX Engine) intercepta la acción</li>
+            <li>Se envía una petición HTTP en segundo plano</li>
+            <li>El servidor responde solo con datos (Normalmente JSON)</li>
+            <li>No e recarga la página completa</li>
+        </ol>
+        <b><i>Browser → JS (Ajax Engine) → Server → Database → Server → JS → Actualiza DOM</i></b>
+        <br>
+        <cite>¿Qué es el AJAX engine?
+            Es simplemente JavaScript usando fetch(), XMLHttpRequest() y asnc/await
+        </cite>
+
+        <p>
+            El atractivo de AJAX es su naturaleza asíncrona, lo que significa que puede comunicarse con el servidor, intercambiar datos y actualizar la página sin tener que recargar el navegador
+        </p>
+
+        <h2>Métodos nativos</h2>
+
+        <ul>
+            <li>
+            <h3><a href="https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/Microsoft_Extensions/ActiveXObject"
+                target="_blank" rel="noopener">ActiveXObject</a> <small>(Solo para IE8 e inferiores)</small></h3>
+            </li>
+            <li>
+            <h3><a href="https://developer.mozilla.org/es/docs/Web/API/XMLHttpRequest" target="_blank"
+                rel="noopener">XMLHttpRequest (Para el resto de los navegadores)</a></h3>
+            </li>
+            <li>
+            <h3><a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API" target="_blank" rel="noopener">API Fetch</a>
+            </h3>
+            </li>
+        </ul>
+
+        <h2>Librerías Externas</h2>
+       <ul>
+            <li>
+            <h3><a href="https://api.jquery.com/category/ajax/" target="_blank" rel="noopener">jQuery.ajax()</a></h3>
+                <i>Recordemos que JQuery era usado para detectar el tipo de navegador de usuario para la ejecución de su código adaptativo</i>
+        </li>
+            <li>
+            <h3><a href="https://github.com/axios/axios" target="_blank" rel="noopener">Axios</a></h3>
+            <mark>Es la librería popular por estar basada en promesas
+                Es un cliente de peticiones HTTP tanto para el navegador como NODE
+            </mark>
+            </li>
+            <li>
+            <h3>etc.</h3>
+            </li>
+        </ul>
+
+        <legend>
+            AJAX no es una tecnología en sí mismo. En realidad se trata de varias tecnologías independientes que se unen:
+        </legend>
+        <ul>
+            <li>
+                <b>HTML y CSS</b>, para crear una presentación basada en estándares.</li>
+            <li>
+                <b>DOM</b>, para la interacción y manipulación dinámica de la presentación.</li>
+            <li>
+                <b>HTML, XML y JSON</b>, para el intercambio y la manipulación de información.</li>
+            <li>
+                <b>XMLHttpRequest</b> o <b>Fetch</b>, para el intercambio asíncrono de información.</li>
+            <li>
+                <b>JavaScript</b>, para unir todas las demás tecnologías.</li>
+            <li>
+                <b>Estado de la Petición</b>
+                <br>
+                <ul>
+                    <li>READY_STATE_UNINITIALIZED = 0 <i>(No inicializado)</i></li>
+                    <li>READY_STATE_LOADING = 1 <i>()</i></li>
+                    <li>READY_STATE_LOADED = 2 <i>()</i></li>
+                    <li>READY_STATE_INTERACTIVE = 3 <i>()</i></li>
+                    <li>READY_STATE_COMPLETE = 4 <i>(Cuando el servidor responde y usemos la información)</i></li>
+                </ul>
+            </li>
+            <li>
+                <b><a href="https://developer.mozilla.org/es/docs/Web/HTTP/Status" target="_blank" rel="noopener">Códigos de
+                    estado de respuesta HTTP</a></b>
+                    <ul>
+                        <li>Respuestas Informativas (100 - 199)</li>
+                        <li>Respuestas Satisfactorias o ÉXITO(200 - 299)</li>
+                        <li>Redirecciones (300 - 399)</li>
+                        <li>Errores de los clientes (400 - 499)</li>
+                        <p><i>En esta categoría entran los errores:
+                            URL incorrecta (404), JSON mal estructurado, Falta Token, Falta campo obligatorio, 
+                        </i></p>
+                        <br>
+                        <li>Errores del Servidor (500)</li>
+                        <p><i>En esta otra Errores de base de datos, Excepción del Backend, Servidor Saturado, TimeOut interno</i></p>
+
+                    </ul>
+
+                    <div class="box">
+                        <pre>
+                            <code>
+async function obtenerDatos() {
+  const response = await fetch("https://api.com/datos");
+
+  if (!response.ok) {
+    if (response.status >= 400 && response.status < 500) {
+      console.log("Error del cliente:", response.status);
+    } else if (response.status >= 500) {
+      console.log("Error del servidor:", response.status);
+    }
+    return;
+  }
+
+  const data = await response.json();
+  console.log(data);
+
+  //api.github.com/users/arturo-chi -------> Api de github para usuarios
+}
+
+                            </code>
+                        </pre>
+                    </div>
+            </li>
+
+        </ul>
+
+
+        
+        <h2>OTROS RECURSOS</h2>
+        <mark><a href="https://cdnjs.com/">cdnjs</a></mark>
+
+        <br><br><br><br><br>
+        <cite>En esta sección veremos los 2 objetos nativos y AXIOS </cite>
+
+
+    </main>
+
+    <div class="section" data-video="video106">
+        <h2>Objeto XMLHttpRequests</h2>
+        <ol id="xhr"></ol>
+        <p>Lo que haremos aqui será usar una API, recordemos que las APIS son mecanismos para interactuar con sistemas informáticos u otras computadoras, a servicios a plataformas o redes sociales</p>
+        <p><a href="https://jsonplaceholder.typicode.com/">Json Placeholder</a></p>
+        <i>Es una api rest falsa online para aprender pruebas y prototipos (se puede instalar localemente JSON Server)</i>
+    
+    </div>
+
+
+    <div class="section" data-video="video107">
+        <h2>API Fetch</h2>
+        <ol id="fetch"></ol>
+    </div>
+
+
+    <div class="section" data-video="video108">
+        <h2>API fetch + Async-Await</h2>
+        <ol id="async"></ol>
+    </div>
+
+    <div class="section" data-video="video109">
+        <h2>AXIOS</h2>
+        <p>Axios es una librería externa para trabajar con peticiones HTTP</p>
+        <legend>Su repositirio está en: <a href="https://github.com/axios/axios" target="_blank">https://github.com/axios/axios</a></legend>
+        <legend>Su descarga desde: <a href="https://github.com/axios/axios#installing" target="_blank">DESCARGA</a></legend>
+        
+        <p>Para instalar en NODE</p>
+        <code>
+            $ npm install axios
+        </code>
+        <p>Para instalar con CDN</p>
+        
+        <code>
+            < script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+        </code>
+        <p>Para instalar con CDN Unpkgd</p>
+        <code>
+            < script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
+        </code>
+        <br>
+
+        <br><br><br>
+        <ol id="axios">
+
+        </ol>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="js/ajax_nativos.js"></script>
+    <script src="js/ajax_externos.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</body>
+</html>
