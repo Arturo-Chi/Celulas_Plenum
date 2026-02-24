@@ -1,0 +1,39 @@
+Para la instalación de JSON Server debemos de contar desde antes con NODE JS
+
+Podemos instalarla con el comando especificado dentro de la dirección:
+https://github.com/typicode/json-server
+
+
+**Instalación:**
+npm install json-server
+
+**Uso:**
+Crear un db.json o db.json5
+{
+  "$schema": "./node_modules/json-server/schema.json",
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
+
+**Arrancar Servidor:**
+npx json-server db.json
+
+**El servidor iniciará en el puerto 3000**
+JSON Server started on PORT :3000
+http://localhost:3000
+
+**para acceder a la api rest usar:**
+curl http://localhost:3000/posts/1
+
+Ejecutar: 
+json-server --help 
+Para mostrar una lista de opciones

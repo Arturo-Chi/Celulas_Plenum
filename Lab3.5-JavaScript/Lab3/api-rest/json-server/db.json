@@ -1,0 +1,96 @@
+{
+  "hermandad": [
+    {
+      "id": "1",
+      "nombre": "hermandad del lamento mudo",
+      "arma": "espada Mea Culpa"
+    },
+    {
+      "id": "2",
+      "nombre": "hermandad de la sal",
+      "arma": "alabarda de odón"
+    },
+    {
+      "id": "3",
+      "nombre": "hermandad de la oración perpetua",
+      "arma": "rezos de ocre"
+    },
+    {
+      "id": "4",
+      "nombre": "hermandad de los bordadores",
+      "arma": "esgrima"
+    },
+    {
+      "id": "5",
+      "nombre": "hermandad de la incorrupción",
+      "arma": "ariete"
+    },
+    {
+      "id": "6",
+      "nombre": "legión ungida",
+      "arma": "espada vendada"
+    }
+  ],
+  "penitentes": [
+    {
+      "id": "1",
+      "nombre": "penitente"
+    },
+    {
+      "id": "2",
+      "nombre": "crisanta"
+    },
+    {
+      "id": "3",
+      "nombre": "quirce"
+    },
+    {
+      "id": "4",
+      "nombre": "orospina"
+    },
+    {
+      "id": "5",
+      "nombre": "venedicta"
+    },
+    {
+      "id": "6",
+      "nombre": "lesmes"
+    },
+    {
+      "id": 7,
+      "nombre": "deogracias"
+    }
+  ],
+  "rezos": [
+    {
+      "id": "1",
+      "nombre": "tiento a tus cabellos espinados"
+    },
+    {
+      "id": "2",
+      "nombre": "debla de luces"
+    },
+    {
+      "id": "3",
+      "nombre": "taranto a la hermana mía"
+    },
+    {
+      "id": "4",
+      "nombre": "plegaria de los pueblos olvidados"
+    }
+  ],
+  "cuentas": [
+    {
+      "id": "1",
+      "nombre": "ojo calcificado"
+    },
+    {
+      "id": "2",
+      "nombre": "rosario de perpetua"
+    },
+    {
+      "id": "3",
+      "nombre": "cuenta inmaculada"
+    }
+  ]
+}

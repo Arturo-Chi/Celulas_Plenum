@@ -1,0 +1,150 @@
+**Instalación de JSON Server**
+Para la instalación de JSON Server se usó el comando:
+npm install -g json-server
+
+**Documento db.json**
+Se usó la siguiente forma:
+{
+    "hermandad":[
+        {
+            "id":1,
+            "nombre":"hermandad del lamento mudo",
+            "arma":"espada Mea Culpa"
+        },
+        {
+            "id":2,
+            "nombre":"hermandad de la sal",
+            "arma":"alabarda de odón"
+        },
+        {
+            "id":3,
+            "nombre":"hermandad de la oración perpetua",
+            "arma":"rezos de ocre"
+        },
+        {
+            "id":4,
+            "nombre":"hermandad de los bordadores",
+            "arma":"esgrima"
+        },
+        {
+            "id":5,
+            "nombre":"hermandad de la incorrupción",
+            "arma":"ariete"
+        },
+        {
+            "id":6,
+            "nombre":"legión ungida",
+            "arma":"espada vendada"
+        }
+    ],
+    "penitentes":[
+        {
+            "id":1,
+            "nombre": "penitente"
+        },
+        {
+            "id":2,
+            "nombre":"crisanta"
+        },
+        {
+            "id":3,
+            "nombre":"quirce"
+        },
+        {
+            "id":4,
+            "nombre":"orospina"
+        },
+        {
+            "id":5,
+            "nombre":"venedicta"
+        },
+        {
+            "id":6,
+            "nombre":"lesmes"
+        }
+    ],
+    "rezos": [
+        {
+            "id":1,
+            "nombre":"tiento a tus cabellos espinados"
+        },
+        {
+            "id":2,
+            "nombre":"debla de luces"
+        },
+        {
+            "id":3,
+            "nombre":"taranto a la hermana mía"
+        },
+        {
+            "id":4,
+            "nombre":"plegaria de los pueblos olvidados"
+        }
+    ],
+    "cuentas":[
+        {
+            "id": 1,
+            "nombre": "ojo calcificado"
+        },
+        {
+            "id": 2,
+            "nombre": "rosario de perpetua"
+        },
+        {
+            "id": 3,
+            "nombre": "cuenta inmaculada"
+        }
+
+    ]
+}
+**Carga de db.json en JSON server**
+Para la carga del documento de la base de datos se usó:
+npx json-server db.json
+[db.json] -> Es el nombre del documento de la base de datos
+
+Después de ejecutar veremos algo como esto en consola:
+
+***************************************************
+JSON Server started on PORT :3000
+Press CTRL-C to stop
+Watching db.json...
+
+♡( ◡‿◡ )
+
+Index:
+http://localhost:3000/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:3000/hermandad
+http://localhost:3000/penitentes
+http://localhost:3000/rezos
+***************************************************
+
+**Pruebas de consulta**
+al abrir el enlace que aparece en consola en el navegador, podremos ver que un sitio web con nuestros endpoints:
+
+
+**************************************************
+JSON Server
+
+✧*｡٩(ˊᗜˋ*)و✧*｡
+
+/hermandad - 6 items
+/penitentes - 6 items
+/rezos - 4 items
+/cuentas - 3 items
+**************************************************
+Basta con poner alguno de los endpoints que se muestran en la barra de busqueda con el prefijo de la url para consultar el endpoint directamente en nuestro navegador.
+
+localhost:3000/penitentes/1
+
+
+Para detener el proceso de ejecución del servidor ejecutamos solamente 
+ctrl + c
+
+
+**Para configurar puerto del servidor:**
+json-server -w -p 5000 [documento]

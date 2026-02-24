@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REST -  AJAX</title>
+
+</head>
+<body>
+    <h1>CURD API REST AJAX</h1>
+    <section class="crud">
+        <article>
+            <h2 class="crud-title">Agregar Penitentes</h2>
+            <form action="" class="crud-form">
+                <br>
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="hidden" name="action">
+            </form>
+        </article>
+        <article>
+             <h2>Ver Penitentes</h2>
+             <table class="crud-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <tbody>                    
+                        <!--
+                        Para esto se va a usar la técnica de los templates
+                        -->
+                    </tbody>
+                </thead>
+             </table>
+        </article>
+    </section>
+
+    <template class="crud-template">
+        <tr>
+            <td class="id"></td>
+            <td class="nombre"></td>
+            <td>
+                <button class="edit">Editar</button>
+                <button class="delete">Eliminar</button>
+            </td>
+        </tr>
+    </template>
+</body>
+
+
+<script src="apir_ajax.js"></script>
+</html>
