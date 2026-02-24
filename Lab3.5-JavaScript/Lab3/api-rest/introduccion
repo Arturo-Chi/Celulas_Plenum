@@ -1,0 +1,40 @@
+
+API
+Significa Application Programming Interface
+Interfaz de Programación Aplicaciones
+
+Permite que una aplicación se comunique con otra aplicación o servicio
+En desarrollo web sirve para obtener y envíar datos
+
+
+Significado de REST
+REST no es más que un estilo arquitectónico para construir APIs que funcionan sobre HTTP
+
+Características principales:
+
+Cliente-Servidor.
+El cliente y el servidor están desacoplados
+EL cliente no necesita conocer la lógica
+
+Stateless
+Cada petición es independiente y completa
+El servidor no guarda historial de peticiones previas
+
+cacheable
+Las respuestas pueden usarse en caché para mejorar desempeño
+
+Interfaz Uniforme
+Cada recurso se expone bajo un endpoint único que utiliza HTTP de forma consistente (GET, POST)
+
+Sistema de capas
+El servidor puede tener múltiples niveles internos sin que afecte a las solicitudes del cliente
+
+
+Verbos y operaciones comunes
+GET 
+POST
+PUT
+DELETE
+
+
+LINUX (distribución compatible)e
