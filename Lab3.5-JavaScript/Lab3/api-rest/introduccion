@@ -1,5 +1,5 @@
 
-API
+--- API
 Significa Application Programming Interface
 Interfaz de Programación Aplicaciones
 
@@ -7,34 +7,64 @@ Permite que una aplicación se comunique con otra aplicación o servicio
 En desarrollo web sirve para obtener y envíar datos
 
 
-Significado de REST
+--- REST
+Representational State Transfer o en español: Transferencia del estado representacional.
+
+Un servicio rest es un conjunto de restricciones con el que se puede crear un estilo de arquitectura de software.
+
+Se basa en las reglas del protocolo HTTP.
+
 REST no es más que un estilo arquitectónico para construir APIs que funcionan sobre HTTP
 
-Características principales:
+******Características principales:******
 
-Cliente-Servidor.
+---- Relación Cliente-Servidor.
 El cliente y el servidor están desacoplados
-EL cliente no necesita conocer la lógica
+EL cliente no necesita conocer la lógica del servidor y viceversa.-
 
-Stateless
+A diferencia del MVC, donde el controlador controlaba la base de datos y orquestaba peticiones de los usuarios, aquí el cliente y sel servidor están separados.
+
+
+---- Stateless
+Las api rest son sin estado
 Cada petición es independiente y completa
 El servidor no guarda historial de peticiones previas
 
-cacheable
+---- Cacheable
 Las respuestas pueden usarse en caché para mejorar desempeño
 
-Interfaz Uniforme
+---- Interfaz Uniforme
 Cada recurso se expone bajo un endpoint único que utiliza HTTP de forma consistente (GET, POST)
+Considera la existencia de una interfaz uniforme/genérica. Se permite la administración entre la interacción del cliente y del servidor de manera uniforme (ENDPOINTS)
 
-Sistema de capas
+Para cada petición va a existir una url única y con la características que le vamos a pasar como información
+
+
+---- Sistema de capas
 El servidor puede tener múltiples niveles internos sin que afecte a las solicitudes del cliente
 
 
-Verbos y operaciones comunes
+---- ![alt text](image.png)Verbos y operaciones comunes
 GET 
 POST
 PUT
 DELETE
 
+FORMATO DE DATOS.
+Las API REST normalmente regresan datos en JSON
+JSON es ligero u fácil de manejar desde JS
 
-LINUX (distribución compatible)e
+
+****Tecnologías que se usarán****
+
+JSON SERVER - API falsa con la que simularemos un mini proyecto
+
+NodeJS - Entorno de Ejecución de JS fuera del navegador
+https://www.youtube.com/watch?v=_DQP6UxKEn8&list=PLvq-jIkSeTUY7b6mTNigrfZxXNkk0aJd2&index=1&pp=0gcJCR0AztywvtLA
+
+NVM - Tecnología para tener varias versiones de NODEJS en una misma máquina
+https://www.youtube.com/watch?v=iG4u1MK7N3I&list=PLvq-jIkSeTUY7b6mTNigrfZxXNkk0aJd2&index=1
+
+INSOMNIA - Alternativa de cliente de pruebas de API rest
+https://insomnia.rest/download/
+En la página de descarga tiene el designer y el core, descargar e instalar el core
