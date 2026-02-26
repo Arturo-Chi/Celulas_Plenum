@@ -42,6 +42,13 @@ const deleteEvents = (deleteBtns) =>{
     deleteBtns.forEach(el => {
         el.addEventListener("click", e=>{
             console.log(el.dataset.id)
+            ajax({
+                url: `http://localhost:3000/penitentes/${el.dataset.id}`,
+                method: "DELETE",
+                success: (res) => location.reloads,
+                error: ()=> alert(err),
+                data: null
+            });
         })
     });
 }
@@ -52,8 +59,8 @@ const getAll = () =>{
         method:"GET",
         success: (res) => {
             console.log("response",res)
-            d.querySelector('input[name="id"]').value = res.length+1
-            nextId = res.length
+            nextId = Math.max(...res.map(r => r.id))+1;
+            d.querySelector('input[name="nextid"]').value = nextId
 
             res.forEach(element => {
 
@@ -93,8 +100,8 @@ const register = () =>{
         method:"POST",
         success: (res) => {
             console.log(res)
-            let totales= d.querySelector('input[name="id"]')
-            totales.value, totales.textContent = res.length+1
+            //let totales= d.querySelector('input[name="id"]')
+            //totales.value, totales.textContent = res.length+1
 
         },
         error: (err) =>{
@@ -117,7 +124,7 @@ d.addEventListener("DOMContentLoaded", getAll)
 d.addEventListener("submit", e=>{
     if (e.target === $form) {
         e.preventDefault()
-        if (e.target.id.value) {
+        if (!(e.target.id.value)) {
             //POST
             ajax({
                 url: "http://localhost:3000/penitentes",
@@ -129,13 +136,27 @@ d.addEventListener("submit", e=>{
                     $form.insertAdjacentHTML("afterend",`<p><b>${err}</b></p>`)
                 },
                 data : {
-                    id: d.querySelector('input["name=id"]').value,
-                    nombre: d.querySelector('input[""name=nombre]').value 
-                }
+                    //id: d.querySelector('input["name=id"]').value,
+                    //nombre: d.querySelector('input[""name=nombre]').value 
+                    id: e.target.nextid.value,
+                    nombre: e.target.nombre.value
 
+                }
             })
         }else{
             //PUT
+            ajax({
+                url: `http://localhost:3000/penitentes/${e.target.id.value}`,
+                method: "PUT",
+                success: (res)=>{
+                    location.reload()
+                },
+                error: () => $form.insertAdjacentHTML("afterend",`<p><b>${err}</b></p>`),
+                data: {
+                    nombre : e.target.nombre.value
+                }
+            })
+
         }
     }
 })
