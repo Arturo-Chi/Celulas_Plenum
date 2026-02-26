@@ -33,7 +33,7 @@
   ],
   "penitentes": [
     {
-      "nombre": "Penitent One",
+      "nombre": "Ghost of Hallownest",
       "id": "1"
     },
     {
@@ -71,6 +71,10 @@
     {
       "id": "10",
       "nombre": "Perpetua"
+    },
+    {
+      "nombre": "Avispa",
+      "id": "11"
     }
   ],
   "rezos": [

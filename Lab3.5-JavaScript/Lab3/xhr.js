@@ -94,24 +94,6 @@ const getAll = () =>{
     })
 }
 
-const register = () =>{
-    ajax({
-        url: "http://localhost:3000/penitentes",
-        method:"POST",
-        success: (res) => {
-            console.log(res)
-            //let totales= d.querySelector('input[name="id"]')
-            //totales.value, totales.textContent = res.length+1
-
-        },
-        error: (err) =>{
-            
-            console.warn(err)
-        },
-        data: null
-
-    })
-}
 
 const edit = ()=>{};
 const del = ()=>{};
