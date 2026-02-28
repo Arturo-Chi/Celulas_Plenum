@@ -33,16 +33,12 @@
   ],
   "penitentes": [
     {
-      "nombre": "Ghost of Hallownest",
-      "id": "1"
-    },
-    {
-      "nombre": "Crisante de la agonía vendada",
+      "nombre": "Crisanta",
       "id": "2"
     },
     {
-      "id": "3",
-      "nombre": "quirce"
+      "nombre": "Kirce",
+      "id": "3"
     },
     {
       "id": "4",
@@ -75,6 +71,22 @@
     {
       "nombre": "Avispa",
       "id": "11"
+    },
+    {
+      "id": "12",
+      "nombre": "HollowKnight"
+    },
+    {
+      "id": "13",
+      "nombre": "Sinodo"
+    },
+    {
+      "id": "14",
+      "nombre": "Sor cutiva"
+    },
+    {
+      "id": "15",
+      "nombre": "Svsona"
     }
   ],
   "rezos": [
