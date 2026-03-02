@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "id": 1,
+      "slug": "home",
+      "title": "Contenidos del Home",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quaerat nemo similique quam? Earum vel assumenda iure, qui itaque molestias asperiores voluptatem eum repudiandae cupiditate distinctio vitae praesentium accusantium libero!"
+    },
+    {
+      "id": 2,
+      "slug": "acerca",
+      "title": "Contenidos de Acerca de",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quaerat nemo similique quam? Earum vel assumenda iure, qui itaque molestias asperiores voluptatem eum repudiandae cupiditate distinctio vitae praesentium accusantium libero!"
+    },
+    {
+      "id": 3,
+      "slug": "servicio",
+      "title": "Contenidos de Servicio",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quaerat nemo similique quam? Earum vel assumenda iure, qui itaque molestias asperiores voluptatem eum repudiandae cupiditate distinctio vitae praesentium accusantium libero!"
+    },
+    {
+      "id": 4,
+      "slug": "contacto",
+      "title": "Contenidos de Contacto",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime quaerat nemo similique quam? Earum vel assumenda iure, qui itaque molestias asperiores voluptatem eum repudiandae cupiditate distinctio vitae praesentium accusantium libero!"
+    }
+  ]
+}

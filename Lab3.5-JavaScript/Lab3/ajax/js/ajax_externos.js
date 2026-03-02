@@ -69,6 +69,8 @@ const d = document;
             });
             $axios.appendChild($fragment)
 
+
+
         } catch (error) {
             console.log(error)
         }
