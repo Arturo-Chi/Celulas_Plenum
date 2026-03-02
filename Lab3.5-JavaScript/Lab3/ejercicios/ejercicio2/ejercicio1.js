@@ -1,44 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1 | Sitio Web dinámico</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="header">
-        <img src="assets/logo.svg" alt="logo" class ="logo">
-        <nav class="menu">
-            <a data-id = 1 data-name = "home" href="assets/home.html">Home</a>
-            <a data-id = 2 data-name = "acerca" href="assets/acerca.html">Acerca de</a>
-            <a data-id = 3 data-name = "servicios" href="assets/servicios.html">Servicios</a>
-            <a data-id = 4 data-name = "contacto" href="assets/contacto.html">Contacto</a>
-            
-        </nav>
-    </header>
-    
-    <main class="container">
- 
-    </main>
 
-    <footer class="footer">
-        <p>
-            <small>Sitio diseñado por Iván Arturo Chi Mut</small>
-        </p>
-    </footer>
-
-    <template class="template">
-        <h1 class="title"></h1>
-        <p class="content"></p>
-    </template>
-
-    <!--<script src="ejercicio1.js"></script>-->
-    <script>
-        
         const d = document,
         $main = d.querySelector(".container")
-        console.log(new XMLHttpRequest())
+        //console.log(new XMLHttpRequest())
 
         const getHtml = (options)=>{
             let {url, success, error} = options
@@ -72,7 +35,7 @@
         d.addEventListener("click", e=>{
             if(e.target.matches(".menu a")){
                 e.preventDefault();
-                console.log(e.target.href)
+                //console.log(e.target.href)
                 getHtml({
                     url: e.target.href,
                     success: (html) => $main.innerHTML = html,
@@ -80,7 +43,3 @@
                 })
             }
         })
-
-    </script>
-</body>
-</html>
