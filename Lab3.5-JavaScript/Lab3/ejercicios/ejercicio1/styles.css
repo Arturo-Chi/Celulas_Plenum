@@ -39,6 +39,7 @@ main{
     align-items: center;
 }
 .header .logo{
+    width: 150px;
     margin-right: auto;
 }
 .header a{

@@ -78,7 +78,7 @@ export default function formValidation(){
         $loader.classList.remove("none")
         setTimeout(
             () =>{
-                $loader.classList.add("none");
+                $loader.classList.add("none");2
                 $response.classList.remove("none")
                 $form.reset();
             }, 2000
