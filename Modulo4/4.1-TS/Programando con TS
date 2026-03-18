@@ -1,0 +1,33 @@
+TypeScript 
+En este curso aprenderemos la programación con JavAscript usando TypeScript
+TypeScript es uh lenguaje en el cual podemos programnar y despuéps compilar a JS para ejecutar en el navegador
+
+Beneficios sobre TS:
+Podemos usar características de lenguajes fuertemente tipados.
+Podemos usar características de Js del futuro.
+Todo código de JS es código válido de TS (Solo se le agregan ciertas características a JS)
+
+Prerrequisitos: Conocimiento previo de JS
+
+Variables
+Funciones
+Interfaces
+Clases 
+Módulos
+Librerías de Terceros 
+
+
+INSTALACIÓN DE TypeScript
+Para realizar la instalación de typescript nos dirigimos a la página oficial en el browser.
+www.typescriptlang.org
+
+Previamente ya deberíamos tener instalado NodeJS
+La línea de comandos del compilador de typescript se instala en NodeJS como un package:
+
+npm install -g typescript
+
+Para compilar usamos: tsc helloworld.ts
+
+
+Para descargar e Instalar NodeJS vamos a la dirección: nodejs.org
+Una vez instalemos node, también se nos instalará npm (el gestor de paquetes de NodeJs)
